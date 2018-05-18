@@ -565,6 +565,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.5.5.1.2.4" data-path="28.html">
+            
+                <a href="28.html#跨指标系预警">
+            
+                    
+                    跨指标系预警
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1772,6 +1785,7 @@
 <th>&#x6240;&#x5C5E;&#x76D1;&#x63A7;&#x7EC4;</th>
 <th>&#x8BF4;&#x660E;</th>
 <th>&#x76D1;&#x63A7;&#x6307;&#x6807;</th>
+<th>&#x6307;&#x6807;&#x7CFB;&#x524D;&#x7F00;</th>
 </tr>
 </thead>
 <tbody>
@@ -1780,35 +1794,41 @@
 <td>&#x670D;&#x52A1;&#x7AEF;</td>
 <td>&#x8FDB;&#x7A0B;&#x6027;&#x80FD;&#x6307;&#x6807;</td>
 <td><a href="73.html">&#x8FDB;&#x7A0B;</a></td>
+<td>procState</td>
 </tr>
 <tr>
 <td>&#x5BB9;&#x5668;&#x72B6;&#x6001;&#x6307;&#x6807;&#x7CFB;</td>
 <td>&#x670D;&#x52A1;&#x7AEF;</td>
 <td>&#x5BBF;&#x4E3B;&#x673A;&#x6027;&#x80FD;&#x6307;&#x6807;</td>
 <td><a href="72.html">&#x5E94;&#x7528;&#x5BB9;&#x5668;</a></td>
+<td>hostState</td>
 </tr>
 <tr>
 <td>&#x670D;&#x52A1;&#x72B6;&#x6001;&#x6307;&#x6807;&#x7CFB;</td>
 <td>&#x670D;&#x52A1;&#x7AEF;</td>
 <td>&#x5177;&#x4F53;url&#x670D;&#x52A1;&#x54CD;&#x5E94;&#x6307;&#x6807;</td>
 <td><a href="76.html">&#x670D;&#x52A1;&#x7EC4;&#x4EF6;</a></td>
+<td>urlResp</td>
 </tr>
 <tr>
 <td>&#x5E94;&#x7528;&#x72B6;&#x6001;&#x6307;&#x6807;&#x7CFB;</td>
 <td>&#x670D;&#x52A1;&#x7AEF;</td>
 <td>&#x5E94;&#x7528;&#x54CD;&#x5E94;&#x6307;&#x6807;</td>
 <td><a href="75.html">&#x5E94;&#x7528;&#x5B9E;&#x4F8B;</a></td>
+<td>appResp</td>
 </tr>
 <tr>
 <td>&#x5E94;&#x7528;&#x670D;&#x52A1;&#x5668;&#x72B6;&#x6001;&#x6307;&#x6807;&#x7CFB;</td>
 <td>&#x670D;&#x52A1;&#x7AEF;</td>
 <td>&#x670D;&#x52A1;&#x5668;&#x54CD;&#x5E94;&#x6307;&#x6807;</td>
 <td><a href="74.html">&#x5E94;&#x7528;&#x96C6;&#x7FA4;</a></td>
+<td>serverResp</td>
 </tr>
 <tr>
 <td>&#x8FDB;&#x7A0B;&#x6B7B;&#x4EA1;&#x6307;&#x6807;&#x7CFB;</td>
 <td>&#x670D;&#x52A1;&#x7AEF;</td>
 <td>&#x8FDB;&#x7A0B;&#x6B7B;&#x4EA1;&#x6307;&#x6807;</td>
+<td>&#x65E0;</td>
 <td>&#x65E0;</td>
 </tr>
 <tr>
@@ -1816,18 +1836,21 @@
 <td>&#x5BA2;&#x6237;&#x7AEF;</td>
 <td>&#x4F5C;&#x4E3A;&#x5BA2;&#x6237;&#x7AEF;&#x8C03;&#x7528;&#x5176;&#x4ED6;&#x670D;&#x52A1;&#x6027;&#x80FD;&#x6307;&#x6807;</td>
 <td><a href="77.html">&#x5BA2;&#x6237;&#x7AEF;&#x7EC4;&#x4EF6;</a></td>
+<td>clientResp</td>
 </tr>
 <tr>
 <td>&#x81EA;&#x5B9A;&#x4E49;&#x6307;&#x6807;</td>
 <td>&#x81EA;&#x5B9A;&#x4E49;&#x6307;&#x6807;</td>
 <td>&#x670D;&#x52A1;&#x5668;jvm&#x6027;&#x80FD;&#x6307;&#x6807;&amp;&amp;&#x81EA;&#x5B9A;&#x4E49;&#x6307;&#x6807;</td>
 <td><a href="78.html">JVM</a></td>
+<td>jvm</td>
 </tr>
 <tr>
 <td>&#x65E5;&#x5FD7;</td>
 <td>&#x65E5;&#x5FD7;</td>
 <td>&#x65E5;&#x5FD7;&#x5185;&#x5BB9;&#x6307;&#x6807;</td>
 <td><a href="85.html">&#x65E5;&#x5FD7;</a></td>
+<td>log</td>
 </tr>
 </tbody>
 </table>
@@ -1874,7 +1897,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"8.监控指标说明","level":"1.5.8","depth":2,"next":{"title":"8.1 应用容器","level":"1.5.8.1","depth":3,"path":"72.md","ref":"72.md","articles":[]},"previous":{"title":"7.2 查看历史数据","level":"1.5.7.2","depth":3,"path":"45.md","ref":"45.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-sharing"],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"71.md","mtime":"2018-04-16T02:58:53.286Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-11T08:57:35.679Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"8.监控指标说明","level":"1.5.8","depth":2,"next":{"title":"8.1 应用容器","level":"1.5.8.1","depth":3,"path":"72.md","ref":"72.md","articles":[]},"previous":{"title":"7.2 查看历史数据","level":"1.5.7.2","depth":3,"path":"45.md","ref":"45.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-sharing"],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"71.md","mtime":"2018-05-15T10:21:24.189Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-18T08:17:56.874Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
