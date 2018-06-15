@@ -1,0 +1,1986 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3. Invocation Chain Tracing · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="59/diao-yong-lian-yu-ri-zhi-guan-lian.html" />
+    
+    
+    <link rel="prev" href="57/ri-zhi-yu-diao-yong-lian-guan-lian.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    UAV.Monitor+APM User Operation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="01_login.html">
+            
+                <a href="01_login.html">
+            
+                    
+                    Sign In
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="02_main_page.html">
+            
+                <a href="02_main_page.html">
+            
+                    
+                    Interface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="04_term.html">
+            
+                <a href="04_term.html">
+            
+                    
+                    Terms
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="03.html">
+            
+                <a href="03.html">
+            
+                    
+                    Application: UAV GodEye
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="13.html">
+            
+                <a href="13.html">
+            
+                    
+                    1. Application Monitoring
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="13.html">
+            
+                <a href="13.html#概览视图">
+            
+                    
+                    1.1 Outline View
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1.1" data-path="13.html">
+            
+                <a href="13.html#检索">
+            
+                    
+                    1.1.1 Query
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="16.html">
+            
+                <a href="16.html">
+            
+                    
+                    1.2 Application Profile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="17.html">
+            
+                <a href="17.html">
+            
+                    
+                    1.3 Application Cluster Performance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.4" data-path="18.html">
+            
+                <a href="18.html">
+            
+                    
+                    1.4 Application Instance Performance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.5" data-path="91.html">
+            
+                <a href="91.html">
+            
+                    
+                    1.5 Invocation Chain Tracing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.6" data-path="92.html">
+            
+                <a href="92.html">
+            
+                    
+                    1.6 Thread Analysis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.7" data-path="19.html">
+            
+                <a href="19.html">
+            
+                    
+                    1.7 Application Server / JVM Performance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.8" data-path="27.html">
+            
+                <a href="27.html">
+            
+                    
+                    1.8 Application Container
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.9" data-path="29.html">
+            
+                <a href="29.html">
+            
+                    
+                    1.9 Application Process
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.10" data-path="22.html">
+            
+                <a href="22.html">
+            
+                    
+                    1.10 Application Log Query
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.11" data-path="20.html">
+            
+                <a href="20.html">
+            
+                    
+                    1.11 Service Component Performance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.12" data-path="21.html">
+            
+                <a href="21.html">
+            
+                    
+                    1.12 Client Component Performance
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="57.html">
+            
+                <a href="57.html">
+            
+                    
+                    2. Application Log Query
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="57/ri-zhi-yu-diao-yong-lian-guan-lian.html">
+            
+                <a href="57/ri-zhi-yu-diao-yong-lian-guan-lian.html">
+            
+                    
+                    Log-Invocation Chain Correlation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.3" data-path="59.html">
+            
+                <a href="59.html">
+            
+                    
+                    3. Invocation Chain Tracing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="59/diao-yong-lian-yu-ri-zhi-guan-lian.html">
+            
+                <a href="59/diao-yong-lian-yu-ri-zhi-guan-lian.html">
+            
+                    
+                    Invocation Chain-Log Correlation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="59/fang-fa-ji-diao-yong-lian-pei-zhi.html">
+            
+                <a href="59/fang-fa-ji-diao-yong-lian-pei-zhi.html">
+            
+                    
+                    Method-level Invocation Chain Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="23.html">
+            
+                <a href="23.html">
+            
+                    
+                    4. Service Flow
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.4.1" data-path="24.html">
+            
+                <a href="24.html">
+            
+                    
+                    4.1 Service Flow of Application Cluster
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.2" data-path="25.html">
+            
+                <a href="25.html">
+            
+                    
+                    4.2 Service Flow of Application Group
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="28.html">
+            
+                <a href="28.html">
+            
+                    
+                    5. Alarm
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.5.1" data-path="28.html">
+            
+                <a href="28.html#预警策略设置">
+            
+                    
+                    5.1 Alarm Strategy Setting
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.5.1.1" data-path="28.html">
+            
+                <a href="28.html#预警策略列表视图">
+            
+                    
+                    5.1.1 List View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.1.2" data-path="28.html">
+            
+                <a href="28.html#创建">
+            
+                    
+                    5.1.2 Create
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.5.1.2.1" data-path="28.html">
+            
+                <a href="28.html#流式预警条件">
+            
+                    
+                    Streaming Alarm Condition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.1.2.2" data-path="28.html">
+            
+                <a href="28.html#环比预警条件">
+            
+                    
+                    Alarm Condition Based on Sequential Comparison
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.1.2.3" data-path="28.html">
+            
+                <a href="28.html#同比预警条件">
+            
+                    
+                    Alarm Condition Based on YoY Comparison
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.1.2.4" data-path="28.html">
+            
+                <a href="28.html#k跨指标系预警">
+            
+                    
+                    Cross Metric-System Alarm Conditions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.1.3" data-path="28.html">
+            
+                <a href="28.html#查看">
+            
+                    
+                    5.1.3 View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.1.4" data-path="28.html">
+            
+                <a href="28.html#修改">
+            
+                    
+                    5.1.4 Modify
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.1.5" data-path="28.html">
+            
+                <a href="28.html#删除">
+            
+                    
+                    5.1.5 Delete
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.2" data-path="38.html">
+            
+                <a href="38.html">
+            
+                    
+                    5.2 View Alarm History
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.5.2.1" data-path="38.html">
+            
+                <a href="38.html#列表视图">
+            
+                    
+                    5.2.1 List View
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.5.2.1.1" data-path="38.html">
+            
+                <a href="38.html#检索">
+            
+                    
+                    5.2.1.1 Query
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.2.2" data-path="41.html">
+            
+                <a href="41.html">
+            
+                    
+                    5.2.2 Alarm Details
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.3" data-path="34.html">
+            
+                <a href="34.html">
+            
+                    
+                    5.3 Alarm Action
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.5.3.1" data-path="34.html">
+            
+                <a href="34.html#邮件">
+            
+                    
+                    5.3.1 Mail
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.3.2" data-path="34.html">
+            
+                <a href="34.html#短信">
+            
+                    
+                    5.3.2 SMS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.3.3" data-path="34.html">
+            
+                <a href="34.html#HTTP接口">
+            
+                    
+                    5.3.3 HTTP Interface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.3.4" data-path="34.html">
+            
+                <a href="34.html#线程分析">
+            
+                    
+                    5.3.4 Thread Analysis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="05_host_monitor.html">
+            
+                <a href="05_host_monitor.html">
+            
+                    
+                    6. Application Container Monitoring
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.6.1" data-path="05_host_monitor.html">
+            
+                <a href="05_host_monitor.html#概览视图">
+            
+                    
+                    6.1 Outline View
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.6.1.1" data-path="05_host_monitor.html">
+            
+                <a href="05_host_monitor.html#快速检索">
+            
+                    
+                    6.1.1 Quick Query
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6.2" data-path="08.html">
+            
+                <a href="08.html">
+            
+                    
+                    6.2 Application Container Profile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6.3" data-path="09.html">
+            
+                <a href="09.html">
+            
+                    
+                    6.3 Application Container Performance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6.4" data-path="10.html">
+            
+                <a href="10.html">
+            
+                    
+                    6.4 Process Performance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6.5" data-path="11.html">
+            
+                <a href="11.html">
+            
+                    
+                    6.5 Remote Control over Process
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6.6" data-path="12.html">
+            
+                <a href="12.html">
+            
+                    
+                    6.6 Remote Control over Process of UAV Node
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="42.html">
+            
+                <a href="42.html">
+            
+                    
+                    7. History Monitoring Data
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.7.1" data-path="43.html">
+            
+                <a href="43.html">
+            
+                    
+                    7.1 List View of Application Instances
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.7.1.1" data-path="43.html">
+            
+                <a href="43.html#检索">
+            
+                    
+                    7.1.1 Query
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7.2" data-path="45.html">
+            
+                <a href="45.html">
+            
+                    
+                    7.2 View History Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="71.html">
+            
+                <a href="71.html">
+            
+                    
+                    8. Monitoring Metric Illustration
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.8.1" data-path="72.html">
+            
+                <a href="72.html">
+            
+                    
+                    8.1 Application Container
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8.2" data-path="73.html">
+            
+                <a href="73.html">
+            
+                    
+                    8.2 Process
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8.3" data-path="74.html">
+            
+                <a href="74.html">
+            
+                    
+                    8.3 Application Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8.4" data-path="75.html">
+            
+                <a href="75.html">
+            
+                    
+                    8.4 Application Instance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8.5" data-path="76.html">
+            
+                <a href="76.html">
+            
+                    
+                    8.5 Service Component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8.6" data-path="77.html">
+            
+                <a href="77.html">
+            
+                    
+                    8.6 Client Component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8.7" data-path="78.html">
+            
+                <a href="78.html">
+            
+                    
+                    8.7 JVM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8.8" data-path="85.html">
+            
+                <a href="85.html">
+            
+                    
+                    8.8 Log
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="79.html">
+            
+                <a href="79.html">
+            
+                    
+                    9. Custom Metrics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.9.1" data-path="80.html">
+            
+                <a href="80.html">
+            
+                    
+                    9.1 Definition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9.2" data-path="81.html">
+            
+                <a href="81.html">
+            
+                    
+                    9.2 Realization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9.3" data-path="82.html">
+            
+                <a href="82.html">
+            
+                    
+                    9.3 Display
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9.4" data-path="83.html">
+            
+                <a href="83.html">
+            
+                    
+                    9.4 Alarm Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9.5" data-path="84.html">
+            
+                <a href="84.html">
+            
+                    
+                    9.5 Simple Monitor
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="90.html">
+            
+                <a href="90.html">
+            
+                    
+                    Application: UAV GodCompass
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="90.html">
+            
+                <a href="90.html#情报中心">
+            
+                    
+                    1. Intelligence Center
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="90.html">
+            
+                <a href="90.html#配置说明">
+            
+                    
+                    2. Panel Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="49.html">
+            
+                <a href="49.html">
+            
+                    
+                    Application: AppHub Manager
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="49.html">
+            
+                <a href="49.html">
+            
+                    
+                    1. APP Management
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="49.html">
+            
+                <a href="49.html#列表视图">
+            
+                    
+                    1.1 List View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.2" data-path="49.html">
+            
+                <a href="49.html#检索">
+            
+                    
+                    1.2 Query
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.3" data-path="49.html">
+            
+                <a href="49.html#创建">
+            
+                    
+                    1.3 Create
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4" data-path="49.html">
+            
+                <a href="49.html#修改">
+            
+                    
+                    1.4 Modify
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.5" data-path="49.html">
+            
+                <a href="49.html#删除">
+            
+                    
+                    1.5 Delete
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="55.html">
+            
+                <a href="55.html">
+            
+                    
+                    2. Authorization Management
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="55.html">
+            
+                <a href="55.html#列表视图">
+            
+                    
+                    2.1 List View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.2" data-path="55.html">
+            
+                <a href="55.html#检索">
+            
+                    
+                    2.2 Query
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.3" data-path="55.html">
+            
+                <a href="55.html#创建">
+            
+                    
+                    2.3 Create
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.4" data-path="55.html">
+            
+                <a href="55.html#修改">
+            
+                    
+                    2.4 Modify
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.5" data-path="55.html">
+            
+                <a href="55.html#删除">
+            
+                    
+                    2.5 Delete
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="56.html">
+            
+                <a href="56.html">
+            
+                    
+                    3. User Feedback
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="61.html">
+            
+                <a href="61.html">
+            
+                    
+                    4. Information Query
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.4.1" data-path="62.html">
+            
+                <a href="62.html">
+            
+                    
+                    4.1 Query by Email
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.2" data-path="63.html">
+            
+                <a href="63.html">
+            
+                    
+                    4.2 Query by User Name
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="65.html">
+            
+                <a href="65.html">
+            
+                    
+                    Application: Service Governance Manager
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="65.html">
+            
+                <a href="65.html#监控授权">
+            
+                    
+                    1. Monitoring Authorization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1.1" data-path="65.html">
+            
+                <a href="65.html#列表视图">
+            
+                    
+                    1.1 List View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.2" data-path="65.html">
+            
+                <a href="65.html#检索">
+            
+                    
+                    1.2 Query
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.3" data-path="65.html">
+            
+                <a href="65.html#创建">
+            
+                    
+                    1.3 Create
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.4" data-path="65.html">
+            
+                <a href="65.html#修改">
+            
+                    
+                    1.4 Modify
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.5" data-path="65.html">
+            
+                <a href="65.html#删除">
+            
+                    
+                    1.5 Delete
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="66.html">
+            
+                <a href="66.html">
+            
+                    
+                    2. Intelligence Center Management
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.2.1" data-path="66.html">
+            
+                <a href="66.html#列表视图">
+            
+                    
+                    2.1 List View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.2" data-path="66.html">
+            
+                <a href="66.html#检索">
+            
+                    
+                    2.2 Query
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.3" data-path="66.html">
+            
+                <a href="66.html#创建">
+            
+                    
+                    2.3 Create
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.4" data-path="66.html">
+            
+                <a href="66.html#修改">
+            
+                    
+                    2.4 Modify
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.5" data-path="66.html">
+            
+                <a href="66.html#删除">
+            
+                    
+                    2.5 Delete
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="86.html">
+            
+                <a href="86.html">
+            
+                    
+                    Application: Basic Cluster Manager
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="86.html">
+            
+                <a href="86.html#ES管理">
+            
+                    
+                    1. ES Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="87.html">
+            
+                <a href="87.html">
+            
+                    
+                    2. MQ Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="3opentsdbguan-li.html">
+            
+                <a href="3opentsdbguan-li.html">
+            
+                    
+                    3.OpenTSDB Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >3. Invocation Chain Tracing</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="invocation-chain-tracing">Invocation Chain Tracing</h1>
+<h3 id="invocation-chain-model-basics">Invocation Chain Model Basics</h3>
+<p>Metadata:</p>
+<ul>
+<li>SpanEndpointType: invocation type (Root(&#x201C;E&#x201D;), Service(&#x201C;S&#x201D;), Client(&#x201C;C&#x201D;), Method(&#x201C;M&#x201D;));</li>
+<li>traceId: unique identifier of an invocation chain;</li>
+<li>spanId: invocation sequence of the current node in an invocation chain (unique when combined with SpanEndpointType)</li>
+<li>parentId: parent invocation node of the current node in an invocation chain.</li>
+</ul>
+<p>Mapping rules:</p>
+<ul>
+<li>Register the initial invocation (without parent invocation) the caller (service or web) as starting node E and generate the unique traceID;</li>
+<li>Add &#x201C;1&#x201D; (&#x201C;.1&#x201D; to the first spanId) to the spanId for invocation among application components (such as httpclient and method invocation) within the system;</li>
+<li><p>Span information of Service A and Service B differs in SpanEndpointType (each representing one end of the span) only for invocation among systems.</p>
+<p><img src="assets/59-chain-0.PNG" alt=""></p>
+<pre><code>Note:
+Please use @FormParam annotations to obtain parameters at the server if your program employs jersey and propagate parameters via application/x-www-form-urlencoded. Otherwise, parameters cannot be obtained when heavyweight invocation chain is enabled.
+</code></pre></li>
+</ul>
+<h3 id="enable-and-disable-invocation-chain-tracing">Enable and Disable Invocation Chain Tracing</h3>
+<p>Enable or disable invocation chain tracing in the <a href="91.html">Invocation Chain Tracing</a> interface.</p>
+<h3 id="invocation-chain-tracing-view">Invocation Chain Tracing View</h3>
+<p>Click on [Invocation Chain Tracing] under UAV GodEye and get to the list view.</p>
+<p><img src="assets/59_chain_1.png" alt=""></p>
+<hr>
+<h3 id="list-view">List View</h3>
+<p><img src="assets/59-ivcchain.png" alt=""></p>
+<h5 id="1-select-an-application-instance-drop-down-boxes-from-left-to-right-are-for"><strong>1)</strong> Select an application instance. Drop-down boxes from left to right are for:</h5>
+<ul>
+<li>Selecting an application cluster</li>
+<li>Selecting an application instance of an application cluster;</li>
+</ul>
+<h5 id="2-search-for-invocation-chain-data-during-specified-time-intervals-specify-time-with-the-same-method-as-that-of-the-application-log-query-from-left-to-right"><strong>2)</strong> Search for invocation chain data during specified time intervals. <a href="57.html#&#x9009;&#x62E9;&#x65F6;&#x95F4;">Specify time</a> with the same method as that of the application log query. From left to right:</h5>
+<ul>
+<li>Time: [All] denotes total time;</li>
+<li>Time setting<ul>
+<li>By the day: click on [All] to pop up the calendar and specify the date;</li>
+<li>By the hour: click on [All] to pop up the calendar and specify the date and the hour;</li>
+<li>By the minute: click on [All] to pop up the calendar and specify the date, the hour and the minute;</li>
+</ul>
+</li>
+<li>Sort by: [Ascending] or [Descending]</li>
+<li><img src="assets/28_13.png" alt="">: clear the specified time back to [All]</li>
+</ul>
+<h5 id="3-keyword-query"><strong>3)</strong> Keyword query</h5>
+<ul>
+<li>Hover the curser over the keyword box to view the brief rules
+<img src="assets/59_ivcsearchhelp.png" alt=""></li>
+<li><img src="assets/43_04.png" alt="">: click to search for the invocation chain information within the specified time intervals, or to search for the invocation chain information within the most recent 1 minute by default if no time is specified</li>
+<li><p><img src="assets/help.png" alt="">: click to view the details and examples of  the query functionality of invocation chains</p>
+<h6 id="illustration-of-keyword-query-rules">Illustration of keyword query rules</h6>
+<ol>
+<li>Query by <code>Service URL</code> by default when entering the keyword in the query box</li>
+<li>Query by <code>State</code> when prefixing the keyword with @ in the query box<ul>
+<li>For example, the keyword <code>@500</code> in the query box indicates querying the invocation chains whose return state code is 500 </li>
+</ul>
+</li>
+<li>Conduct federated query by connecting <code>Service URL</code> and <code>State</code> with @<ul>
+<li>For example, the keyword <code>monitor@500</code> in the query box indicates querying the invocation chains whose <code>Service URL</code> contains <code>monitor</code> and <code>State</code> code is 500</li>
+</ul>
+</li>
+<li>Query by all fields in the format of <code>url=&quot;xx&quot;, state=&quot;xx&quot;</code>. The key value before &quot;=&quot; is the query field. The query functionality currently supports parallel query by <code>Service URL</code>, <code>State</code>, <code>Class</code> and <code>Method</code>. The value after &quot;=&quot; is the query keyword. The query functionality supports the multiple keyword query in Rule 5 and the fuzzy match query in Rule 6<ul>
+<li>For example, <code>url=&quot;montior&quot;, state=&quot;500 404&quot;, method=&quot;*query*&quot;</code> indicates querying the invocation chains whose <code>Service URL</code> contains <code>monitor</code>, <code>State</code> code is <code>500</code> or <code>404</code>, and <code>Method</code> contains <code>query</code></li>
+</ul>
+</li>
+<li>The query fiedls support multiple keywords query. Below are detailed rules:<ul>
+<li>Support OR query by separating keywords with a space<ul>
+<li>For example, <code>&lt;kwd1&gt; &lt;kwd2&gt;</code> indicates <code>either kwd1 or kwd2</code></li>
+</ul>
+</li>
+<li>Support AND query by connecting all keywords with <code>+</code><ul>
+<li>For example, <code>&lt;kwd1&gt;+&lt;kwd2&gt;</code> indicates <code>both kwd1 and kwd2</code></li>
+</ul>
+</li>
+<li>Support the co-existence of a space and <code>+</code>, with keywords connected by <code>+</code> being taken as a whole<ul>
+<li>For example, <code>&lt;kwd1&gt;+&lt;kwd2&gt; &lt;kwd3&gt; &lt;kwd4&gt;</code> indicates the <code>co-existence of kwd1 and kwd2 or kwd3 or kwd4</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Prefix and suffix the keyword with * for fuzzy match<ul>
+<li>For example, <code>\*monitor\*</code> indicates that all invocation chains containing <code>monitor</code> shall be matched</li>
+</ul>
+</li>
+</ol>
+<h6 id="notes">Notes:</h6>
+<ul>
+<li>All queried keywords shall be segmented when there is no * among keywords. Segmented keywords shall not be highlighted. Prefix and suffix the keywords with * for fuzzy match. </li>
+<li>The fuzzy match query supports AND query only, i.e. the keyword in the format of <code>*monitor*</code> do not allow a space that connects another keyword after it for OR query</li>
+</ul>
+</li>
+</ul>
+<h5 id="4-quick-query-buttons-that-support-common-query"><strong>4)</strong> Quick query buttons that support common query</h5>
+<ul>
+<li>L1min: view service requests within the latest 1 minute;</li>
+<li>s100in1hr: view the slowest 100 service requests within the latest 1 hour;</li>
+<li>L100: view the latest 100 service requests within 24 hours;</li>
+<li>s100: view the slowest 100 service requests within 24 hours;</li>
+</ul>
+<h5 id="5-display-the-application-instance-selected-and-the-service-request-total"><strong>5)</strong> Display the application instance selected and the service request total;</h5>
+<h5 id="6-display-the-service-invocation-information-click-to-view-invocation-chain-details-of-the-current-invocation-request"><strong>6)</strong> Display the service invocation information. Click to view <a href="#&#x8C03;&#x7528;&#x94FE;&#x8BE6;&#x60C5;">invocation chain details</a> of the current invocation request;</h5>
+<ul>
+<li>Staring time: the time when the service request starts;</li>
+<li>Service&#x3000;URL: URL address of the service;</li>
+<li>Node information: service type + local IP;</li>
+<li>Service&#x3000;class: the class to which the service belongs; </li>
+<li>Method: the way in which the service request is made;</li>
+<li>Status: <em>Click to view status</em><pre><code>OK for good;
+Err for error;
+Numbers for the status code of HTTP response;
+</code></pre></li>
+<li>Time consumed, in ms: time cost by this thread;</li>
+</ul>
+<h3 id="&#x8C03;&#x7528;&#x94FE;&#x8BE6;&#x60C5;">Invocation Chain Details </h3>
+<p><img src="assets/59-chainDetail.png" alt=""></p>
+<p><strong>1)</strong> Invocation chain tracing: traceID: IP+port+timestamp+current threadID+atomic variant;<br><strong>2)</strong> Application and port to which the service belongs plus the current service total;<br><strong>3)</strong> Back to the list view of invocation chains;<br><strong>4)</strong> Invocation chains belonging to the same service request are collapsable;<br><strong>5)</strong> Display the details of the current invocation. Click to view the <a href="#&#x8C03;&#x7528;&#x94FE;&#x8BE6;&#x60C5;">service invocation details</a>;</p>
+<ul>
+<li>Execution sequence: the priority according to which services are executed;</li>
+<li>Staring time: the time when the service request starts;</li>
+<li>Service/tracing URL: indicates that the invocation is a service or URL;</li>
+<li>Type: E for Root: represents the general port of Span;<pre><code>S for Service: represents server components of Span;
+C for Client: represents client components of Span;
+M for Method;
+</code></pre></li>
+<li>Node information: service type + local IP;</li>
+<li>Service class: class to which the service belongs; </li>
+<li>Method: the way in which the service or service request is made;</li>
+<li>IP &amp; port: IP serial and port serial;</li>
+<li>Application label: application to which the service belongs; </li>
+<li>Status: Click to view status;<pre><code>OK for good;
+Err for error;
+Numbers for HTTP response status code;
+</code></pre></li>
+<li>Time consumed, ms: time cost by this thread;</li>
+</ul>
+<p><strong>6)</strong> <a href="59/diao-yong-lian-yu-ri-zhi-guan-lian.html">Invocation chain-log correlation</a>;</p>
+<p><strong>Example of invocation chain details:</strong><br>Take &#x7535;&#x7B7E;.&#x5929;&#x5A01;&#x8BC1;&#x4E66;&#x4EE3;&#x7406;&#x670D;&#x52A1; as an example:</p>
+<p><strong>(7)</strong> SpanID;</p>
+<p><img src="assets/59-chainDetailExample.png" alt=""></p>
+<p>Below is the detailed process of invocation chain tracing:</p>
+<p><img src="assets/59-chain-3-01.PNG" alt=""></p>
+<ul>
+<li>The user (10.<em>. </em>. <em>) invokes Service A(http://</em>: 8080/ccsp/ccsp/icert/apply ) and accesses application ccsp in  1020 ms ;</li>
+<li>Service A(ccsp) accesses jdbc.client and executes executeQuery;</li>
+<li>Service A(ccsp) invokes Service B (http:10._.*.8088) by sending sendPost via Apache.http.Client and accesses the application servproxy;</li>
+<li>Service B(servproxy) invokes three methods (001, 002 and 003). Be noted that method is secondary to service though displayed in the same class;</li>
+<li>Service B(servproxy) executes executeQuery and executeUpdate of jdbc.client twice respectively;</li>
+<li>Service B(servproxy) invokes Service C via apache.http.AsyncClient;</li>
+</ul>
+<hr>
+<h3 id="&#x670D;&#x52A1;&#x8C03;&#x7528;&#x8BE6;&#x60C5;">Service Invocation Details </h3>
+<p><img src="assets/59-chain-4.PNG" alt=""></p>
+<p><strong>1)</strong> Refresh the current page;<br><strong>2)</strong> Invocation process details;<br><strong>3)</strong> Service details;<br><strong>4)</strong> Click <a href="#&#x5143;&#x6570;&#x636E;&#x8BE6;&#x60C5;">here</a> to view metadata details;</p>
+<hr>
+<h3 id="&#x5143;&#x6570;&#x636E;&#x8BE6;&#x60C5;">Metadata Details </h3>
+<p><img src="assets/59-chain-5.PNG" alt=""></p>
+<p><strong>1)</strong> Metadata</p>
+<ul>
+<li>spanID: invocation sequence of the current node in an invocation chain;</li>
+<li>Parentid: parent invocation node of the current node in an invocation chain;</li>
+</ul>
+<p><strong>2)</strong> Request header information
+<strong>3)</strong> Request content: requested content, such as &quot;&#x4E2D;&#x534E;&#x4EBA;&#x6C11;&#x5927;&#x56E2;&#x7ED3;&quot; shown in the picture;
+<strong>4)</strong> Response header information
+<strong>5)</strong> Response content: responded content,such as &quot;&#x4E2D;&#x534E;&#x4EBA;&#x6C11;&#x5927;&#x56E2;&#x7ED3;&quot; shown in the picture;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="57/ri-zhi-yu-diao-yong-lian-guan-lian.html" class="navigation navigation-prev " aria-label="Previous page: Log-Invocation Chain Correlation">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="59/diao-yong-lian-yu-ri-zhi-guan-lian.html" class="navigation navigation-next " aria-label="Next page: Invocation Chain-Log Correlation">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3. Invocation Chain Tracing","level":"1.5.3","depth":2,"next":{"title":"Invocation Chain-Log Correlation","level":"1.5.3.1","depth":3,"path":"59/diao-yong-lian-yu-ri-zhi-guan-lian.md","ref":"59/diao-yong-lian-yu-ri-zhi-guan-lian.md","articles":[]},"previous":{"title":"Log-Invocation Chain Correlation","level":"1.5.2.1","depth":3,"path":"57/ri-zhi-yu-diao-yong-lian-guan-lian.md","ref":"57/ri-zhi-yu-diao-yong-lian-guan-lian.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"59.md","mtime":"2018-06-11T04:39:58.651Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-11T08:14:58.019Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
