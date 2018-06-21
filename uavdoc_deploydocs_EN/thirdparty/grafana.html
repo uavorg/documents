@@ -1,0 +1,1244 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1.7 Grafana · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../healmanagerInstall/healmanagerInstall.html" />
+    
+    
+    <link rel="prev" href="ldap.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    UAV.Monitor+APM Installation and Deployment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../quickstart.html">
+            
+                <a href="../quickstart.html">
+            
+                    
+                    Demo Version Deployment
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../quick_install_windows.html">
+            
+                <a href="../quick_install_windows.html">
+            
+                    
+                    Windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../quick_install_linux.html">
+            
+                <a href="../quick_install_linux.html">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../quick_install_mac.html">
+            
+                <a href="../quick_install_mac.html">
+            
+                    
+                    Mac
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../uavserviceDeploy.html">
+            
+                <a href="../uavserviceDeploy.html">
+            
+                    
+                    Core Service Installation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../thirdparty.html">
+            
+                <a href="../thirdparty.html">
+            
+                    
+                    1. Third-party Service Preparation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="rocketmq.html">
+            
+                <a href="rocketmq.html">
+            
+                    
+                    1.1 RocketMQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="opentsdb.html">
+            
+                <a href="opentsdb.html">
+            
+                    
+                    1.2 OpenTSDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="mongodb.html">
+            
+                <a href="mongodb.html">
+            
+                    
+                    1.3 MongoDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="redis.html">
+            
+                <a href="redis.html">
+            
+                    
+                    1.4 Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="elasticsearch.html">
+            
+                <a href="elasticsearch.html">
+            
+                    
+                    1.5 ElasticSearch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="ldap.html">
+            
+                <a href="ldap.html">
+            
+                    
+                    1.6 LDAP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.1.7" data-path="grafana.html">
+            
+                <a href="grafana.html">
+            
+                    
+                    1.7 Grafana
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../healmanagerInstall/healmanagerInstall.html">
+            
+                <a href="../healmanagerInstall/healmanagerInstall.html">
+            
+                    
+                    2. Health Manager Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../healmanagerInstall/healmanagerInstall.html">
+            
+                <a href="../healmanagerInstall/healmanagerInstall.html">
+            
+                    
+                    2.1 Intallation and Configuration
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../healmanagerInstall/healmanagerInstall/standalone.html">
+            
+                <a href="../healmanagerInstall/healmanagerInstall/standalone.html">
+            
+                    
+                    2.1.1 AllInOne Deployment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../healmanagerInstall/healmanagerInstall/microservice.html">
+            
+                <a href="../healmanagerInstall/healmanagerInstall/microservice.html">
+            
+                    
+                    2.1.2 Distributed Deployment
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.2.1" data-path="../healmanagerInstall/healmanagerInstall/microservice/hm-hbserver.html">
+            
+                <a href="../healmanagerInstall/healmanagerInstall/microservice/hm-hbserver.html">
+            
+                    
+                    Heartbeat Server (hm_hbserver)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.2" data-path="../healmanagerInstall/healmanagerInstall/microservice/hm_moserver.html">
+            
+                <a href="../healmanagerInstall/healmanagerInstall/microservice/hm_moserver.html">
+            
+                    
+                    Monitoring Server (hm_moserver)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.3" data-path="../healmanagerInstall/healmanagerInstall/microservice/hm_pfntfyserver.html">
+            
+                <a href="../healmanagerInstall/healmanagerInstall/microservice/hm_pfntfyserver.html">
+            
+                    
+                    Profile and Notification Server (hm_pfntfyserver)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.4" data-path="../healmanagerInstall/healmanagerInstall/microservice/hm_apphubmgr.html">
+            
+                <a href="../healmanagerInstall/healmanagerInstall/microservice/hm_apphubmgr.html">
+            
+                    
+                    AppHub Manager (hm_apphubmgr)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.5" data-path="../healmanagerInstall/healmanagerInstall/microservice/hm_rtserver.html">
+            
+                <a href="../healmanagerInstall/healmanagerInstall/microservice/hm_rtserver.html">
+            
+                    
+                    Runtime Notification Server (hm_rtserver)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.6" data-path="../healmanagerInstall/healmanagerInstall/microservice/ri-zhi-fu-52a128-hm-logserver.html">
+            
+                <a href="../healmanagerInstall/healmanagerInstall/microservice/ri-zhi-fu-52a128-hm-logserver.html">
+            
+                    
+                    Log Server (hm_logserver)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.7" data-path="../healmanagerInstall/healmanagerInstall/microservice/hm_nodeserver.html">
+            
+                <a href="../healmanagerInstall/healmanagerInstall/microservice/hm_nodeserver.html">
+            
+                    
+                    Node Server (hm_nodeserver)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.8" data-path="../healmanagerInstall/healmanagerInstall/microservice/hm_apmserver.html">
+            
+                <a href="../healmanagerInstall/healmanagerInstall/microservice/hm_apmserver.html">
+            
+                    
+                    APM Server (hm_apmserver)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.9" data-path="../healmanagerInstall/healmanagerInstall/microservice/upgrade-server.html">
+            
+                <a href="../healmanagerInstall/healmanagerInstall/microservice/upgrade-server.html">
+            
+                    
+                    Upgrade Server (upgrade_server)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.10" data-path="../healmanagerInstall/healmanagerInstall/microservice/profile-and-notification-and-heartbeat-server.html">
+            
+                <a href="../healmanagerInstall/healmanagerInstall/microservice/profile-and-notification-and-heartbeat-server.html">
+            
+                    
+                    Profile & Notification & Heartbeat Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../healmanagerInstall/hm_start&stop.html">
+            
+                <a href="../healmanagerInstall/hm_start&stop.html">
+            
+                    
+                    2.2 Start and Stop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../healmanagerInstall/issues.html">
+            
+                <a href="../healmanagerInstall/issues.html">
+            
+                    
+                    2.3 FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../apphub_Install/apphub_Install.html">
+            
+                <a href="../apphub_Install/apphub_Install.html">
+            
+                    
+                    3. AppHub Installation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.1" data-path="../apphub_Install/apphub_Install.html">
+            
+                <a href="../apphub_Install/apphub_Install.html">
+            
+                    
+                    3.1 Installation and Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.2" data-path="../apphub_Install/apphub_Install.html">
+            
+                <a href="../apphub_Install/apphub_Install.html">
+            
+                    
+                    3.2 Start and Login
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.3" data-path="../apphub_Install/issues.html">
+            
+                <a href="../apphub_Install/issues.html">
+            
+                    
+                    3.3 FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../upgrade.html">
+            
+                <a href="../upgrade.html">
+            
+                    
+                    Upgrade
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Agent.html">
+            
+                <a href="../Agent.html">
+            
+                    
+                    Client Probe Installation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../uavagentInstall/ma_install.html">
+            
+                <a href="../uavagentInstall/ma_install.html">
+            
+                    
+                    1. Monitor Agent Installation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../uavagentInstall/ma_install.html">
+            
+                <a href="../uavagentInstall/ma_install.html">
+            
+                    
+                    1.1 Installation and Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../uavagentInstall/ma_start_stop.html">
+            
+                <a href="../uavagentInstall/ma_start_stop.html">
+            
+                    
+                    1.2 Start and Stop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="../uavagentInstall/issues.html">
+            
+                <a href="../uavagentInstall/issues.html">
+            
+                    
+                    1.3 FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../mof_install/mof_install.html">
+            
+                <a href="../mof_install/mof_install.html">
+            
+                    
+                    2. Monitor Framework Access
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../mof_install/mof_install.html">
+            
+                <a href="../mof_install/mof_install.html">
+            
+                    
+                    2.1 Installation and Uninstallation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../mof_install/example.html">
+            
+                <a href="../mof_install/example.html">
+            
+                    
+                    2.2 MOF Access Instance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.3" data-path="../mof_install/issues.html">
+            
+                <a href="../mof_install/issues.html">
+            
+                    
+                    2.3 FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../docker/uavagent.html">
+            
+                <a href="../docker/uavagent.html">
+            
+                    
+                    3. Docker Deployment
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../docker/uavagent.html">
+            
+                <a href="../docker/uavagent.html">
+            
+                    
+                    3.1 MA Deployment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="../docker/mof.html">
+            
+                <a href="../docker/mof.html">
+            
+                    
+                    3.2 MOF Deployment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.3" data-path="../docker/33-chang-jian-wen-ti.html">
+            
+                <a href="../docker/33-chang-jian-wen-ti.html">
+            
+                    
+                    3.3 FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../healmanagerInstall/hm_configration.html">
+            
+                <a href="../healmanagerInstall/hm_configration.html">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../healmanagerInstall/hm_configration.html">
+            
+                <a href="../healmanagerInstall/hm_configration.html">
+            
+                    
+                    1. HM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../apphub_Install/apphub_configuration.html">
+            
+                <a href="../apphub_Install/apphub_configuration.html">
+            
+                    
+                    2. AppHub
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../uavagentInstall/ma_configuration.html">
+            
+                <a href="../uavagentInstall/ma_configuration.html">
+            
+                    
+                    3. MA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../mof_install/mof_configuration.html">
+            
+                <a href="../mof_install/mof_configuration.html">
+            
+                    
+                    4. MOF
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../chang-jian-wen-ti.html">
+            
+                <a href="../chang-jian-wen-ti.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >1.7 Grafana</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="grafana">Grafana</h1>
+<p>Grafana is integrated in the Intelligence Center to display OpenTSDB data and Elasticsearch data.</p>
+<p>Please refer to <a href="https://grafana.com//" target="_blank">https://grafana.com//</a>) for Grafana installation
+Please refer to <a href="https://docs.grafana.org/installation/configuration/" target="_blank">https://docs.grafana.org/installation/configuration/</a> for Grafana configuration</p>
+<p>Application groups in UAV correspond to organizations in grafana. The user of UAV is granted with the same access permission to application groups as to organizations in Grafana.</p>
+<h3 id="GrafanaAppHub&#x5BF9;&#x63A5;">AppHub and Grafana Mapping</h3>
+<p>Finish steps below after installing Grafana and keep it connected to AppHub:</p>
+<h4 id="1-adjust-grafana-configuration">1. Adjust Grafana Configuration</h4>
+<p>Disallow sign-out, disallow registration, default org setting, default org access permission configuration, and menu access permission of ordinary users. Below are references: </p>
+<pre><code>Configuration path: @pwd/grafana/conf/defaults.ini
+Configuration reference:
+app_mode = production
+instance_name = ${HOSTNAME}
+[paths]
+data = data
+logs = data/log
+plugins = data/plugins
+[server]
+protocol = http
+http_addr =
+http_port = 3000
+domain = localhost
+enforce_domain = false
+root_url = %(protocol)s://%(domain)s:%(http_port)s/
+router_logging = false
+static_root_path = public
+enable_gzip = false
+cert_file =
+cert_key =
+socket = /tmp/grafana.sock
+[database]
+type = sqlite3
+host = 127.0.0.1:3306
+name = grafana
+user = root
+password =
+url =
+max_idle_conn =
+max_open_conn =
+ssl_mode = disable
+ca_cert_path =
+client_key_path =
+client_cert_path =
+server_cert_name =
+path = grafana.db
+[session]
+provider = file
+provider_config = sessions
+cookie_name = grafana_sess
+cookie_secure = false
+session_life_time = 86400
+gc_interval_time = 86400
+[dataproxy]
+logging = false
+[analytics]
+reporting_enabled = true
+check_for_updates = true
+google_analytics_ua_id =
+google_tag_manager_id =
+[security]
+admin_user = admin
+admin_password = admin
+secret_key = SW2YcwTIb9zpOOhoPsMm
+login_remember_days = 7
+cookie_username = grafana_user
+cookie_remember_name = grafana_remember
+disable_gravatar = false
+data_source_proxy_whitelist =
+[snapshots]
+external_enabled = true
+external_snapshot_url = https://snapshots-origin.raintank.io
+external_snapshot_name = Publish to snapshot.raintank.io
+snapshot_remove_expired = true
+snapshot_TTL_days = 90
+[users]
+allow_sign_up = true
+allow_org_create = true
+auto_assign_org = true
+auto_assign_org_role = Viewer
+verify_email_enabled = false
+login_hint = email or username
+default_theme = dark
+[auth]
+disable_login_form = false
+disable_signout_menu = false
+[auth.anonymous]
+enabled = false
+org_name = Main Org.
+org_role = Viewer
+[auth.github]
+enabled = false
+allow_sign_up = true
+client_id = some_id
+client_secret = some_secret
+scopes = user:email
+auth_url = https://github.com/login/oauth/authorize
+token_url = https://github.com/login/oauth/access_token
+api_url = https://api.github.com/user
+team_ids =
+allowed_organizations =
+[auth.google]
+enabled = false
+allow_sign_up = true
+client_id = some_client_id
+client_secret = some_client_secret
+scopes = https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email
+auth_url = https://accounts.google.com/o/oauth2/auth
+token_url = https://accounts.google.com/o/oauth2/token
+api_url = https://www.googleapis.com/oauth2/v1/userinfo
+allowed_domains =
+hosted_domain =
+[auth.grafananet]
+enabled = false
+allow_sign_up = true
+client_id = some_id
+client_secret = some_secret
+scopes = user:email
+allowed_organizations =
+[auth.grafana_com]
+enabled = false
+allow_sign_up = true
+client_id = some_id
+client_secret = some_secret
+scopes = user:email
+allowed_organizations =
+[auth.generic_oauth]
+name = OAuth
+enabled = false
+allow_sign_up = true
+client_id = some_id
+client_secret = some_secret
+scopes = user:email
+auth_url =
+token_url =
+api_url =
+team_ids =
+allowed_organizations =
+[auth.basic]
+enabled = true
+[auth.proxy]
+enabled = false
+header_name = X-WEBAUTH-USER
+header_property = username
+auto_sign_up = true
+ldap_sync_ttl = 60
+whitelist =
+[auth.ldap]
+enabled = false
+config_file = /etc/grafana/ldap.toml
+allow_sign_up = true
+[smtp]
+enabled = false
+host = localhost:25
+user =
+password =
+cert_file =
+key_file =
+skip_verify = false
+from_address = admin@grafana.localhost
+from_name = Grafana
+[emails]
+welcome_email_on_sign_up = false
+templates_pattern = emails/*.html
+[log]
+mode = console file
+level = info
+filters =
+[log.console]
+level =
+format = console
+[log.file]
+level =
+format = text
+log_rotate = true
+max_lines = 1000000
+max_size_shift = 28
+daily_rotate = true
+max_days = 7
+[log.syslog]
+level =
+format = text
+network =
+address =
+facility =
+tag =
+[event_publisher]
+enabled = false
+rabbitmq_url = amqp://localhost/
+exchange = grafana_events
+[dashboards.json]
+enabled = false
+path = /var/lib/grafana/dashboards
+[quota]
+enabled = false
+org_user = 10
+org_dashboard = 100
+org_data_source = 10
+org_api_key = 10
+user_org = 10
+global_user = -1
+global_org = -1
+global_dashboard = -1
+global_api_key = -1
+global_session = -1
+[alerting]
+enabled = true
+execute_alerts = true
+[metrics]
+enabled = true
+interval_seconds = 10
+[metrics.graphite]
+address =
+prefix = prod.grafana.%(instance_name)s.
+[grafana_net]
+url = https://grafana.com
+[grafana_com]
+url = https://grafana.com
+[external_image_storage]
+provider =
+[external_image_storage.s3]
+bucket_url =
+access_key =
+secret_key =
+[external_image_storage.webdav]
+url =
+username =
+password =
+public_url =
+</code></pre><h4 id="2-grafana-creates-exclusive-api-user-for-apphub">2. Grafana Creates Exclusive API User for AppHub</h4>
+<p>Sign in Grafana with Admin account (refer to Grafana configuration file for the username and password of Admin) for user operation</p>
+<p><img src="../assets/grafana_1.png" alt=""></p>
+<p>Create API user</p>
+<p><img src="../assets/grafana_2.png" alt=""></p>
+<p>Edit API user</p>
+<p><img src="../assets/grafana_3.png" alt=""></p>
+<p>Check Admin permissions</p>
+<p><img src="../assets/grafana_4.png" alt=""></p>
+<h4 id="Grafana&#x5BF9;&#x63A5;AppHub&#x4E4B;xml&#x914D;&#x7F6E;">3. Configure AppHub web.xml</h4>
+<pre><code>param-value of param-name (uav.apphub.sso.grafana.connection.info): 
+{
+&quot;api.url&quot;: &quot;http://127.0.0.1:3000&quot;,
+&quot;web.url&quot;: &quot;http://127.0.0.1:3000&quot;,
+&quot;datasource.opentsdb.url&quot;: &quot;http://127.0.0.1:4243&quot;,
+&quot;datasource.elasticsearch.url&quot;: &quot;http://127.0.0.1:9200&quot;,
+&quot;authorization.loginId&quot;: &quot;apiuser&quot;,
+&quot;authorization.loginPwd&quot;: &quot;apiuser&quot;,
+&quot;authorization.register.defPwd&quot;: &quot;1q@W3e&quot;,
+&quot;authorization.register.sleep.time&quot;: &quot;2000&quot;
+}
+</code></pre><p>Fields: </p>
+<pre><code>&quot;api.url&quot;: Grafana access address for API call
+&quot;web.url&quot;: login address (such as domain name) of Grafana after authorization
+&quot;datasource.opentsdb.url&quot;: OpenTSDB access address for dashboard creation
+&quot;datasource.elasticsearch.url&quot;: ES access address for dashboard creation
+&#x201C;authorization.loginId&#x201D;: exclusive API user account of Grafana
+&quot;authorization.loginPwd&quot;: exclusive API password of Grafana
+&quot;authorization.register.defPwd&quot;: uniform and default user password of Grafana for automatic registration
+&quot;authorization.register.sleep.time&quot;: time intervals between threads when AppHub accesses Grafana API. Asynchronous invocation requires requests to be accomplished with interactions.
+</code></pre><h3 id="initialize-dashboards">Initialize Dashboards</h3>
+<p>Application clusters of UAV correspond to dashboards of Grafana. Initialize dashboards of application clusters in the <a href="../../../uavdoc_useroperation/66.html">Intelligence Center</a> management page.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ldap.html" class="navigation navigation-prev " aria-label="Previous page: 1.6 LDAP">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../healmanagerInstall/healmanagerInstall.html" class="navigation navigation-next " aria-label="Next page: 2. Health Manager Installation">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"1.7 Grafana","level":"1.3.1.7","depth":3,"next":{"title":"2. Health Manager Installation","level":"1.3.2","depth":2,"path":"healmanagerInstall/healmanagerInstall.md","ref":"healmanagerInstall/healmanagerInstall.md","articles":[]},"previous":{"title":"1.6 LDAP","level":"1.3.1.6","depth":3,"path":"thirdparty/ldap.md","ref":"thirdparty/ldap.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"thirdparty/grafana.md","mtime":"2018-06-19T07:40:38.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T03:02:27.670Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

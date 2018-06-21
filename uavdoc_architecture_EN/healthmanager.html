@@ -1,0 +1,794 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Health Manager · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="healthmanager.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    UAV.Monitor+APM  Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="healthmanager.html">
+            
+                <a href="healthmanager.html">
+            
+                    
+                    Health Manager
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="healthmanager.html">
+            
+                <a href="healthmanager.html">
+            
+                    
+                    HM Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="healthmanager/hmfu-wu.html">
+            
+                <a href="healthmanager/hmfu-wu.html">
+            
+                    
+                    HM Servers
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="healthmanager/xin-tiao-shu-ju-fu-wu.html">
+            
+                <a href="healthmanager/xin-tiao-shu-ju-fu-wu.html">
+            
+                    
+                    Heartbeat Data Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="healthmanager/hua-xiang-shu-ju-fu-wu.html">
+            
+                <a href="healthmanager/hua-xiang-shu-ju-fu-wu.html">
+            
+                    
+                    Profile Data Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="healthmanager/shi-shi-shu-ju-fu-wu.html">
+            
+                <a href="healthmanager/shi-shi-shu-ju-fu-wu.html">
+            
+                    
+                    Monitoring Data Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="healthmanager/rong-qi-jie-dian-shu-ju-fu-wu.html">
+            
+                <a href="healthmanager/rong-qi-jie-dian-shu-ju-fu-wu.html">
+            
+                    
+                    Node Data Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="healthmanager/shi-shi-yu-jing-fu-wu.html">
+            
+                <a href="healthmanager/shi-shi-yu-jing-fu-wu.html">
+            
+                    
+                    Runtime Notification Server
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.5.1" data-path="healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-xin-xi-shu-ju-jie-gou-slice.html">
+            
+                <a href="healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-xin-xi-shu-ju-jie-gou-slice.html">
+            
+                    
+                    Notification Data Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5.2" data-path="healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-ce-lve.html">
+            
+                <a href="healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-ce-lve.html">
+            
+                    
+                    Notification Strategy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5.3" data-path="healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-ce-lve-biao-da-shi.html">
+            
+                <a href="healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-ce-lve-biao-da-shi.html">
+            
+                    
+                    Notification Strategy Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5.4" data-path="healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-tong-zhi-ge-shi.html">
+            
+                <a href="healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-tong-zhi-ge-shi.html">
+            
+                    
+                    Notification Format
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" data-path="healthmanager/yu-jing-zhong-xin-fu-wu.html">
+            
+                <a href="healthmanager/yu-jing-zhong-xin-fu-wu.html">
+            
+                    
+                    Notification Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.7" data-path="healthmanager/apphubfu-wu.html">
+            
+                <a href="healthmanager/apphubfu-wu.html">
+            
+                    
+                    AppHub Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.8" data-path="healthmanager/ri-zhi-fu-wu.html">
+            
+                <a href="healthmanager/ri-zhi-fu-wu.html">
+            
+                    
+                    Log Data Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.9" data-path="healthmanager/diao-yong-lian.html">
+            
+                <a href="healthmanager/diao-yong-lian.html">
+            
+                    
+                    APM Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.10" data-path="healthmanager/jie-kou-shuo-ming.html">
+            
+                <a href="healthmanager/jie-kou-shuo-ming.html">
+            
+                    
+                    HM Interface
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="monitoragent.html">
+            
+                <a href="monitoragent.html">
+            
+                    
+                    Monitor Agent
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="monitoragent.html">
+            
+                <a href="monitoragent.html">
+            
+                    
+                    MA Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="monitoragent/xin-tiao-ji-zhi.html">
+            
+                <a href="monitoragent/xin-tiao-ji-zhi.html">
+            
+                    
+                    Heartbeat Mechanism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="monitoragent/ying-yong-shu-ju-cai-ji.html">
+            
+                <a href="monitoragent/ying-yong-shu-ju-cai-ji.html">
+            
+                    
+                    Application Data Collection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="monitoragent/ying-yong-shu-ju-cai-ji/ying-yong-shi-shi-shu-ju.html">
+            
+                <a href="monitoragent/ying-yong-shu-ju-cai-ji/ying-yong-shi-shi-shu-ju.html">
+            
+                    
+                    Application Monitoring Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="monitoragent/ying-yong-shu-ju-cai-ji/ying-yong-hua-xiang-shu-ju.html">
+            
+                <a href="monitoragent/ying-yong-shu-ju-cai-ji/ying-yong-hua-xiang-shu-ju.html">
+            
+                    
+                    Application Profile Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="monitoragent/rong-qi-ji-jin-cheng-shu-ju-cai-ji.html">
+            
+                <a href="monitoragent/rong-qi-ji-jin-cheng-shu-ju-cai-ji.html">
+            
+                    
+                    Node and Process Data Collection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="monitoragent/shu-ju-gui-ji-ji-zhi.html">
+            
+                <a href="monitoragent/shu-ju-gui-ji-ji-zhi.html">
+            
+                    
+                    File Data Collection Mechanism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="monitoragent/jin-cheng-zhi-shou.html">
+            
+                <a href="monitoragent/jin-cheng-zhi-shou.html">
+            
+                    
+                    Process Lifekeeper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="monitoragent/jie-dian-kong-zhi.html">
+            
+                <a href="monitoragent/jie-dian-kong-zhi.html">
+            
+                    
+                    Node Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="moniorframework.html">
+            
+                <a href="moniorframework.html">
+            
+                    
+                    Monitor Framework
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="moniorframework.html">
+            
+                <a href="moniorframework.html">
+            
+                    
+                    MOF Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="moniorframework/mof-agent.html">
+            
+                <a href="moniorframework/mof-agent.html">
+            
+                    
+                    MOF Agent
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="moniorframework/supportor.html">
+            
+                <a href="moniorframework/supportor.html">
+            
+                    
+                    Supportor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="moniorframework/globalfilter.html">
+            
+                <a href="moniorframework/globalfilter.html">
+            
+                    
+                    GlobalFilter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="moniorframework/interceptframework.html">
+            
+                <a href="moniorframework/interceptframework.html">
+            
+                    
+                    InterceptFramework
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="moniorframework/captureframework.html">
+            
+                <a href="moniorframework/captureframework.html">
+            
+                    
+                    CaptureFramework
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="moniorframework/mofshu-ju-cai-ji.html">
+            
+                <a href="moniorframework/mofshu-ju-cai-ji.html">
+            
+                    
+                    MOF Data Collection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.7.1" data-path="moniorframework/shi-shi-shu-ju-sheng-cheng.html">
+            
+                <a href="moniorframework/shi-shi-shu-ju-sheng-cheng.html">
+            
+                    
+                    Monitoring Data Collection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.2" data-path="moniorframework/hua-xiang-shu-ju-cai-ji.html">
+            
+                <a href="moniorframework/hua-xiang-shu-ju-cai-ji.html">
+            
+                    
+                    Profile Data Collection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.3" data-path="moniorframework/diao-yong-lian-shu-ju-sheng-cheng.html">
+            
+                <a href="moniorframework/diao-yong-lian-shu-ju-sheng-cheng.html">
+            
+                    
+                    Invocation Chain Data Collection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.4" data-path="moniorframework/xian-cheng-fen-xi-shu-ju-cai-ji.html">
+            
+                <a href="moniorframework/xian-cheng-fen-xi-shu-ju-cai-ji.html">
+            
+                    
+                    Thread Analysis Data Collection
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Health Manager</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="health-manager">Health Manager</h1>
+<h1 id="hm-architecture">HM Architecture</h1>
+<h2 id="1-overall-architecture-and-characteristics">1. Overall architecture and characteristics</h2>
+<p>HM(HealthManager) is a comprehensive service center that supports the processing of the monitoring data, the profile data, the runtime notification data and log data. It calculates and processes all data in the UAVStack and provides related service support. Below is the overall architecture of HM: </p>
+<p><img src="assets/HM&#x67B6;&#x6784;.png" alt=""></p>
+<p>Below are characteristics of HM: </p>
+<ol>
+<li>HM is a deployable JAVA MAIN process program</li>
+<li>Each HM could integrate multiple features, each of which is with the single responsibility. Users shall customize the HM process by integrating features needed by the business </li>
+<li>HM can be deployed on different hosts based on the needs of users, forming an HM cluster</li>
+<li>The service interface of HM is visible to the higher level (business and other systems).</li>
+</ol>
+<h2 id="2-hm-workflow">2. HM workflow</h2>
+<p>Below are the overall workflow of HM: </p>
+<p><img src="assets/HM_&#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;.png" alt=""></p>
+<p>In UAVStack, MA collects the monitor data and profile data (except the heartbeat data) and delivers the data to the information middleware RocketMQ. Each feature in HM consumes its corresponding data and persists the data into different databases based on the message type. For instance, the monitoring server shall consume the monitor data in RocketMQ and persist the data into OpenTSDB while the profile data shall consume the profile data and persist the data into MongoDB. Refer to details in HM service. HM shall expose Http service interfaces, with which AppHub shall query and display data. Some external systems could access the monitoring data with such interfaces.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: UAV.Monitor+APM  Architecture">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="healthmanager.html" class="navigation navigation-next " aria-label="Next page: HM Architecture">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Health Manager","level":"1.2","depth":1,"next":{"title":"HM Architecture","level":"1.2.1","depth":2,"path":"healthmanager.md","ref":"healthmanager.md","articles":[]},"previous":{"title":"UAV.Monitor+APM  Architecture","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"healthmanager.md","mtime":"2018-06-21T02:55:56.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T03:02:19.043Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

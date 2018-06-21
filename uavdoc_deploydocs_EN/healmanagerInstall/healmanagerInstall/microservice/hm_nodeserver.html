@@ -1,0 +1,1204 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Node Server (hm_nodeserver) · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="hm_apmserver.html" />
+    
+    
+    <link rel="prev" href="ri-zhi-fu-52a128-hm-logserver.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    UAV.Monitor+APM Installation and Deployment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../../quickstart.html">
+            
+                <a href="../../../quickstart.html">
+            
+                    
+                    Demo Version Deployment
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../../quick_install_windows.html">
+            
+                <a href="../../../quick_install_windows.html">
+            
+                    
+                    Windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../../quick_install_linux.html">
+            
+                <a href="../../../quick_install_linux.html">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../../quick_install_mac.html">
+            
+                <a href="../../../quick_install_mac.html">
+            
+                    
+                    Mac
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../../uavserviceDeploy.html">
+            
+                <a href="../../../uavserviceDeploy.html">
+            
+                    
+                    Core Service Installation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../../thirdparty.html">
+            
+                <a href="../../../thirdparty.html">
+            
+                    
+                    1. Third-party Service Preparation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../../thirdparty/rocketmq.html">
+            
+                <a href="../../../thirdparty/rocketmq.html">
+            
+                    
+                    1.1 RocketMQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../../../thirdparty/opentsdb.html">
+            
+                <a href="../../../thirdparty/opentsdb.html">
+            
+                    
+                    1.2 OpenTSDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../../../thirdparty/mongodb.html">
+            
+                <a href="../../../thirdparty/mongodb.html">
+            
+                    
+                    1.3 MongoDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../../../thirdparty/redis.html">
+            
+                <a href="../../../thirdparty/redis.html">
+            
+                    
+                    1.4 Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../../../thirdparty/elasticsearch.html">
+            
+                <a href="../../../thirdparty/elasticsearch.html">
+            
+                    
+                    1.5 ElasticSearch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../../../thirdparty/ldap.html">
+            
+                <a href="../../../thirdparty/ldap.html">
+            
+                    
+                    1.6 LDAP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../../../thirdparty/grafana.html">
+            
+                <a href="../../../thirdparty/grafana.html">
+            
+                    
+                    1.7 Grafana
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../healmanagerInstall.html">
+            
+                <a href="../../healmanagerInstall.html">
+            
+                    
+                    2. Health Manager Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../healmanagerInstall.html">
+            
+                <a href="../../healmanagerInstall.html">
+            
+                    
+                    2.1 Intallation and Configuration
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../standalone.html">
+            
+                <a href="../standalone.html">
+            
+                    
+                    2.1.1 AllInOne Deployment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../microservice.html">
+            
+                <a href="../microservice.html">
+            
+                    
+                    2.1.2 Distributed Deployment
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.2.1" data-path="hm-hbserver.html">
+            
+                <a href="hm-hbserver.html">
+            
+                    
+                    Heartbeat Server (hm_hbserver)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.2" data-path="hm_moserver.html">
+            
+                <a href="hm_moserver.html">
+            
+                    
+                    Monitoring Server (hm_moserver)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.3" data-path="hm_pfntfyserver.html">
+            
+                <a href="hm_pfntfyserver.html">
+            
+                    
+                    Profile and Notification Server (hm_pfntfyserver)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.4" data-path="hm_apphubmgr.html">
+            
+                <a href="hm_apphubmgr.html">
+            
+                    
+                    AppHub Manager (hm_apphubmgr)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.5" data-path="hm_rtserver.html">
+            
+                <a href="hm_rtserver.html">
+            
+                    
+                    Runtime Notification Server (hm_rtserver)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.6" data-path="ri-zhi-fu-52a128-hm-logserver.html">
+            
+                <a href="ri-zhi-fu-52a128-hm-logserver.html">
+            
+                    
+                    Log Server (hm_logserver)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.3.2.7" data-path="hm_nodeserver.html">
+            
+                <a href="hm_nodeserver.html">
+            
+                    
+                    Node Server (hm_nodeserver)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.8" data-path="hm_apmserver.html">
+            
+                <a href="hm_apmserver.html">
+            
+                    
+                    APM Server (hm_apmserver)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.9" data-path="upgrade-server.html">
+            
+                <a href="upgrade-server.html">
+            
+                    
+                    Upgrade Server (upgrade_server)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.10" data-path="profile-and-notification-and-heartbeat-server.html">
+            
+                <a href="profile-and-notification-and-heartbeat-server.html">
+            
+                    
+                    Profile & Notification & Heartbeat Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../hm_start&stop.html">
+            
+                <a href="../../hm_start&stop.html">
+            
+                    
+                    2.2 Start and Stop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../issues.html">
+            
+                <a href="../../issues.html">
+            
+                    
+                    2.3 FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../../../apphub_Install/apphub_Install.html">
+            
+                <a href="../../../apphub_Install/apphub_Install.html">
+            
+                    
+                    3. AppHub Installation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.1" data-path="../../../apphub_Install/apphub_Install.html">
+            
+                <a href="../../../apphub_Install/apphub_Install.html">
+            
+                    
+                    3.1 Installation and Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.2" data-path="../../../apphub_Install/apphub_Install.html">
+            
+                <a href="../../../apphub_Install/apphub_Install.html">
+            
+                    
+                    3.2 Start and Login
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.3" data-path="../../../apphub_Install/issues.html">
+            
+                <a href="../../../apphub_Install/issues.html">
+            
+                    
+                    3.3 FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../../upgrade.html">
+            
+                <a href="../../../upgrade.html">
+            
+                    
+                    Upgrade
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../../Agent.html">
+            
+                <a href="../../../Agent.html">
+            
+                    
+                    Client Probe Installation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../../uavagentInstall/ma_install.html">
+            
+                <a href="../../../uavagentInstall/ma_install.html">
+            
+                    
+                    1. Monitor Agent Installation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../../../uavagentInstall/ma_install.html">
+            
+                <a href="../../../uavagentInstall/ma_install.html">
+            
+                    
+                    1.1 Installation and Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../../../uavagentInstall/ma_start_stop.html">
+            
+                <a href="../../../uavagentInstall/ma_start_stop.html">
+            
+                    
+                    1.2 Start and Stop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="../../../uavagentInstall/issues.html">
+            
+                <a href="../../../uavagentInstall/issues.html">
+            
+                    
+                    1.3 FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../../mof_install/mof_install.html">
+            
+                <a href="../../../mof_install/mof_install.html">
+            
+                    
+                    2. Monitor Framework Access
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../../../mof_install/mof_install.html">
+            
+                <a href="../../../mof_install/mof_install.html">
+            
+                    
+                    2.1 Installation and Uninstallation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../../../mof_install/example.html">
+            
+                <a href="../../../mof_install/example.html">
+            
+                    
+                    2.2 MOF Access Instance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.3" data-path="../../../mof_install/issues.html">
+            
+                <a href="../../../mof_install/issues.html">
+            
+                    
+                    2.3 FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../../docker/uavagent.html">
+            
+                <a href="../../../docker/uavagent.html">
+            
+                    
+                    3. Docker Deployment
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../../../docker/uavagent.html">
+            
+                <a href="../../../docker/uavagent.html">
+            
+                    
+                    3.1 MA Deployment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="../../../docker/mof.html">
+            
+                <a href="../../../docker/mof.html">
+            
+                    
+                    3.2 MOF Deployment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.3" data-path="../../../docker/33-chang-jian-wen-ti.html">
+            
+                <a href="../../../docker/33-chang-jian-wen-ti.html">
+            
+                    
+                    3.3 FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../hm_configration.html">
+            
+                <a href="../../hm_configration.html">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../hm_configration.html">
+            
+                <a href="../../hm_configration.html">
+            
+                    
+                    1. HM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../../apphub_Install/apphub_configuration.html">
+            
+                <a href="../../../apphub_Install/apphub_configuration.html">
+            
+                    
+                    2. AppHub
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../../uavagentInstall/ma_configuration.html">
+            
+                <a href="../../../uavagentInstall/ma_configuration.html">
+            
+                    
+                    3. MA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../../mof_install/mof_configuration.html">
+            
+                <a href="../../../mof_install/mof_configuration.html">
+            
+                    
+                    4. MOF
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../../chang-jian-wen-ti.html">
+            
+                <a href="../../../chang-jian-wen-ti.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >Node Server (hm_nodeserver)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="node-server">Node Server</h1>
+<p>Configuration file hm_pro(test)_nodeserver.properties</p>
+<h2 id="log-configuration">Log configuration</h2>
+<h5 id="loglevelinfo">log.level=INFO</h5>
+<p>INFO, ERR, WARNING, DEBUG, FINE, FINER and ALL</p>
+<h5 id="logdebugfalse">log.debug=false</h5>
+<p>Enable debug logging or not</p>
+<h5 id="logfsize10">log.fsize=10</h5>
+<p>Size of single output block of logs</p>
+<h5 id="logbuffersize150">log.buffersize=150</h5>
+<p>Collect log file every 150 rows</p>
+<h5 id="logcollectenablefalse">log.collectEnable=false</h5>
+<p>Collect logs or not</p>
+<h5 id="logcollectmatch">log.collectMatch=</h5>
+<p>Regex match to collect specified logs</p>
+<h5 id="metadatacenterid1">meta.datacenterid=1</h5>
+<p>Configure data center ID</p>
+<h5 id="metanodetypeu5e94u7528u5bb9u5668u6570u636eu670du52a1">meta.nodetype=\u5E94\u7528\u5BB9\u5668\u6570\u636E\u670D\u52A1</h5>
+<p>Node name and UTF8 code</p>
+<h2 id="basic-feature-configuration">Basic Feature Configuration</h2>
+<h3 id="message-producer-message-producer">message producer: Message Producer</h3>
+<h5 id="resourcemessageproducerclassorguavstackresourcescommonmessagingmessageproducerresourcecomponent">resource.messageproducer.class=org.uavstack.resources.common.messaging.MessageProducerResourceComponent</h5>
+<p>Main component class of message producer</p>
+<h5 id="resourcemessageproducerproperties">resource.messageproducer.properties=</h5>
+<p>Property configuraion, for example: key1=value1,key2=value2,...</p>
+<h5 id="resourcemessageproducermessagingnameserver127001987612700198761270019876">resource.messageproducer.messagingnameserver=127.0.0.1:9876;127.0.0.1:9876;127.0.0.1:9876</h5>
+<p>Address of the message middleware server RocketMQ. Separate multiple addresses with &#x201C;;&#x201D;</p>
+<h5 id="resourcemessageproducermessagingthreshold30">resource.messageproducer.messagingthreshold=30</h5>
+<p>Threshold value for message compression. Send compressed messages when the message size (in kb) exceeds the threshold value</p>
+<h3 id="system-http-invoker-http-clinet-invocation">System Http invoker: Http Clinet Invocation</h3>
+<h5 id="resourcehttpinvokeclassorguavstackresourcescommoninvokerhttpinvokerresourcecomponent">resource.httpinvoke.class=org.uavstack.resources.common.invoker.HttpInvokerResourceComponent</h5>
+<p>Component class of Http invocation</p>
+<h5 id="resourcehttpinvokeproperties">resource.httpinvoke.properties=</h5>
+<p>Property configuraion, for example: key1=value1,key2=value2,...</p>
+<h5 id="resourcehttpinvokehttpclientmaxperroute20">resource.httpinvoke.http.client.maxperroute=20</h5>
+<p>Maximum client connection per route</p>
+<h5 id="resourcehttpinvokehttpclientmaxtotal100">resource.httpinvoke.http.client.maxtotal=100</h5>
+<p>Maximum client connection</p>
+<h5 id="resourcehttpinvokehttpclientsotimeout10000">resource.httpinvoke.http.client.sotimeout=10000</h5>
+<p>Timeout period of the client socket connection, in ms</p>
+<h5 id="resourcehttpinvokehttpclientconntimeout10000">resource.httpinvoke.http.client.conntimeout=10000</h5>
+<p>Timeout period of the client connection, in ms</p>
+<h5 id="resourcehttpinvokehttpclientreqtimeout10000">resource.httpinvoke.http.client.reqtimeout=10000</h5>
+<p>Timeout period of the client request, in ms</p>
+<h3 id="nodeoperagent-node-control-feature">nodeoperagent: Node Control Feature</h3>
+<h5 id="featurenodeoperagentloadercomcrediteaseuavagentheartbeatjar">feature.nodeoperagent.loader=com.creditease.uav.agent.heartbeat.jar</h5>
+<p>Main jar of the node control feature for classloader isolation</p>
+<h5 id="featurenodeoperagentenabletrue">feature.nodeoperagent.enable=true</h5>
+<p>Enable the node control feature</p>
+<h5 id="featurenodeoperagentcomponentscomcrediteaseagentfeaturenodeoperagent">feature.nodeoperagent.components=com.creditease.agent.feature.NodeOperAgent</h5>
+<p>Main class of the node control feature</p>
+<h5 id="featurenodeoperagenthttpport10145">feature.nodeoperagent.http.port=10145</h5>
+<p>Port of node control server</p>
+<h3 id="notifyagent-notification-feature">notifyagent: Notification Feature</h3>
+<h5 id="featurenotifyagentloadercomcrediteaseuavnotifymanagerjar">feature.notifyagent.loader=com.creditease.uav.notifymanager.jar</h5>
+<p>Main jar of the node notification feature for classloader isolation</p>
+<h5 id="featurenotifyagentenabletrue">feature.notifyagent.enable=true</h5>
+<p>Enable the notification feature</p>
+<h5 id="featurenotifyagentcomponentscomcrediteaseagentfeatureglobalnotificationagent">feature.notifyagent.components=com.creditease.agent.feature.GlobalNotificationAgent</h5>
+<p>Main class of the notification feature</p>
+<h5 id="featurenotifyagentproperties">feature.notifyagent.properties=</h5>
+<p>Property configuraion, for example: key1=value1,key2=value2,...</p>
+<h5 id="featurenotifyagentnotifyhandlerscomcrediteaseagentfeatureglobalnotifyhandlersnotificationeventpublishhandler">feature.notifyagent.notifyhandlers=com.creditease.agent.feature.globalnotify.handlers.NotificationEventPublishHandler</h5>
+<p>Main class of the notification feature</p>
+<h5 id="featurenotifyagentexpiretime14400">feature.notifyagent.expireTime=14400</h5>
+<p>Expiration time of the notification event, in s</p>
+<h5 id="featurenotifyagentfrozentime300">feature.notifyagent.frozenTime=300</h5>
+<p>Frozen time of the notification event, in s</p>
+<h3 id="heartbeatclientagent-heartbeat-client-feature">heartbeatclientagent: Heartbeat Client Feature</h3>
+<h5 id="featurehbclientagentloadercomcrediteaseuavagentheartbeatjar">feature.hbclientagent.loader=com.creditease.uav.agent.heartbeat.jar</h5>
+<p>Main jar of the heartbeat client feature for classloader isolation</p>
+<h5 id="featurehbclientagentenabletrue">feature.hbclientagent.enable=true</h5>
+<p>Enable the heartbeat client feature</p>
+<h5 id="featurehbclientagentcomponentscomcrediteaseagentfeatureheartbeatclientagent">feature.hbclientagent.components=com.creditease.agent.feature.HeartBeatClientAgent</h5>
+<p>Main class of the heartbeat client feature</p>
+<h5 id="featurehbclientagentproperties">feature.hbclientagent.properties=</h5>
+<p>Property configuraion, for example: key1=value1,key2=value2,...</p>
+<h5 id="featurehbclientagenthbhandlerscomcrediteaseagentfeaturehbagenthandlershbclientdefaulthandler">feature.hbclientagent.hbhandlers=com.creditease.agent.feature.hbagent.handlers.HBClientDefaultHandler</h5>
+<p>Handler class of heartbeat delivery</p>
+<h5 id="featurehbclientagenthbservers1270018011&#xFF0C;12700180111270018011127001801112700180111270018011">feature.hbclientagent.hbservers=127.0.0.1:8011&#xFF0C;127.0.0.1:8011,127.0.0.1:8011,127.0.0.1:8011,127.0.0.1:8011,127.0.0.1:8011</h5>
+<p>Heartbeat server address</p>
+<h5 id="featurehbclientagentinterval15000">feature.hbclientagent.interval=15000</h5>
+<p>Heartbeat delivery interval, in ms</p>
+<h2 id="functional-feature-configuration">Functional Feature Configuration</h2>
+<h3 id="healthmanager-node-server-feature">HealthManager: Node Server Feature</h3>
+<h5 id="featurehealthmanagerloadercomcrediteaseuavhealthmanager-10jar">feature.healthmanager.loader=com.creditease.uav.healthmanager-1.0.jar</h5>
+<p>Main jar of the Health Manager feature for classloader isolation</p>
+<h5 id="featurehealthmanagerenabletrue">feature.healthmanager.enable=true</h5>
+<p>Enable the Health Manager feature</p>
+<h5 id="featurehealthmanagercomponentscomcrediteaseuavfeaturehealthmanager">feature.healthmanager.components=com.creditease.uav.feature.HealthManager</h5>
+<p>Main class of the Health Manager feature</p>
+<h5 id="featurehealthmanagerproperties">feature.healthmanager.properties=</h5>
+<p>Property configuration, for example:  key1=value1,key2=value2,...</p>
+<h5 id="featurehealthmanagermessagingnameserver127001987612700198761270019876">feature.healthmanager.messagingnameserver=127.0.0.1:9876;127.0.0.1:9876;127.0.0.1:9876</h5>
+<p>MQ address of the message queue of the HM monitoring data. Separate multiple addresses with &#x201C;,&#x201D;</p>
+<h5 id="featurehealthmanagermtmonitorconsumethreadmax10">feature.healthmanager.MT_Monitor.consumethreadmax=10</h5>
+<p>Maximum thread count consumed by the monitoring data</p>
+<h5 id="featurehealthmanagermtnotifyconsumethreadmax10">feature.healthmanager.MT_Notify.consumethreadmax=10</h5>
+<p>Maximum thread count consumed by the notification data</p>
+<h5 id="featurehealthmanagermtprofileconsumethreadmax10">feature.healthmanager.MT_Profile.consumethreadmax=10</h5>
+<p>Maximum thread count consumed by the profile data</p>
+<h5 id="featurehealthmanagermtnodeconsumethreadmax10">feature.healthmanager.MT_Node.consumethreadmax=10</h5>
+<p>Maximum thread count consumed by the node data</p>
+<h5 id="featurehealthmanagermtmonitorconsumestopinterval0">feature.healthmanager.MT_Monitorconsumestopinterval=0</h5>
+<p>Consumption interval of the monitoring data, in ms</p>
+<h5 id="featurehealthmanagermtnotifyconsumestopinterval0">feature.healthmanager.MT_Notify.consumestopinterval=0</h5>
+<p>Consumption interval of the notification data, in ms</p>
+<h5 id="featurehealthmanagermtprofileconsumestopinterval0">feature.healthmanager.MT_Profile.consumestopinterval=0</h5>
+<p>Consumption interval of the profile data, in ms</p>
+<h5 id="featurehealthmanagermtnodeconsumestopinterval0">feature.healthmanager.MT_Node.consumestopinterval=0</h5>
+<p>Consumption interval of the node data, in ms</p>
+<h5 id="featurehealthmanagermtmonitorenablefalse">feature.healthmanager.MT_Monitor.enable=false</h5>
+<p>Enable monitoring data consumption or not</p>
+<h5 id="featurehealthmanagermtnotifyenablefalse">feature.healthmanager.MT_Notify.enable=false</h5>
+<p>Enable notification data consumption or not</p>
+<h5 id="featurehealthmanagermtprofileenablefalse">feature.healthmanager.MT_Profile.enable=false</h5>
+<p>Enable profile data consumption or not</p>
+<h5 id="featurehealthmanagermtnodeenabletrue">feature.healthmanager.MT_Node.enable=true</h5>
+<p>Enable node data consumption or not</p>
+<h5 id="featurehealthmanagerhealthmangerhandlerscomcrediteaseuavfeaturehealthmanagerhttphandlershmdatastorequeryhandlercomcrediteaseuavfeaturehealthmanagerhttphandlershmcachequeryhandler">feature.healthmanager.healthMangerHandlers=com.creditease.uav.feature.healthmanager.http.handlers.HMDataStoreQueryHandler,com.creditease.uav.feature.healthmanager.http.handlers.HMCacheQueryHandler</h5>
+<p>Handler class of the node data query server</p>
+<h5 id="featurehealthmanagerhttpport8045">feature.healthmanager.http.port=8045</h5>
+<p>Port of the node server</p>
+<h5 id="featurehealthmanagerhttpbacklog10">feature.healthmanager.http.backlog=10</h5>
+<p>Length of the connection queue of the node data server</p>
+<h5 id="featurehealthmanagerhttpcore10">feature.healthmanager.http.core=10</h5>
+<p>Core thread count of the node data server</p>
+<h5 id="featurehealthmanagerhttpmax200">feature.healthmanager.http.max=200</h5>
+<p>Maximum thread count of the node data server</p>
+<h5 id="featurehealthmanagerhttpbqsize5">feature.healthmanager.http.bqsize=5</h5>
+<p>Queue length of the node data server</p>
+<h3 id="profile-data-cache-profile-data-cache">profile data cache: Profile Data Cache</h3>
+<h5 id="featurehealthmanagerlifekeeperenablefalse">feature.healthmanager.lifekeeper.enable=false</h5>
+<p>Enable the heartbeat lifekeeper or not</p>
+<h5 id="featurehealthmanagerlifekeeperinterval60000">feature.healthmanager.lifekeeper.interval=60000</h5>
+<p>Time interval of heartbeat lifekeeper, in ms</p>
+<h5 id="featurehealthmanagerstoreaddr1270016379">feature.healthmanager.store.addr=127.0.0.1:6379</h5>
+<p>Address of node data cache(Redis)</p>
+<h5 id="featurehealthmanagerstoreconcurrentmin100">feature.healthmanager.store.concurrent.min=100</h5>
+<p>Minimum thread count in the thread pool of the Redis client</p>
+<h5 id="featurehealthmanagerstoreconcurrentmax500">feature.healthmanager.store.concurrent.max=500</h5>
+<p>Maximum thread count in the thread pool of the Redis client</p>
+<h5 id="featurehealthmanagerstoreconcurrentbqsize5">feature.healthmanager.store.concurrent.bqsize=5</h5>
+<p>Queue length in the thread pool of the Redis client</p>
+<h5 id="featurehealthmanagerstoreconcurrentpwd">feature.healthmanager.store.concurrent.pwd=</h5>
+<p>Redis password</p>
+<h3 id="featuredbsourcemongodb4profile">feature.DBSource.MongoDB4Profile</h3>
+<h5 id="featurehealthmanagermtprofiledsenabletrue">feature.healthmanager.MT_Profile.ds.enable=true</h5>
+<p>Enable profile data storage (MongoDB) or not</p>
+<h5 id="featurehealthmanagermtprofiledsservers12700127017">feature.healthmanager.MT_Profile.ds.servers=127.0.0.1:27017</h5>
+<p>Address of the data source (MongoDB) that stores the profile data</p>
+<h5 id="featurehealthmanagermtprofiledsdbprofiledatastore">feature.healthmanager.MT_Profile.ds.db=profileDataStore</h5>
+<p>Name of the database (MongoDB) that stores the profile data</p>
+<h5 id="featurehealthmanagermtprofiledspowerprofiledatastore">feature.healthmanager.MT_Profile.ds.power=profileDataStore</h5>
+<p>Access to the database MongoDB that stores the profile data</p>
+<h5 id="featurehealthmanagermtprofiledsusr">feature.healthmanager.MT_Profile.ds.usr=</h5>
+<p>Username of MongoDB that stores the profile data</p>
+<h5 id="featurehealthmanagermtprofiledspwd">feature.healthmanager.MT_Profile.ds.pwd=</h5>
+<p>Password of MongoDB that stores the profile data</p>
+<h3 id="featuredbsourcemongodb4notification">feature.DBSource.MongoDB4Notification</h3>
+<h5 id="featurehealthmanagermtnotifydsenabletrue">feature.healthmanager.MT_Notify.ds.enable=true</h5>
+<p>Enable notification data storage (MongoDB) or not </p>
+<h5 id="featurehealthmanagermtnotifydsservers12700127017">feature.healthmanager.MT_Notify.ds.servers=127.0.0.1:27017</h5>
+<p>Address of the data source (MongoDB) that stores the notification data</p>
+<h5 id="featurehealthmanagermtnotifydsdbnotifydatastore">feature.healthmanager.MT_Notify.ds.db=notifyDataStore</h5>
+<p>Name of the database MongoDB that stores the notification data</p>
+<h5 id="featurehealthmanagermtnotifydspowernotifydatastore">feature.healthmanager.MT_Notify.ds.power=notifyDataStore</h5>
+<p>Access to the database MongoDB that stores the notification data</p>
+<h5 id="featurehealthmanagermtnotifydsusr">feature.healthmanager.MT_Notify.ds.usr=</h5>
+<p>Username of the database MongoDB that stores the notification data</p>
+<h5 id="featurehealthmanagermtnotifydspwd">feature.healthmanager.MT_Notify.ds.pwd=</h5>
+<p>Password of the database MongoDB that stores the notification data</p>
+<h3 id="featuredbsourceopentsdb4monitor">feature.DBSource.OpenTSDB4Monitor</h3>
+<h5 id="featurehealthmanagermtmonitordsenabletrue">feature.healthmanager.MT_Monitor.ds.enable=true</h5>
+<p>Enable monitoring data storage (OpenTSDB) or not</p>
+<h5 id="featurehealthmanagermtmonitordsservers12700142431270014243">feature.healthmanager.MT_Monitor.ds.servers=127.0.0.1:4243,127.0.0.1:4243</h5>
+<p>Address of the data source (OpenTSDB) that stores the monitoring data</p>
+<h5 id="featurehealthmanagermtmonitordsdbmonitordatastore">feature.healthmanager.MT_Monitor.ds.db=monitorDataStore</h5>
+<p>Name of the database OpenTSDB that stores the monitoring data</p>
+<h5 id="featurehealthmanagermtmonitordsmaxperroute100">feature.healthmanager.MT_Monitor.ds.maxPerRoute=100</h5>
+<p>Maximum client connection per route of the database OpenTSDB that stores monitoring data</p>
+<h5 id="featurehealthmanagermtmonitordsmaxroute500">feature.healthmanager.MT_Monitor.ds.maxRoute=500</h5>
+<p>Maximum client connection of the database OpenTSDB that stores the monitoring data</p>
+<h5 id="featurehealthmanagermtmonitordssotimeout10000">feature.healthmanager.MT_Monitor.ds.soTimeout=10000</h5>
+<p>Timeout period of the client socket connection of the database OpenTSDB that stores the monitoring data, in ms</p>
+<h5 id="featurehealthmanagermtmonitordsconntimeout5000">feature.healthmanager.MT_Monitor.ds.connTimeout=5000</h5>
+<p>Timeout period of the client connection of the database OpenTSDB that stores the monitoring data, in ms</p>
+<h5 id="featurehealthmanagermtmonitordsreqtimeout5000">feature.healthmanager.MT_Monitor.ds.reqTimeout=5000</h5>
+<p>Timeout period of the client request of the databse OpenTSDB that stores the monitoring data, in ms</p>
+<h5 id="featurehealthmanagermtmonitordsbatchsize500">feature.healthmanager.MT_Monitor.ds.batchsize=500</h5>
+<p>Batch processing size of the database OpenTSDB that stores the monitoring data</p>
+<h5 id="featurehealthmanagermtmonitordsretry1">feature.healthmanager.MT_Monitor.ds.retry=1</h5>
+<p>Number of retries after delivery failure of the database OpenTSDB that stores the monitoring data</p>
+<h5 id="featurehealthmanagermtmonitordsexpire30000">feature.healthmanager.MT_Monitor.ds.expire=30000</h5>
+<p>Expiration time of the operation to the database OpenTSDB  that stores the monitoring data</p>
+<h5 id="featurehealthmanagermtmonitordscachetime5">feature.healthmanager.MT_Monitor.ds.cachetime=5</h5>
+<p>Data cache time of the database OpenTSDB that stores the monitoring data</p>
+<h3 id="featuredbsourceopentsdb4node">feature.DBSource.OpenTSDB4Node</h3>
+<h5 id="featurehealthmanagermtnodedsenabletrue">feature.healthmanager.MT_Node.ds.enable=true</h5>
+<p>Enable node data storage (OpenTSDB) or not</p>
+<h5 id="featurehealthmanagermtnodedsservers12700142431270014243">feature.healthmanager.MT_Node.ds.servers=127.0.0.1:4243,127.0.0.1:4243</h5>
+<p>Address of the datasource OpenTSDB that stores the node data</p>
+<h5 id="featurehealthmanagermtnodedsdbnodedatastore">feature.healthmanager.MT_Node.ds.db=nodeDataStore</h5>
+<p>Name of the database OpenTSDB that stores the node data</p>
+<h5 id="featurehealthmanagermtnodedsmaxperroute10">feature.healthmanager.MT_Node.ds.maxPerRoute=10</h5>
+<p>Maximum client connection per route of the database OpenTSDB datastore that stores the node data</p>
+<h5 id="featurehealthmanagermtnodedsmaxroute50">feature.healthmanager.MT_Node.ds.maxRoute=50</h5>
+<p>Maximum client connection of the database OpenTSDB that stores the node data</p>
+<h5 id="featurehealthmanagermtnodedssotimeout10000">feature.healthmanager.MT_Node.ds.soTimeout=10000</h5>
+<p>Timeout period of the client socket connection of the database OpenTSDB that stores the node data, in ms</p>
+<h5 id="featurehealthmanagermtnodedsconntimeout5000">feature.healthmanager.MT_Node.ds.connTimeout=5000</h5>
+<p>Timeout period of the client connection of the database OpenTSDB that stores the node data, in ms</p>
+<h5 id="featurehealthmanagermtnodedsreqtimeout3000">feature.healthmanager.MT_Node.ds.reqTimeout=3000</h5>
+<p>Timeout period of the client request of the database OpenTSDB that stores the node data, in ms</p>
+<h5 id="featurehealthmanagermtnodedsretry3">feature.healthmanager.MT_Node.ds.retry=3</h5>
+<p>Number of retries after delivery failure of the database OpenTSDB that stores the node data</p>
+<h5 id="featurehealthmanagermtnodedsbatchsize50">feature.healthmanager.MT_Node.ds.batchsize=50</h5>
+<p>Batch processing size of the database OpenTSDB that stores the node data</p>
+<h5 id="featurehealthmanagermtnodedsexpire30000">feature.healthmanager.MT_Node.ds.expire=30000</h5>
+<p>Expiration time of the operation to the database OpenTSDB that stores the node data</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ri-zhi-fu-52a128-hm-logserver.html" class="navigation navigation-prev " aria-label="Previous page: Log Server (hm_logserver)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="hm_apmserver.html" class="navigation navigation-next " aria-label="Next page: APM Server (hm_apmserver)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Node Server (hm_nodeserver)","level":"1.3.3.2.7","depth":4,"next":{"title":"APM Server (hm_apmserver)","level":"1.3.3.2.8","depth":4,"path":"healmanagerInstall/healmanagerInstall/microservice/hm_apmserver.md","ref":"healmanagerInstall/healmanagerInstall/microservice/hm_apmserver.md","articles":[]},"previous":{"title":"Log Server (hm_logserver)","level":"1.3.3.2.6","depth":4,"path":"healmanagerInstall/healmanagerInstall/microservice/ri-zhi-fu-52a128-hm-logserver.md","ref":"healmanagerInstall/healmanagerInstall/microservice/ri-zhi-fu-52a128-hm-logserver.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"healmanagerInstall/healmanagerInstall/microservice/hm_nodeserver.md","mtime":"2018-06-20T11:03:22.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T03:02:27.670Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
