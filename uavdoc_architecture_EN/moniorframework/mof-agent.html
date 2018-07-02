@@ -284,7 +284,7 @@
                 <a href="../healthmanager/apphubfu-wu.html">
             
                     
-                    AppHub Server
+                    AppHub Manager
             
                 </a>
             
@@ -457,7 +457,7 @@
                 <a href="../monitoragent/jin-cheng-zhi-shou.html">
             
                     
-                    Process Lifekeeper
+                    Process Keep-alive
             
                 </a>
             
@@ -697,45 +697,52 @@
                                 <section class="normal markdown-section">
                                 
                                 <h2 id="mof-agent">MOF Agent</h2>
-<h4 id="component-diagram-of-mof-agent-">Component diagram of MOF Agent <img src="../assets/mof-agent_1.PNG" alt=""></h4>
+<h4 id="mof-agent-components">MOF Agent Components</h4>
+<p><img src="../assets/mof-agent_1.PNG" alt=""></p>
 <ul>
 <li><p>Main principle of MOF Agent:</p>
-<p>Transfer the logic that the pre-loaded codes monitor businesses with JavaAgent</p>
+<p>Build in the logic which enables the pre-loaded codes to monitor the businesses with JavaAgent</p>
 </li>
 <li><p>Core components:<br>MOFAgent<br>MOFClsTransformer<br>MOFAdaptor<br>MOFInterceptor</p>
 </li>
 <li><p>Core technologies:<br>JavaAgent<br>Javassist</p>
 </li>
 </ul>
-<h4 id="hook-principle-of-mof-agent-tomcatmscp">Hook principle of MOF Agent TomCat/MSCP</h4>
+<h4 id="hooking-principle-of-mof-agent-tomcatmscp">Hooking Principle of MOF Agent TomCat/MSCP</h4>
 <ul>
-<li><p>TomcatAdaptor/MSCPAdaptor hooking:</p>
-<p>TomcatAdaptor/MSCPAdaptor has two methods, namely onStartup and onLoadClass:<br>onStartup loads the targeted hook class and builts in bytecodes during the initialization;<br>onLoadClass hooks codes in the business logic and builts in bytecodes of the UAV monitoring codes.</p>
+<li><p>TomcatAdaptor/MSCPAdaptor hooking: 
+TomcatAdaptor/MSCPAdaptor uses two methods, namely onStartup and onLoadClass: </p>
+<pre><code>onStartup loads the targeted hooking class and builts in bytecodes during initialization;  
+onLoadClass hooks codes in the business logic and builts in bytecodes of UAV monitoring codes.
+</code></pre></li>
+<li><p>TomcatIT/MSCPIT parsing:
+TomcatIT/MSCPIT correponds to class loading and configuration file initialization when TomcatAdaptor/MSCPIT executes onStartup.</p>
 </li>
-<li><p>TomcatIT/MSCPIT parsing:</p>
-<p>TomcatIT/MSCPIT correponds to class loading and configuration file initialization when TomcatAdaptor/MSCPIT executes onStartup.</p>
+<li><p>TomcatPlusIT/MSCPPlusIT parsing:
+TomcatPlusIT/MSCPPlusIT corresponds to different classes that execute onLoadClass in TomcatAdaptor/MSCPPlusIT and the monitoring logic executed in the method.</p>
 </li>
-<li><p>TomcatPlusIT/MSCPPlusIT parsing:</p>
-<p>TomcatPlusIT/MSCPPlusIT corresponds to different classes that execute onLoadClass in TomcatAdaptor/MSCPPlusIT and the monitoring logic executed in the method.</p>
-</li>
-<li><p>Key hook targets and functionality of Tomcat/MSCP:<br>Key hook targets of Tomcat:<br>Bootstrap(createClassLoader)--&gt;Tomcat loads MOFJar package during initialization and initializes the configuration file<br>Connector(invoke)--&gt;Tomcat executes the MOF monitoring logic with the onServiceStart method</p>
-<p>Key hook targets of MSCP:<br>MSCPBoot(createBootClassLoader): corresponds to the initialization of MOFJar package when MSCP is loaded<br>SystemStarter(startServer): corresponds to the MOF monitoring logic executed by the system</p>
-</li>
+<li><p>Key hooking targets and functionality of Tomcat/MSCP:<br>Key hooking targets of Tomcat:   </p>
+<pre><code>Bootstrap\(createClassLoader\)--&amp;gt;Tomcat loads MOFJar package during initialization and initializes the configuration file  
+Connector\(invoke\)--&amp;gt;Tomcat executes the MOF monitoring logic with the onServiceStart method
+</code></pre><p>Key hooking targets of MSCP:   </p>
+<pre><code>MSCPBoot\(createBootClassLoader\): corresponds to the initialization of MOFJar package when MSCP is loaded  
+SystemStarter\(startServer\): corresponds to the MOF monitoring logic executed by the system
+</code></pre></li>
 </ul>
-<h4 id="mof-mofagent-package-level-dependency-structure">MOF-MOFAgent package level dependency structure</h4>
+<h4 id="mof-mofagent-package-level-dependency-structure">MOF-MOFAgent Package-level Dependency Structure</h4>
 <p><img src="../assets/mof-agent_2.PNG" alt=""></p>
 <ul>
-<li><p>Key technologies:<br>JavaAsssist<br>HOOK (&#x62E6;&#x622A;&#x6846;&#x67B6;)<br>webAppClassLoader</p>
+<li><p>Key technologies:<br>JavaAsssist<br>HOOK (hooking framework)<br>webAppClassLoader</p>
 </li>
-<li><p>Key class and functionality:<br>TomcatAdpater<br>MSCPAdpater<br>The profile data and the client-side monitoring metrics are captured and monitored via the InterceptSupport and hookProxy mechanism.<br>The monitoring data is stored in the object storage DataStore and provides JMX interface.</p>
+<li><p>Key classes and functionality:<br>TomcatAdpater<br>MSCPAdpater<br>The profile data and the client monitoring metrics are captured and monitored via the InterceptSupport and hookProxy mechanism.<br>The monitoring data is stored in DataStore and provides JMX interface.</p>
 </li>
-<li><p>Key configuration file or script:</p>
-<p>uavmof.location<br>run.sh--&#x3009;javaAgent<br>uav.properties</p>
+<li><p>Key configuration file or script:
+uavmof.location<br>run.sh--&gt;javaAgent<br>uav.properties</p>
 </li>
 </ul>
-<h5 id="mofagent-class-diagram">MOFAgent class diagram</h5>
+<h5 id="mofagent-class-diagram">MOFAgent Class Diagram</h5>
 <p><img src="../assets/mof-agent_4.PNG" alt=""></p>
-<h4 id="monitorframework-startup-workflow">MonitorFramework startup workflow</h4>
+<h4 id="monitorframework-startup-workflow">MonitorFramework Startup Workflow</h4>
 <p><img src="../assets/mof-agent_3.PNG" alt=""></p>
 
                                 
@@ -780,7 +787,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"MOF Agent","level":"1.4.2","depth":2,"next":{"title":"Supportor","level":"1.4.3","depth":2,"path":"moniorframework/supportor.md","ref":"moniorframework/supportor.md","articles":[]},"previous":{"title":"MOF Architecture","level":"1.4.1","depth":2,"path":"moniorframework.md","ref":"moniorframework.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"moniorframework/mof-agent.md","mtime":"2018-06-21T02:55:56.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T03:02:19.043Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"MOF Agent","level":"1.4.2","depth":2,"next":{"title":"Supportor","level":"1.4.3","depth":2,"path":"moniorframework/supportor.md","ref":"moniorframework/supportor.md","articles":[]},"previous":{"title":"MOF Architecture","level":"1.4.1","depth":2,"path":"moniorframework.md","ref":"moniorframework.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"moniorframework/mof-agent.md","mtime":"2018-06-28T09:51:28.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-02T03:08:45.482Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

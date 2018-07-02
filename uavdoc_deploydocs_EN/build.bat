@@ -1,1 +1,0 @@
-gitbook build . ./uavdoc_deploydocs_EN

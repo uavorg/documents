@@ -284,7 +284,7 @@
                 <a href="../healthmanager/apphubfu-wu.html">
             
                     
-                    AppHub Server
+                    AppHub Manager
             
                 </a>
             
@@ -457,7 +457,7 @@
                 <a href="jin-cheng-zhi-shou.html">
             
                     
-                    Process Lifekeeper
+                    Process Keep-alive
             
                 </a>
             
@@ -696,35 +696,35 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="application-data-collection">Application data collection</h1>
+                                <h1 id="application-data-collection">Application Data Collection</h1>
 <ul>
 <li><p>Self-detection workflow:</p>
-<p>In the start method of MonitorAgent </p>
+<p>In the start method of Monitor Agent </p>
 <ol>
-<li>Create and start the AppServerMonitorDetector instance, obtain  all JVM processes with the run method, and start the data fetching task.</li>
+<li>Create and start the AppServerMonitorDetector instance, obtain  all JVM processes with the run method, and start the corresponding data fetching task.</li>
 <li>Create the AppServerMonitorDetector instance and start a thread to collect the profile data.</li>
-<li>Start MDFListener to receive MDF or MDF array pushed by the third-party so as to collect the monitoring data.</li>
+<li>Start MDFListener to receive the MDF or MDF array pushed by the third-party so as to collect the runtime monitoring data.</li>
 </ol>
 </li>
 <li><p>Periodical fetching workflow: </p>
-<p>Includes AppServerMonitorDataCatchWorker (Tomcat), MSCPMonitorDataCatchWorker (MSCP) and JavaMonitorDataCatchWorker (JavaSE). Take Tomcat as an example: </p>
+<p>AppServerMonitorDataCatchWorker (Tomcat), MSCPMonitorDataCatchWorker (MSCP) and JavaMonitorDataCatchWorker (JavaSE). Take Tomcat as an example: </p>
 <p>In the run method of AppServerMonitorDataCatchWorker</p>
 <ol>
 <li>Obtain all MBean corresponding to <a href="ying-yong-shu-ju-cai-ji/ying-yong-hua-xiang-shu-ju.html">Monitor</a> with the doCaptureMonitorData method and store all Mbean into MDF.</li>
 <li>Process data with the detector.runHandlers method.</li>
-<li>Obtain all MBean corresponding to <a href="ying-yong-shu-ju-cai-ji/ying-yong-hua-xiang-shu-ju.html">Profile</a> with the doCaptureProfileData method and store all Mbean into MDF.</li>
+<li>Obtain all MBean corresponding to <a href="ying-yong-shu-ju-cai-ji/ying-yong-hua-xiang-shu-ju.html">Profile</a> with the doCaptureProfileData method and store all Mbean into PMDF.</li>
 <li>Display the profile data with apdc.putData.</li>
 </ol>
-<p>wherein, Mbean is classified into different types: </p>
 </li>
+</ul>
+<p>wherein, Mbean is classified into different types: </p>
+<ul>
 <li><p>MBean queried by AppServer/MSCP: 
 profile: &quot;com.creditease:feature=profiles,*&quot;
 monitor: &quot;com.creditease:feature=monitors,*&quot;</p>
 </li>
-</ul>
-<ul>
-<li><p>MBean queried by Java:</p>
-<p>&quot;java.lang.management&quot;
+<li><p>MBean queried by Java:
+&quot;java.lang.management&quot;
 ClassLoadingMXBean
 MemoryMXBean
 MemoryPoolMXBean
@@ -778,7 +778,7 @@ UnixOperatingSystemMXBean</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Application Data Collection","level":"1.3.3","depth":2,"next":{"title":"Application Monitoring Data","level":"1.3.3.1","depth":3,"path":"monitoragent/ying-yong-shu-ju-cai-ji/ying-yong-shi-shi-shu-ju.md","ref":"monitoragent/ying-yong-shu-ju-cai-ji/ying-yong-shi-shi-shu-ju.md","articles":[]},"previous":{"title":"Heartbeat Mechanism","level":"1.3.2","depth":2,"path":"monitoragent/xin-tiao-ji-zhi.md","ref":"monitoragent/xin-tiao-ji-zhi.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"monitoragent/ying-yong-shu-ju-cai-ji.md","mtime":"2018-06-21T02:55:56.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T03:02:19.043Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Application Data Collection","level":"1.3.3","depth":2,"next":{"title":"Application Monitoring Data","level":"1.3.3.1","depth":3,"path":"monitoragent/ying-yong-shu-ju-cai-ji/ying-yong-shi-shi-shu-ju.md","ref":"monitoragent/ying-yong-shu-ju-cai-ji/ying-yong-shi-shi-shu-ju.md","articles":[]},"previous":{"title":"Heartbeat Mechanism","level":"1.3.2","depth":2,"path":"monitoragent/xin-tiao-ji-zhi.md","ref":"monitoragent/xin-tiao-ji-zhi.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"monitoragent/ying-yong-shu-ju-cai-ji.md","mtime":"2018-06-28T09:51:28.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-02T03:08:45.482Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

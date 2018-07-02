@@ -284,7 +284,7 @@
                 <a href="../healthmanager/apphubfu-wu.html">
             
                     
-                    AppHub Server
+                    AppHub Manager
             
                 </a>
             
@@ -457,7 +457,7 @@
                 <a href="../monitoragent/jin-cheng-zhi-shou.html">
             
                     
-                    Process Lifekeeper
+                    Process Keep-alive
             
                 </a>
             
@@ -696,21 +696,21 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="monitoring-data-capturing">Monitoring data capturing</h1>
-<h3 id="monitoring-data">Monitoring data</h3>
-<p>Also refered to as the runtime data generated when the process runs, including CPU use, heap memory, JVM information and statistics information (average response time and access count) related to service access and client-side invocation.</p>
-<h4 id="service-data-collection">Service data collection</h4>
-<p>The service data collection takes DefaultMonitorSupporter.start as the access point and builds the monitor instance (StandardMonitor instance of the server type by default, including the StandardMonitorRepository instance and the uavlog instance). The StandardMonitorRepository instance registers with the monitor. A StandardMonitorRepository instance includes multiple MonitorElement instances which are saved in the elemsMap property.</p>
-<p>The elemsMap property saves different collection handlers based on different collection objects:</p>
+                                <h1 id="monitoring-data-collection">Monitoring Data Collection</h1>
+<h3 id="monitoring-data">Monitoring Data</h3>
+<p>Also refered to as the runtime data that is generated when a process runs. Monitoring data includes CPU use, heap memory, JVM information and statistics information (average response time and access count) related to service access and client invocation.</p>
+<h4 id="service-data-collection">Service Data Collection</h4>
+<p>The service data collection takes DefaultMonitorSupporter.start as the access point and builds the monitor instance (The StandardMonitor instances are of the server type by default, which include the StandardMonitorRepository instance and the uavlog instance). The StandardMonitorRepository instance registers with the monitor. A StandardMonitorRepository instance includes multiple MonitorElement instances which are saved in the elemsMap property.</p>
+<p>The elemsMap property stores different collection handlers based on different collection objects:</p>
 <ul>
-<li>ServerEndRespTimeCapHandler: collects the response time and loading count of Server, App and URL.</li>
+<li>ServerEndRespTimeCapHandler: collects the response time and the loading count of Server, App and URL.</li>
 <li>JVMStateCapHandler: collects JVM conditions, including heap use, GC count, thread count, CPU and class count.</li>
 </ul>
-<h4 id="client-side-data-collection">Client-side data collection</h4>
-<p>The service data collection takes DefaultClientMonitorSupporter.start as the access point and builds the monitor instance (StandardMonitor instance of the client type by default, including the StandardMonitorRepository instance and the uavlog instance). The StandardMonitorRepository instance registers with the monitor. A StandardMonitorRepository instance includes multiple MonitorElement instances which are saved in the elemsMap property.</p>
-<p>The elemsMap property saves only one colletion handler: </p>
+<h4 id="client-data-collection">Client Data Collection</h4>
+<p>The service data collection takes DefaultClientMonitorSupporter.start as the access point and builds the monitor instance (The StandardMonitor instances are of the client type by default, which include the StandardMonitorRepository instance and the uavlog instance). The StandardMonitorRepository instance registers with the monitor. A StandardMonitorRepository instance includes multiple MonitorElement instances which are saved in the elemsMap property.</p>
+<p>The elemsMap property store one colletion handler only: </p>
 <ul>
-<li>ClientRespTimeCapHandler: collects the response time and loading count of the client side.</li>
+<li>ClientRespTimeCapHandler: collects the response time and loading count of the client.</li>
 </ul>
 
                                 
@@ -755,7 +755,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Monitoring Data Collection","level":"1.4.7.1","depth":3,"next":{"title":"Profile Data Collection","level":"1.4.7.2","depth":3,"path":"moniorframework/hua-xiang-shu-ju-cai-ji.md","ref":"moniorframework/hua-xiang-shu-ju-cai-ji.md","articles":[]},"previous":{"title":"MOF Data Collection","level":"1.4.7","depth":2,"path":"moniorframework/mofshu-ju-cai-ji.md","ref":"moniorframework/mofshu-ju-cai-ji.md","articles":[{"title":"Monitoring Data Collection","level":"1.4.7.1","depth":3,"path":"moniorframework/shi-shi-shu-ju-sheng-cheng.md","ref":"moniorframework/shi-shi-shu-ju-sheng-cheng.md","articles":[]},{"title":"Profile Data Collection","level":"1.4.7.2","depth":3,"path":"moniorframework/hua-xiang-shu-ju-cai-ji.md","ref":"moniorframework/hua-xiang-shu-ju-cai-ji.md","articles":[]},{"title":"Invocation Chain Data Collection","level":"1.4.7.3","depth":3,"path":"moniorframework/diao-yong-lian-shu-ju-sheng-cheng.md","ref":"moniorframework/diao-yong-lian-shu-ju-sheng-cheng.md","articles":[]},{"title":"Thread Analysis Data Collection","level":"1.4.7.4","depth":3,"path":"moniorframework/xian-cheng-fen-xi-shu-ju-cai-ji.md","ref":"moniorframework/xian-cheng-fen-xi-shu-ju-cai-ji.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"moniorframework/shi-shi-shu-ju-sheng-cheng.md","mtime":"2018-06-21T02:55:56.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T03:02:19.043Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Monitoring Data Collection","level":"1.4.7.1","depth":3,"next":{"title":"Profile Data Collection","level":"1.4.7.2","depth":3,"path":"moniorframework/hua-xiang-shu-ju-cai-ji.md","ref":"moniorframework/hua-xiang-shu-ju-cai-ji.md","articles":[]},"previous":{"title":"MOF Data Collection","level":"1.4.7","depth":2,"path":"moniorframework/mofshu-ju-cai-ji.md","ref":"moniorframework/mofshu-ju-cai-ji.md","articles":[{"title":"Monitoring Data Collection","level":"1.4.7.1","depth":3,"path":"moniorframework/shi-shi-shu-ju-sheng-cheng.md","ref":"moniorframework/shi-shi-shu-ju-sheng-cheng.md","articles":[]},{"title":"Profile Data Collection","level":"1.4.7.2","depth":3,"path":"moniorframework/hua-xiang-shu-ju-cai-ji.md","ref":"moniorframework/hua-xiang-shu-ju-cai-ji.md","articles":[]},{"title":"Invocation Chain Data Collection","level":"1.4.7.3","depth":3,"path":"moniorframework/diao-yong-lian-shu-ju-sheng-cheng.md","ref":"moniorframework/diao-yong-lian-shu-ju-sheng-cheng.md","articles":[]},{"title":"Thread Analysis Data Collection","level":"1.4.7.4","depth":3,"path":"moniorframework/xian-cheng-fen-xi-shu-ju-cai-ji.md","ref":"moniorframework/xian-cheng-fen-xi-shu-ju-cai-ji.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"moniorframework/shi-shi-shu-ju-sheng-cheng.md","mtime":"2018-06-28T09:51:28.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-02T03:08:45.482Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

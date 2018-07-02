@@ -289,7 +289,7 @@
                 <a href="../healmanagerInstall/healmanagerInstall.html">
             
                     
-                    2. Health Manager Installation
+                        2. Health Manager Installation
             
                 </a>
             
@@ -460,7 +460,7 @@
                 <a href="../healmanagerInstall/healmanagerInstall/microservice/profile-and-notification-and-heartbeat-server.html">
             
                     
-                    Profile & Notification & Heartbeat Server
+                    Profile, Notification and Heartbeat Server
             
                 </a>
             
@@ -567,20 +567,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="../upgrade.html">
-            
-                <a href="../upgrade.html">
-            
-                    
-                    Upgrade
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5" data-path="../Agent.html">
+        <li class="chapter " data-level="1.4" data-path="../Agent.html">
             
                 <a href="../Agent.html">
             
@@ -594,7 +581,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="ma_install.html">
+        <li class="chapter " data-level="1.4.1" data-path="ma_install.html">
             
                 <a href="ma_install.html">
             
@@ -608,7 +595,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1.1" data-path="ma_install.html">
+        <li class="chapter " data-level="1.4.1.1" data-path="ma_install.html">
             
                 <a href="ma_install.html">
             
@@ -621,7 +608,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.1.2" data-path="ma_start_stop.html">
+        <li class="chapter active" data-level="1.4.1.2" data-path="ma_start_stop.html">
             
                 <a href="ma_start_stop.html">
             
@@ -634,7 +621,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.3" data-path="issues.html">
+        <li class="chapter " data-level="1.4.1.3" data-path="issues.html">
             
                 <a href="issues.html">
             
@@ -652,7 +639,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="../mof_install/mof_install.html">
+        <li class="chapter " data-level="1.4.2" data-path="../mof_install/mof_install.html">
             
                 <a href="../mof_install/mof_install.html">
             
@@ -666,7 +653,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.2.1" data-path="../mof_install/mof_install.html">
+        <li class="chapter " data-level="1.4.2.1" data-path="../mof_install/mof_install.html">
             
                 <a href="../mof_install/mof_install.html">
             
@@ -679,7 +666,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2.2" data-path="../mof_install/example.html">
+        <li class="chapter " data-level="1.4.2.2" data-path="../mof_install/example.html">
             
                 <a href="../mof_install/example.html">
             
@@ -692,7 +679,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2.3" data-path="../mof_install/issues.html">
+        <li class="chapter " data-level="1.4.2.3" data-path="../mof_install/issues.html">
             
                 <a href="../mof_install/issues.html">
             
@@ -710,7 +697,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="../docker/uavagent.html">
+        <li class="chapter " data-level="1.4.3" data-path="../docker/uavagent.html">
             
                 <a href="../docker/uavagent.html">
             
@@ -724,7 +711,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.3.1" data-path="../docker/uavagent.html">
+        <li class="chapter " data-level="1.4.3.1" data-path="../docker/uavagent.html">
             
                 <a href="../docker/uavagent.html">
             
@@ -737,7 +724,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3.2" data-path="../docker/mof.html">
+        <li class="chapter " data-level="1.4.3.2" data-path="../docker/mof.html">
             
                 <a href="../docker/mof.html">
             
@@ -750,7 +737,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3.3" data-path="../docker/33-chang-jian-wen-ti.html">
+        <li class="chapter " data-level="1.4.3.3" data-path="../docker/33-chang-jian-wen-ti.html">
             
                 <a href="../docker/33-chang-jian-wen-ti.html">
             
@@ -770,6 +757,19 @@
     
 
             </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../upgrade.html">
+            
+                <a href="../upgrade.html">
+            
+                    
+                    Upgrade
+            
+                </a>
+            
+
             
         </li>
     
@@ -909,23 +909,23 @@
 <p>cd uavagent/bin <br>
 sh start.sh netcard name JDK path</p>
 </blockquote>
-<p>The host would have multiple IP if there are several netcards or virtual netcards. The IP would be specified based on the name of the netcard when MA starts. The IP whose serial No. is 1 shall be used by default (correct in most cases) if no specification. Check the correspondence between the name of the netcard and IP with ifconfig command.</p>
 <ul>
+<li>The host would have multiple IPs if there are several netcards or virtual netcards. MA specifies an IP based on the name of a netcard when getting started; otherwise, the IP whose serial No. is 1 shall be used by default (correct in most cases). Check the correspondence between the name of the netcard and IP with ifconfig command.</li>
 <li>Configuration is not needed if the JDK version is above 1.7 in the JAVA environment of the local machine; otherwise, configure the JDK path after the command.</li>
 </ul>
-<p>Check whether MA starts or not with JPS command.</p>
+<p>Check whether MA is successfully started or not with the JPS command.</p>
 <p><img src="../assets/agentstart.png" alt=""></p>
-<p>Check whether MA functions or not in All-seeing Eye of AppHub.</p>
+<p>Check whether MA functions properly with UAV GodEye in AppHub.</p>
 <p><img src="../assets/agent.png" alt=""></p>
-<p>Change to the directory ../../uavagent.metadata/logs to check the start log. Successful start if no error information.</p>
+<p>Change to the directory ../../uavagent.metadata/logs to check the startup log. Successful start if no error information.</p>
 <h3 id="stop">Stop</h3>
-<p>Monitoring script will be added to contab of the user when MA starts. MA shall restart if the process is killed. Execute the command below to stop MA: </p>
+<p>The keep-alive script will be added to crontab of the user when MA gets started. MA shall get restarted automatically if the process is killed to stop the MA. Execute the command below to stop MA: </p>
 <blockquote>
 <p>sh bin/stop.sh</p>
 </blockquote>
-<p>Kill the process if it does not stop after the command above is invoked.</p>
-<h3 id="&#x8D44;&#x6E90;&#x9650;&#x5236;&#x5668;">Resource limiter</h3>
-<p>The resource limiter shall run routine check on the use of system resources by MA. MA shall be automatically restarted when its memory use or CPU use is above the threshold in the <a href="ma_configuration.html#monitoragent">MA configuration</a> and continues for some time.</p>
+<p>Kill the process if it does not stop after the command above is executed.</p>
+<h3 id="&#x8D44;&#x6E90;&#x9650;&#x5236;&#x5668;">Resource Limiter</h3>
+<p>The resource limiter shall run routine check on the use of system resources by MA. MA shall be automatically restarted when its memory use or CPU use is above the threshold set in <a href="ma_configuration.html#monitoragent">MA Configuration</a> and continues for a period.</p>
 
                                 
                                 </section>
@@ -969,7 +969,7 @@ sh start.sh netcard name JDK path</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"1.2 Start and Stop","level":"1.5.1.2","depth":3,"next":{"title":"1.3 FAQ","level":"1.5.1.3","depth":3,"path":"uavagentInstall/issues.md","ref":"uavagentInstall/issues.md","articles":[]},"previous":{"title":"1.1 Installation and Configuration","level":"1.5.1.1","depth":3,"path":"uavagentInstall/ma_install.md","ref":"uavagentInstall/ma_install.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"uavagentInstall/ma_start_stop.md","mtime":"2018-06-19T07:40:38.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T03:02:27.670Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"1.2 Start and Stop","level":"1.4.1.2","depth":3,"next":{"title":"1.3 FAQ","level":"1.4.1.3","depth":3,"path":"uavagentInstall/issues.md","ref":"uavagentInstall/issues.md","articles":[]},"previous":{"title":"1.1 Installation and Configuration","level":"1.4.1.1","depth":3,"path":"uavagentInstall/ma_install.md","ref":"uavagentInstall/ma_install.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"uavagentInstall/ma_start_stop.md","mtime":"2018-06-27T08:33:46.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-02T03:08:07.805Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

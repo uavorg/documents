@@ -284,7 +284,7 @@
                 <a href="../healthmanager/apphubfu-wu.html">
             
                     
-                    AppHub Server
+                    AppHub Manager
             
                 </a>
             
@@ -457,7 +457,7 @@
                 <a href="../monitoragent/jin-cheng-zhi-shou.html">
             
                     
-                    Process Lifekeeper
+                    Process Keep-alive
             
                 </a>
             
@@ -697,21 +697,24 @@
                                 <section class="normal markdown-section">
                                 
                                 <h2 id="invocation-chain-data-generation">Invocation Chain Data Generation</h2>
-<p>The invocation chain is the specific implementation of the domain model of distributed tracing.
+<p>The invocation chain is a specific application case of the domain model of distributed tracing.
 The invocation chain records each request and analyzes the invocation process.</p>
-<h3 id="invocation-chain-model">Invocation chain model</h3>
+<h3 id="invocation-chain-model">Invocation Chain Model</h3>
 <ul>
-<li>Invocation chain metadata: 
-SpanEndpointType: invocation type (Root(&#x201C;E&#x201D;), Service(&#x201C;S&#x201D;), Client(&#x201C;C&#x201D;), Method(&#x201C;M&#x201D;));
-traceId: unique identifier of trace;
-spanId: invocation sequence of the current node in an invocation chain (unique when combined with SpanEndpointType)
-parentId: parent invocation node of current node in an invocation chain.</li>
-<li><p>Invocation chain mapping rules:
-1) Register the initial invocation (without parent invocation) of the invoker (service and web) as the starting node E and generate the unique traceID;
-2) Add &#x201C;1&#x201D; (&#x201C;.1&#x201D; if comes as the first one) after the spanID for the invocation among application components (such as httpclient and method invocation) within the system;
-3) Span information of Service A and Service B differs in SpanEndpointType only (each representing one end of the span) for the invocation among systems.</p>
+<li><p>Metadata: </p>
+<ul>
+<li>SpanEndpointType: invocation type (Root(&#x201C;E&#x201D;), Service(&#x201C;S&#x201D;), Client(&#x201C;C&#x201D;), Method(&#x201C;M&#x201D;));</li>
+<li>traceId: unique identifier of an invocation chain;</li>
+<li>spanId: invocation sequence of the current node in an invocation chain (unique when combined with SpanEndpointType)</li>
+<li>parentId: parent invocation node of the current node in an invocation chain.</li>
+</ul>
 </li>
-<li><p>Illustration with the example:</p>
+<li><p>Mapping rules:
+1) Register the initial invocation (without parent invocation) of the caller (service or web) as the starting node E and generate the unique traceID;</p>
+<p>2) Add &#x201C;1&#x201D; (&#x201C;.1&#x201D; to the first spanID) to the spanID for invocation among application components (such as httpclient and method invocation) within the system;</p>
+<p>3) Span information of Service A and Service B differs in SpanEndpointType (each representing one end of the span) only for the invocation among systems.</p>
+</li>
+<li><p>Example:</p>
 </li>
 </ul>
 <p><img src="../assets/diao-yong-lian-shu-ju-sheng-cheng_1.png" alt=""></p>
@@ -722,30 +725,24 @@ parentId: parent invocation node of current node in an invocation chain.</li>
 <li>traceId;1.1.1;1.1;C</li>
 <li>traceId;1.1.2;1.1;C</li>
 </ul>
-<h3 id="invocation-chain-model-implementation">Invocation chain model implementation</h3>
+<h3 id="implementation-of-the-invocation-chain-model">Implementation of the Invocation Chain Model</h3>
 <p><img src="../assets/diao-yong-lian-shu-ju-sheng-cheng_2.png" alt=""></p>
 <ul>
-<li>The invocation chain employs the GlobalFilter mechanism of UAV to implement JEEServiceRunGlobalFilterHandler and intercepts all requests to access Tomcat.</li>
-</ul>
-<ul>
+<li>The invocation chain employs UAV&apos;s GlobalFilter mechanism to implement JEEServiceRunGlobalFilterHandler and to intercept all requests to access Tomcat.</li>
 <li>Abstract three scenes: 1, server; 2, client; and 3, method. Create corresponding handlers.</li>
+<li>Add adapters (XXAdapter) to the client hook so as to adapt all data sources (such as HttpClient, MQ and JDBC).</li>
+<li>Output the invocation chain information to the log file with the mechanism aforesaid and collect logs with MA&apos;s collection mechanism.</li>
 </ul>
-<ul>
-<li>Add adapters (XXAdapter) to the hook of the client so as to adapt all data sources (such as HttpClient, MQ and JDBC).</li>
-</ul>
-<ul>
-<li>Output the invocation chain information to the log file with the mechanism aforesaid and collects logs with the collection mechanism of MA.</li>
-</ul>
-<h3 id="invocation-chain-architecture">Invocation chain architecture</h3>
+<h3 id="invocation-chain-architecture">Invocation Chain Architecture</h3>
 <p><img src="../assets/diao-yong-lian-shu-ju-sheng-cheng_3.png" alt=""></p>
-<p>1) Enable or disenable the invocation chain with the inline applets of UAV; </p>
-<p>2) MOF collects the invocation chain information and outputs it to the log files;</p>
-<p>3) The collection mechanism of MA uploads logs to the specifized topic in RocketMQ of UAV;</p>
-<p>4) The invocation chain handlers in HM analyze and process the invocation chain data in RocketMQ and store the data in ElasticSearch;</p>
-<p>5) HM supports the query interfaces for front-end display of the console.</p>
-<h5 id="InvokeChainSupporter&#x542F;&#x52A8;&#x4E0E;&#x5B9E;&#x73B0;">InvokeChainSupporter startup and implementation</h5>
+<p>1) Enable or disable the invocation chain dynamically with UAV&apos;s inline applets; 
+2) MOF collects the invocation chain information and outputs the information to log files;
+3) MA&apos;s collection mechanism uploads logs to the specifized topic in UAV&apos;s RocketMQ;
+4) HM&apos;s invocation chain handlers analyze and process the invocation chain data in RocketMQ and store the data in Elasticsearch;
+5) HM provides external query interfaces for the front-end display of the console.</p>
+<h5 id="InvokeChainSupporter&#x542F;&#x52A8;&#x4E0E;&#x5B9E;&#x73B0;">InvokeChainSupporter Startup and Implementation</h5>
 <p><img src="../assets/diao-yong-lian-shu-ju-sheng-cheng_4.PNG" alt=""></p>
-<h5 id="SlowOperSupporter&#x542F;&#x52A8;&#x4E0E;&#x5B9E;&#x73B0;">SlowOperSupporter startup and implementation</h5>
+<h5 id="SlowOperSupporter&#x542F;&#x52A8;&#x4E0E;&#x5B9E;&#x73B0;">SlowOperSupporter Startup and Implementation</h5>
 <p><img src="../assets/diao-yong-lian-shu-ju-sheng-cheng_5.PNG" alt=""></p>
 
                                 
@@ -790,7 +787,7 @@ parentId: parent invocation node of current node in an invocation chain.</li>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Invocation Chain Data Collection","level":"1.4.7.3","depth":3,"next":{"title":"Thread Analysis Data Collection","level":"1.4.7.4","depth":3,"path":"moniorframework/xian-cheng-fen-xi-shu-ju-cai-ji.md","ref":"moniorframework/xian-cheng-fen-xi-shu-ju-cai-ji.md","articles":[]},"previous":{"title":"Profile Data Collection","level":"1.4.7.2","depth":3,"path":"moniorframework/hua-xiang-shu-ju-cai-ji.md","ref":"moniorframework/hua-xiang-shu-ju-cai-ji.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"moniorframework/diao-yong-lian-shu-ju-sheng-cheng.md","mtime":"2018-06-21T02:55:56.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T03:02:19.043Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Invocation Chain Data Collection","level":"1.4.7.3","depth":3,"next":{"title":"Thread Analysis Data Collection","level":"1.4.7.4","depth":3,"path":"moniorframework/xian-cheng-fen-xi-shu-ju-cai-ji.md","ref":"moniorframework/xian-cheng-fen-xi-shu-ju-cai-ji.md","articles":[]},"previous":{"title":"Profile Data Collection","level":"1.4.7.2","depth":3,"path":"moniorframework/hua-xiang-shu-ju-cai-ji.md","ref":"moniorframework/hua-xiang-shu-ju-cai-ji.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"moniorframework/diao-yong-lian-shu-ju-sheng-cheng.md","mtime":"2018-06-28T09:51:28.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-02T03:08:45.482Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

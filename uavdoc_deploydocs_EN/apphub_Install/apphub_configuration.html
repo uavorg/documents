@@ -289,7 +289,7 @@
                 <a href="../healmanagerInstall/healmanagerInstall.html">
             
                     
-                    2. Health Manager Installation
+                        2. Health Manager Installation
             
                 </a>
             
@@ -460,7 +460,7 @@
                 <a href="../healmanagerInstall/healmanagerInstall/microservice/profile-and-notification-and-heartbeat-server.html">
             
                     
-                    Profile & Notification & Heartbeat Server
+                    Profile, Notification and Heartbeat Server
             
                 </a>
             
@@ -567,20 +567,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="../upgrade.html">
-            
-                <a href="../upgrade.html">
-            
-                    
-                    Upgrade
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5" data-path="../Agent.html">
+        <li class="chapter " data-level="1.4" data-path="../Agent.html">
             
                 <a href="../Agent.html">
             
@@ -594,7 +581,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="../uavagentInstall/ma_install.html">
+        <li class="chapter " data-level="1.4.1" data-path="../uavagentInstall/ma_install.html">
             
                 <a href="../uavagentInstall/ma_install.html">
             
@@ -608,7 +595,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1.1" data-path="../uavagentInstall/ma_install.html">
+        <li class="chapter " data-level="1.4.1.1" data-path="../uavagentInstall/ma_install.html">
             
                 <a href="../uavagentInstall/ma_install.html">
             
@@ -621,7 +608,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.2" data-path="../uavagentInstall/ma_start_stop.html">
+        <li class="chapter " data-level="1.4.1.2" data-path="../uavagentInstall/ma_start_stop.html">
             
                 <a href="../uavagentInstall/ma_start_stop.html">
             
@@ -634,7 +621,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.3" data-path="../uavagentInstall/issues.html">
+        <li class="chapter " data-level="1.4.1.3" data-path="../uavagentInstall/issues.html">
             
                 <a href="../uavagentInstall/issues.html">
             
@@ -652,7 +639,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="../mof_install/mof_install.html">
+        <li class="chapter " data-level="1.4.2" data-path="../mof_install/mof_install.html">
             
                 <a href="../mof_install/mof_install.html">
             
@@ -666,7 +653,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.2.1" data-path="../mof_install/mof_install.html">
+        <li class="chapter " data-level="1.4.2.1" data-path="../mof_install/mof_install.html">
             
                 <a href="../mof_install/mof_install.html">
             
@@ -679,7 +666,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2.2" data-path="../mof_install/example.html">
+        <li class="chapter " data-level="1.4.2.2" data-path="../mof_install/example.html">
             
                 <a href="../mof_install/example.html">
             
@@ -692,7 +679,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2.3" data-path="../mof_install/issues.html">
+        <li class="chapter " data-level="1.4.2.3" data-path="../mof_install/issues.html">
             
                 <a href="../mof_install/issues.html">
             
@@ -710,7 +697,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="../docker/uavagent.html">
+        <li class="chapter " data-level="1.4.3" data-path="../docker/uavagent.html">
             
                 <a href="../docker/uavagent.html">
             
@@ -724,7 +711,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.3.1" data-path="../docker/uavagent.html">
+        <li class="chapter " data-level="1.4.3.1" data-path="../docker/uavagent.html">
             
                 <a href="../docker/uavagent.html">
             
@@ -737,7 +724,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3.2" data-path="../docker/mof.html">
+        <li class="chapter " data-level="1.4.3.2" data-path="../docker/mof.html">
             
                 <a href="../docker/mof.html">
             
@@ -750,7 +737,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3.3" data-path="../docker/33-chang-jian-wen-ti.html">
+        <li class="chapter " data-level="1.4.3.3" data-path="../docker/33-chang-jian-wen-ti.html">
             
                 <a href="../docker/33-chang-jian-wen-ti.html">
             
@@ -770,6 +757,19 @@
     
 
             </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../upgrade.html">
+            
+                <a href="../upgrade.html">
+            
+                    
+                    Upgrade
+            
+                </a>
+            
+
             
         </li>
     
@@ -902,54 +902,54 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="configuration-of-apphub">Configuration of AppHub</h1>
-<p>Configure AppHub in the contextparam of web.xml. Below are implications of param</p>
-<p><code>uav.app.*.redis.store.params</code><br>
-Configuration parameters of cache connection to Redis</p>
-<p><code>uav.app.*.http.client.params</code><br>
-Configuration parameters of Http connections</p>
-<p><code>uav.app.godeye.notify.mongodb.query.range</code><br>
-Optimization parameter of Mongo query</p>
-<p><code>uav.apphub.sso.admin.loginid</code><br>
-admin username</p>
-<p><code>uav.apphub.sso.admin.password</code><br>
-admin password</p>
-<p><code>uav.apphub.sso.guest.loginid</code><br>
-guest username</p>
-<p><code>uav.apphub.sso.guest.password</code><br>
-guest password</p>
-<p><code>uav.apphub.sso.white.list</code><br>
-Configuration of white list user</p>
-<p><code>uav.app.manage.redis.store.addr</code><br>
-Address of App management information cache (Redis)</p>
-<p><code>uav.app.ldap.redis.store.addr</code><br>
-Address of access management information cache (Redis)</p>
-<p><code>uav.app.godeye.redis.store.addr</code><br>
-Address of monitoring data cache (Redis)</p>
-<p><code>@url:uav.app.godeye.hbquery.http.addr</code><br>
-Heartbeat data query address of <a href="../healmanagerInstall/healmanagerInstall/microservice.html#APPHUB&#x7BA1;&#x7406;&#x670D;&#x52A1;">AppHub Manager</a></p>
-<p><code>@url:uav.app.godeye.healthmanager.http.addr</code><br>
-Address of the monitoring data query server in <a href="../healmanagerInstall/healmanagerInstall/microservice.html#APPHUB&#x7BA1;&#x7406;&#x670D;&#x52A1;">AppHub Manager</a></p>
-<p><code>@url:uav.app.godeye.notify.view.http.addr</code><br>
-Address of the notification server in <a href="../healmanagerInstall/healmanagerInstall/microservice.html#&#x753B;&#x50CF;&#x4E0E;&#x9884;&#x8B66;&#x670D;&#x52A1;">Profile and Notification server</a></p>
-<p><code>@url:uav.app.godeye.notify.strategy.http.addr</code><br>
-Address of the runtime nofitication server in <a href="../healmanagerInstall/healmanagerInstall/microservice.html#APPHUB&#x7BA1;&#x7406;&#x670D;&#x52A1;">AppHub Manager</a></p>
-<p><code>@url:uav.app.manage.apphubmanager.http.addr</code><br>
-Address of the AppHub Management server in <a href="../healmanagerInstall/healmanagerInstall/microservice.html#APPHUB&#x7BA1;&#x7406;&#x670D;&#x52A1;">AppHub Manager</a></p>
-<p><code>@url:uav.app.upgrade.server.http.addr</code><br>
-Address of <a href="../healmanagerInstall/healmanagerInstall/microservice.html#&#x5347;&#x7EA7;&#x4E2D;&#x5FC3;">Upgrade Server</a></p>
-<p><code>@url:uav.app.apm.ivc.http.addr</code><br>
-Address of the invocation chain server in <a href="../healmanagerInstall/healmanagerInstall/microservice.html#&#x5E94;&#x7528;&#x6027;&#x80FD;&#x7BA1;&#x7406;&#x670D;&#x52A1;">Health Manager</a></p>
-<p><code>@url:uav.app.apm.jta.http.addr</code><br>
-Address of the thread analysis server in <a href="../healmanagerInstall/healmanagerInstall/microservice.html#&#x5E94;&#x7528;&#x6027;&#x80FD;&#x7BA1;&#x7406;&#x670D;&#x52A1;">Health Manager</a></p>
-<p><code>@url:uav.app.hm.newlog.http.addr</code><br>
-Address of <a href="../healmanagerInstall/healmanagerInstall/microservice.html#&#x65E5;&#x5FD7;&#x670D;&#x52A1;">Log Server</a></p>
-<p><code>uav.apphub.sso.implclass</code><br>
-Full class name of <a href="../thirdparty/ldap.html#UAV&#x6743;&#x9650;&#x63A7;&#x5236;&#x6269;&#x5C55;">Implementation class of access verification</a></p>
-<p><code>uav.apphub.sso.ldap.connection.info</code><br>
-<a href="../thirdparty/ldap.html">ldap</a>Configuration information</p>
-<p><code>uav.apphub.sso.grafana.connection.info</code><br>
-<a href="../thirdparty/grafana.html#Grafana&#x5BF9;&#x63A5;AppHub&#x4E4B;xml&#x914D;&#x7F6E;">grafana</a>Configuration information</p>
+                                <h1 id="apphub-configuration">AppHub Configuration</h1>
+<p>Configure AppHub in contextparam of web.xml. Below is the illustration of parameters</p>
+<h5 id="uavappredisstoreparams">uav.app.*.redis.store.params</h5>
+<p>Configuration parameters of Redis connections for cache</p>
+<h5 id="uavapphttpclientparams">uav.app.*.http.client.params</h5>
+<p>Configuration parameters of Http connections</p>
+<h5 id="uavappgodeyenotifymongodbqueryrange">uav.app.godeye.notify.mongodb.query.range</h5>
+<p>Optimized parameters for Mongo query</p>
+<h5 id="uavapphubssoadminloginid">uav.apphub.sso.admin.loginid</h5>
+<p>Admin username</p>
+<h5 id="uavapphubssoadminpassword">uav.apphub.sso.admin.password</h5>
+<p>Admin password</p>
+<h5 id="uavapphubssoguestloginid">uav.apphub.sso.guest.loginid</h5>
+<p>Guest username</p>
+<h5 id="uavapphubssoguestpassword">uav.apphub.sso.guest.password</h5>
+<p>Guest password</p>
+<h5 id="uavapphubssowhitelist">uav.apphub.sso.white.list</h5>
+<p>Configuration of white list users</p>
+<h5 id="uavappmanageredisstoreaddr">uav.app.manage.redis.store.addr</h5>
+<p>Address (Redis) of App management information cache </p>
+<h5 id="uavappldapredisstoreaddr">uav.app.ldap.redis.store.addr</h5>
+<p>Address (Redis) of access management information cache</p>
+<h5 id="uavappgodeyeredisstoreaddr">uav.app.godeye.redis.store.addr</h5>
+<p>Address (Redis) of monitoring data cache</p>
+<h5 id="urluavappgodeyehbqueryhttpaddr">@url:uav.app.godeye.hbquery.http.addr</h5>
+<p>Address of heartbeat data query server in <a href="../healmanagerInstall/healmanagerInstall/microservice.html#APPHUB&#x7BA1;&#x7406;&#x670D;&#x52A1;">AppHub Manager</a></p>
+<h5 id="urluavappgodeyehealthmanagerhttpaddr">@url:uav.app.godeye.healthmanager.http.addr</h5>
+<p>Address of monitoring data query server in <a href="../healmanagerInstall/healmanagerInstall/microservice.html#APPHUB&#x7BA1;&#x7406;&#x670D;&#x52A1;">AppHub Manager</a></p>
+<h5 id="urluavappgodeyenotifyviewhttpaddr">@url:uav.app.godeye.notify.view.http.addr</h5>
+<p>Address of notification server in <a href="../healmanagerInstall/healmanagerInstall/microservice.html#&#x753B;&#x50CF;&#x4E0E;&#x9884;&#x8B66;&#x670D;&#x52A1;">Profile and Notification Server</a></p>
+<h5 id="urluavappgodeyenotifystrategyhttpaddr">@url:uav.app.godeye.notify.strategy.http.addr</h5>
+<p>Address of runtime nofitication server in <a href="../healmanagerInstall/healmanagerInstall/microservice.html#APPHUB&#x7BA1;&#x7406;&#x670D;&#x52A1;">AppHub Manager</a></p>
+<h5 id="urluavappmanageapphubmanagerhttpaddr">@url:uav.app.manage.apphubmanager.http.addr</h5>
+<p>Address of AppHub Manager in <a href="../healmanagerInstall/healmanagerInstall/microservice.html#APPHUB&#x7BA1;&#x7406;&#x670D;&#x52A1;">AppHub Manager</a></p>
+<h5 id="urluavappupgradeserverhttpaddr">@url:uav.app.upgrade.server.http.addr</h5>
+<p>Address of <a href="../healmanagerInstall/healmanagerInstall/microservice.html#&#x5347;&#x7EA7;&#x4E2D;&#x5FC3;">Upgrade Server</a></p>
+<h5 id="urluavappapmivchttpaddr">@url:uav.app.apm.ivc.http.addr</h5>
+<p>Address of invocation chain server in <a href="../healmanagerInstall/healmanagerInstall/microservice.html#&#x5E94;&#x7528;&#x6027;&#x80FD;&#x7BA1;&#x7406;&#x670D;&#x52A1;">Application Performance Manager</a></p>
+<h5 id="urluavappapmjtahttpaddr">@url:uav.app.apm.jta.http.addr</h5>
+<p>Address of the thread analysis server in [<a href="../healmanagerInstall/healmanagerInstall/microservice.html#&#x5E94;&#x7528;&#x6027;&#x80FD;&#x7BA1;&#x7406;&#x670D;&#x52A1;">Application Performance Manager</a></p>
+<h5 id="urluavapphmnewloghttpaddr">@url:uav.app.hm.newlog.http.addr</h5>
+<p>Address of <a href="../healmanagerInstall/healmanagerInstall/microservice.html#&#x65E5;&#x5FD7;&#x670D;&#x52A1;">Log Server</a></p>
+<h5 id="uavapphubssoimplclass">uav.apphub.sso.implclass</h5>
+<p>Full class name of <a href="../thirdparty/ldap.html#UAV&#x6743;&#x9650;&#x63A7;&#x5236;&#x6269;&#x5C55;">implementation class for authority verification</a></p>
+<h5 id="uavapphubssoldapconnectioninfo">uav.apphub.sso.ldap.connection.info</h5>
+<p><a href="../thirdparty/ldap.html">LDAP</a> configuration information</p>
+<h5 id="uavapphubssografanaconnectioninfo">uav.apphub.sso.grafana.connection.info</h5>
+<p><a href="../thirdparty/grafana.html#Grafana&#x5BF9;&#x63A5;AppHub&#x4E4B;xml&#x914D;&#x7F6E;">Grafana</a> configuration information</p>
 
                                 
                                 </section>
@@ -993,7 +993,7 @@ Full class name of <a href="../thirdparty/ldap.html#UAV&#x6743;&#x9650;&#x63A7;&
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"2. AppHub","level":"1.6.2","depth":2,"next":{"title":"3. MA","level":"1.6.3","depth":2,"path":"uavagentInstall/ma_configuration.md","ref":"uavagentInstall/ma_configuration.md","articles":[]},"previous":{"title":"1. HM","level":"1.6.1","depth":2,"path":"healmanagerInstall/hm_configration.md","ref":"healmanagerInstall/hm_configration.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"apphub_Install/apphub_configuration.md","mtime":"2018-06-19T07:40:38.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T03:02:27.670Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"2. AppHub","level":"1.6.2","depth":2,"next":{"title":"3. MA","level":"1.6.3","depth":2,"path":"uavagentInstall/ma_configuration.md","ref":"uavagentInstall/ma_configuration.md","articles":[]},"previous":{"title":"1. HM","level":"1.6.1","depth":2,"path":"healmanagerInstall/hm_configration.md","ref":"healmanagerInstall/hm_configration.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"apphub_Install/apphub_configuration.md","mtime":"2018-06-27T08:33:50.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-02T03:08:07.805Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

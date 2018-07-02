@@ -284,7 +284,7 @@
                 <a href="apphubfu-wu.html">
             
                     
-                    AppHub Server
+                    AppHub Manager
             
                 </a>
             
@@ -457,7 +457,7 @@
                 <a href="../monitoragent/jin-cheng-zhi-shou.html">
             
                     
-                    Process Lifekeeper
+                    Process Keep-alive
             
                 </a>
             
@@ -697,10 +697,10 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="hm-interface">HM Interface</h1>
-<p>HM provides external data access API in the format below:</p>
+<p>HM provides API for external data access in the format below:</p>
 <h3 id="http://ip:port/hm/cache/q"><a href="http://ip:port/hm/cache/q" target="_blank">http://ip:port/hm/cache/q</a> </h3>
-<p>HM interface supports the query of profile data, monitor data and iplink data. The default exposed query port is 8765. Below are query instances of specific data type.</p>
-<h4 id="1-profile-data">1, Profile data</h4>
+<p>HM interface allows query of cached profile data, monitoring data and iplink data. The default exposed query port is 8765. Below are instances to query the specifized types of data.</p>
+<h4 id="1-profile-data">1. Profile Data</h4>
 <ul>
 <li><h5 id="query-all-profile-data">Query all profile data</h5>
 <pre><code>  POST localhost:8765/hm/cache/q
@@ -746,8 +746,8 @@
       webapproot:&quot;E:/UAVIDE/defaultworkspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/ROOT&quot;
   }
 </code></pre></li>
-<li><h5 id="query-the-profile-data-under-specific-appgroup">Query the profile data under specific appgroup</h5>
-<p>The instance below queries all profile data of UAV</p>
+<li><h5 id="query-the-profile-data-of-a-specifized-appgroup">Query the profile data of a specifized appgroup</h5>
+<p>The instance below queries all the profile data of UAV</p>
 <pre><code>  POST localhost:8765/hm/cache/q
   {
       &quot;intent&quot;:&quot;profile&quot;,
@@ -756,10 +756,10 @@
          &quot;fvalue&quot;:&quot;UAV&quot;
       }
   }
-</code></pre><p>Returned result<br>The format is identical with that when all profile data is queried. But the result only includes the profile data of specific appgroup.</p>
+</code></pre><p>Returned result<br>The format is identical with that when all profile data is queried. But the result only includes the profile data of a specifized appgroup.</p>
 </li>
-<li><h5 id="query-the-profile-data-under-specific-appurl">Query the profile data under specific appurl</h5>
-<p>The instance below queries the <a href="http://127.0.0.1:8080/apphub/&#x7684;&#x6240;&#x6709;&#x5B9E;&#x4F8B;&#x7684;profile&#x6570;&#x636E;" target="_blank">profile data of all instances with the appurl as http://127.0.0.1:8080/apphub/</a></p>
+<li><h5 id="query-the-profile-data-of-a-specifized-appurl">Query the profile data of a specifized appurl</h5>
+<p>The instance below queries the <a href="http://127.0.0.1:8080/apphub/&#x7684;&#x6240;&#x6709;&#x5B9E;&#x4F8B;&#x7684;profile&#x6570;&#x636E;" target="_blank">profile data of all instances of the appurl http://127.0.0.1:8080/apphub/</a></p>
 <pre><code>  POST localhost:8765/hm/cache/q
   {
       &quot;intent&quot;:&quot;profile&quot;,
@@ -768,10 +768,10 @@
           &quot;fvalue&quot;:&quot;http://127.0.0.1:8080/apphub/&quot;
       }
   }
-</code></pre><p>Returned result<br>The format is identical with that when all profile data is queried. But the result only includes the profile data of specific appurl.</p>
+</code></pre><p>Returned result<br>The format is identical with that when all profile data is queried. But the result only includes the profile data of a specifized appurl.</p>
 </li>
-<li><h5 id="query-the-lib-data-of-an-application-instance-in-specific-user-group">Query the lib data of an application instance in specific user group</h5>
-<p>The instance below queries the <a href="http://127.0.0.1:8080/apphub/&#x7684;&#x5B9E;&#x4F8B;&#x4E2D;lib&#x4E0B;&#x7684;jar&#x5305;&#x6570;&#x636E;" target="_blank">jar package data under lib in the application instance with the appurl as  of all instances with the appurl as http://127.0.0.1:8080/apphub/</a> and the appgroup as UAV</p>
+<li><h5 id="query-the-lib-data-of-an-application-instance-in-a-specifized-user-group">Query the lib data of an application instance in a specifized user group</h5>
+<p>The instance below queries the <a href="http://127.0.0.1:8080/apphub/&#x7684;&#x5B9E;&#x4F8B;&#x4E2D;lib&#x4E0B;&#x7684;jar&#x5305;&#x6570;&#x636E;" target="_blank">jar package data under lib of an application instance with the appurl as http://127.0.0.1:8080/apphub/</a> and the appgroup as UAV</p>
 <pre><code>    POST localhost:8765/hm/cache/q
     {
         &quot;intent&quot;:&quot;profile.detail&quot;,
@@ -784,7 +784,7 @@
 <pre><code>    Below is the format of the result returned
     {rs: &quot;{&quot;UAV@http://127.0.0.1:8080/apphub/&#x2026;reditease.uav.hook.httpclients-1.0-sync3.jar\&quot;}&quot;}&quot;}
 
-    Below is the format of detalied contents in rs, wherein the key is the application identifier and the value is the jar package data of the instance
+    Below is the format of detalied contents in rs, wherein the key is the application identifier and the value is the jar package data of the application instance
     {UAV@http://127.0.0.1:8080/apphub/: &quot;{&quot;com.creditease.uav.logging-1.0.jar&quot;:&quot;file:/E:/UA&#x2026;m.creditease.uav.hook.httpclients-1.0-sync3.jar&quot;}&quot;}
 
     Below is the detailed content of jar package data, wherein the key is the name of jar package and the value is the absolute path of jar package
@@ -799,41 +799,39 @@
         com.creditease.uav.hook.httpclients-1.0-sync3.jar:&quot;file:/E:/UAVCode/uavGitLab/ce-datamonitorsystem/com.creditease.uav.monitorframework.buildComponent/target/build/com.creditease.uav.appfrk/com.creditease.uav.hook.httpclients-1.0-sync3.jar&quot;
         ....
     }
-</code></pre><ul>
-<li><h5 id="query-the-data-of-client-side-components-in-all-application-instances">Query the data of client-side components in all application instances</h5>
-<pre><code>POST localhost:8765/hm/cache/q
-{
-  &quot;intent&quot;:&quot;clients&quot;,
-  &quot;request&quot;:{
-  }
-}
-</code></pre><p>Returned result</p>
-<pre><code>  Below is the format of the result returned
-  {rs: &quot;{&quot;C@UAV@http://127.0.0.1:10102/&quot;:&quot;[{\&quot;values\&quot;&#x2026;lasticsearch.bootstrap.Elasticsearch-13424&quot;:&quot;[]&quot;}&quot;}
-
-  Below is the format of detailed contents in rs, wherein the key is the application identifier and the value is the client-side data included in the instance
+</code></pre></li>
+<li><h5 id="query-the-data-of-client-components-of-all-application-instances">Query the data of client components of all application instances</h5>
+<pre><code>  POST localhost:8765/hm/cache/q
   {
-    C@UAV@http://127.0.0.1:8080/:&quot;[...]&quot;
-    C@UAV@http://127.0.0.1:8080/apphub/:&quot;[...]&quot;
-    C@UAV@http://127.0.0.1:10101/:&quot;[...]&quot;    
-    C@UAV@http://127.0.0.1:10102/:&quot;[...]&quot;
-    C@UAV@jse://127.0.0.1/com.alibaba.rocketmq.broker.BrokerStartup-2144:&quot;[...]&quot;
-    C@UAV@jse://127.0.0.1/com.alibaba.rocketmq.namesrv.NamesrvStartup-3980:&quot;[...]&quot;
-    C@UAV@jse://127.0.0.1/org.elasticsearch.bootstrap.Elasticsearch-13424:&quot;[...]&quot;
+    &quot;intent&quot;:&quot;clients&quot;,
+    &quot;request&quot;:{
+    }
   }
+</code></pre><p>  Returned result</p>
+<pre><code>    Below is the format of the result returned
+    {rs: &quot;{&quot;C@UAV@http://127.0.0.1:10102/&quot;:&quot;[{\&quot;values\&quot;&#x2026;lasticsearch.bootstrap.Elasticsearch-13424&quot;:&quot;[]&quot;}&quot;}
 
-  Below is the detailed content of the client-side data in an instance
-  [
-      {&quot;values&quot;:{&quot;urls&quot;:{&quot;/ah/app&quot;:{&quot;ACpost&quot;:1512455355327,&quot;ts&quot;:1512455355327},&quot;/ah/group&quot;:{&quot;ACpost&quot;:1512455355321,&quot;ts&quot;:1512455355321}},&quot;type&quot;:&quot;apache.http.AsyncClient&quot;,&quot;ts&quot;:1512455355327,&quot;state&quot;:&quot;-1&quot;},&quot;id&quot;:&quot;http://127.0.0.1:8011&quot;},
-      {&quot;values&quot;:{&quot;urls&quot;:{&quot;ap&quot;:{&quot;ACauth&quot;:1512455530875,&quot;ACget&quot;:1512458763341,&quot;ACconfig&quot;:1512455530875,&quot;AChmget&quot;:1512455528761,&quot;AChmset&quot;:1512455355384,&quot;AChgetall&quot;:1512455528756,&quot;ts&quot;:1512458763341}},&quot;type&quot;:&quot;redis.client.Aredis&quot;,&quot;svr&quot;:&quot;redis&quot;,&quot;ts&quot;:1512458763341,&quot;state&quot;:&quot;1&quot;},&quot;id&quot;:&quot;redis://127.0.0.1:6379&quot;},
-      {&quot;values&quot;:{&quot;urls&quot;:{&quot;/hm/cache/q&quot;:{&quot;ACpost&quot;:1512458763356,&quot;ts&quot;:1512458763356}},&quot;type&quot;:&quot;apache.http.AsyncClient&quot;,&quot;ts&quot;:1512458763356,&quot;state&quot;:&quot;1&quot;},&quot;id&quot;:&quot;http://127.0.0.1:8765&quot;}
-  ]
+    Below is the format of detailed contents in rs, wherein the key is the application identifier and the value is the client-side data included in the instance
+    {
+      C@UAV@http://127.0.0.1:8080/:&quot;[...]&quot;
+      C@UAV@http://127.0.0.1:8080/apphub/:&quot;[...]&quot;
+      C@UAV@http://127.0.0.1:10101/:&quot;[...]&quot;    
+      C@UAV@http://127.0.0.1:10102/:&quot;[...]&quot;
+      C@UAV@jse://127.0.0.1/com.alibaba.rocketmq.broker.BrokerStartup-2144:&quot;[...]&quot;
+      C@UAV@jse://127.0.0.1/com.alibaba.rocketmq.namesrv.NamesrvStartup-3980:&quot;[...]&quot;
+      C@UAV@jse://127.0.0.1/org.elasticsearch.bootstrap.Elasticsearch-13424:&quot;[...]&quot;
+    }
+
+    Below is the detailed content of the client data of an instance
+    [
+        {&quot;values&quot;:{&quot;urls&quot;:{&quot;/ah/app&quot;:{&quot;ACpost&quot;:1512455355327,&quot;ts&quot;:1512455355327},&quot;/ah/group&quot;:{&quot;ACpost&quot;:1512455355321,&quot;ts&quot;:1512455355321}},&quot;type&quot;:&quot;apache.http.AsyncClient&quot;,&quot;ts&quot;:1512455355327,&quot;state&quot;:&quot;-1&quot;},&quot;id&quot;:&quot;http://127.0.0.1:8011&quot;},
+        {&quot;values&quot;:{&quot;urls&quot;:{&quot;ap&quot;:{&quot;ACauth&quot;:1512455530875,&quot;ACget&quot;:1512458763341,&quot;ACconfig&quot;:1512455530875,&quot;AChmget&quot;:1512455528761,&quot;AChmset&quot;:1512455355384,&quot;AChgetall&quot;:1512455528756,&quot;ts&quot;:1512458763341}},&quot;type&quot;:&quot;redis.client.Aredis&quot;,&quot;svr&quot;:&quot;redis&quot;,&quot;ts&quot;:1512458763341,&quot;state&quot;:&quot;1&quot;},&quot;id&quot;:&quot;redis://127.0.0.1:6379&quot;},
+        {&quot;values&quot;:{&quot;urls&quot;:{&quot;/hm/cache/q&quot;:{&quot;ACpost&quot;:1512458763356,&quot;ts&quot;:1512458763356}},&quot;type&quot;:&quot;apache.http.AsyncClient&quot;,&quot;ts&quot;:1512458763356,&quot;state&quot;:&quot;1&quot;},&quot;id&quot;:&quot;http://127.0.0.1:8765&quot;}
+    ]
 </code></pre></li>
 </ul>
-</li>
-</ul>
-<h4 id="2-monitoring-data">2, Monitoring data</h4>
-<p>The example below queried <a href="http://127.0.0.1:8080/com.creditease.uav.console&#x5E94;&#x7528;&#x7684;err&#x548C;RC&#x6570;&#x636E;&#xFF0C;&#x53E6;&#x5916;&#x8FD8;&#x652F;&#x6301;&#x7684;metric&#x8FD8;&#x6709;appResp.warn" target="_blank">the err and RC data of the application http://127.0.0.1:8080/com.creditease.uav.console with the IP as 127.0.0.1. The query time is between 1512450873892 and 1512450933892. It also supports the query of such metrics as appResp.warn</a>, appResp.EXT, appResp.tmax, appResp.tsum, appResp.tavg, appResp.tmin and appResp.count.</p>
+<h4 id="2-monitoring-data">2. Monitoring Data</h4>
+<p>The example below queried <a href="http://127.0.0.1:8080/com.creditease.uav.console&#x5E94;&#x7528;&#x7684;err&#x548C;RC&#x6570;&#x636E;&#xFF0C;&#x53E6;&#x5916;&#x8FD8;&#x652F;&#x6301;&#x7684;metric&#x8FD8;&#x6709;appResp.warn" target="_blank">the err and RC data of the application http://127.0.0.1:8080/com.creditease.uav.console with the IP as 127.0.0.1. The time range queried is between 1512450873892 and 1512450933892. It also supports the query of such metrics as appResp.warn</a>, appResp.EXT, appResp.tmax, appResp.tsum, appResp.tavg, appResp.tmin and appResp.count.</p>
 <pre><code>    POST localhost:8765/hm/cache/q
     {
         &quot;intent&quot;:&quot;monitor&quot;,
@@ -877,7 +875,7 @@
       {metric: &quot;appResp.err&quot;, tags: {&#x2026;}, dps: {&#x2026;}}
   ]
 
-  Tags are basically identical with those in the request parameter. The difference lies in the fact that if there is ptag: &quot;*&#x201D; in the request parameter, then the result returned shall be further classified. Take appResp.RC as an example, the result returned shall be classified based on RC200, RC304 and RC302.
+  Tags are basically identical with those in the request parameter. The difference lies in the fact that if there is ptag: &quot;*&#x201D; in the request parameter, then the result returned shall be further classified. Take appResp.RC as an example. The result returned shall be classified based on RC200, RC304 and RC302.
 
   Below is the format of the detailed content in dps
   {
@@ -886,7 +884,7 @@
       1512461010270:353
       1512461025270:353
   }
-</code></pre><h4 id="3&#xFF0C;iplink-data">3&#xFF0C;iplink data</h4>
+</code></pre><h4 id="3-iplink-data">3. IPlink Data</h4>
 <pre><code>    POST localhost:8765/hm/cache/q
 
     {
@@ -913,41 +911,9 @@
       browser://127.0.0.1:8080/apphub:&quot;{&quot;urls&quot;:{&quot;/rs/gui/loadTemp&quot;:1512455530051,&quot;/rs/godeye/profile/q/iplink&quot;:1512462406887,&quot;/uavapp_godeye/appmonitor/main.html&quot;:1512462378880,&quot;/rs/godeye/profile/q/cache&quot;:1512462439074,&quot;/rs/godeye/monitor/q/hm&quot;:1512462406898,&quot;/rs/gui/login&quot;:1512455528725,&quot;/rs/gui/loadMainMenu&quot;:1512455528745,&quot;/rs/gui/jumpAppPage&quot;:1512455529989,&quot;/rs/gui/loadUserManageInfo&quot;:1512455528765},&quot;clients&quot;:{&quot;user://192.168.56.1&quot;:1512462439074},&quot;ts&quot;:1512462439074}&quot;
       browser://127.0.0.1:8080/apphub-ts:&quot;1512462439074&quot;
   }
-</code></pre><h3 id="http://ip:port/newlog/q"><a href="http://ip:port/newlog/q" target="_blank">http://ip:port/newlog/q</a> </h3>
-<p>Users could query the log data via this interface, with the default query port being 7899</p>
-<pre><code>  POST localhost:7899/newlog/q
-  {
-    &quot;intent&quot;:&quot;qContent&quot;,
-    &quot;request&quot;:{
-        &quot;appid&quot;:&quot;apphub&quot;,
-        &quot;indexdate&quot;:&quot;2017-12-8&quot;,//The date when the log is generated. Optional if querying logs generated within the current week
-        &quot;logtype&quot;:&quot;apphub_0.0.log_def&quot;, //file name of log+&apos;_def&apos;
-        &quot;sort&quot;:&quot;l_timestamp=DESC,l_num=DESC&quot;,
-        &quot;from&quot;:&quot;0&quot;,
-        &quot;size&quot;:&quot;100&quot;
-    }
-  }
-</code></pre><p>Returned result</p>
-<pre><code>  Below is the format of the result returned, wherein rs is the log data and count is the total number of logs
-  {
-      rs: &quot;[{&quot;ipport&quot;:&quot;127.0.0.1&quot;,&quot;l_timestamp&quot;:1512&#x2026;failed(AbstractClientExchangeHandler.java:373)&quot;}]&quot;, 
-      count: &quot;1053&quot;
-  }
-
-  Below is the format of the detailed content in rs
-  [
-      ...
-      {ipport: &quot;127.0.0.1:8080&quot;, l_timestamp: 1512463638864, l_num: 1007, content: &quot;at org.apache.http.impl.nio.reactor.DefaultConnect&#x2026;rocessEvents(DefaultConnectingIOReactor.java:147)&quot;}
-      {ipport: &quot;127.0.0.1:8080&quot;, l_timestamp: 1512463638864, l_num: 1006, content: &quot;at org.apache.http.impl.nio.reactor.DefaultConnect&#x2026;processEvent(DefaultConnectingIOReactor.java:175)&quot;}
-      {ipport: &quot;127.0.0.1:8080&quot;, l_timestamp: 1512463638864, l_num: 1005, content: &quot;at org.apache.http.impl.nio.reactor.SessionRequestImpl.failed(SessionRequestImpl.java:159)&quot;}
-      {ipport: &quot;127.0.0.1:8080&quot;, l_timestamp: 1512463638864, l_num: 1004, content: &quot;at org.apache.http.nio.pool.AbstractNIOConnPool$In&#x2026;uestCallback.failed(AbstractNIOConnPool.java:816)&quot;}
-      {ipport: &quot;127.0.0.1:8080&quot;, l_timestamp: 1512463638864, l_num: 1003, content: &quot;at org.apache.http.nio.pool.AbstractNIOConnPool.requestFailed(AbstractNIOConnPool.java:541)&quot;}
-      {ipport: &quot;127.0.0.1:8080&quot;, l_timestamp: 1512463638863, l_num: 1002, content: &quot;at org.apache.http.nio.pool.RouteSpecificPool.failed(RouteSpecificPool.java:165)&quot;}
-      ...
-  ]
 </code></pre><h3 id="http://ip:port/ivc/q"><a href="http://ip:port/ivc/q" target="_blank">http://ip:port/ivc/q</a> </h3>
-<p>Users could query the light-weighted invocation chain data via this interface, with the default query port being 7799</p>
-<h4 id="1-query-instance-of-the-invocation-chain-data">1, Query instance of the invocation chain data</h4>
+<p>Users are allowed to query the lightweight invocation chain data via this interface, with the default query port being 7799</p>
+<h4 id="1-instance-of-query-for-the-invocation-chain-data">1. Instance of Query for the Invocation Chain Data</h4>
 <pre><code>    POST localhost:7799/ivc/q
     {
         &quot;intent&quot;:&quot;qApp&quot;,
@@ -955,7 +921,7 @@
             &quot;appuuid&quot;:&quot;http://127.0.0.1:8080/apphub---apphub&quot;,
             &quot;stime&quot;:&quot;1512377369878&quot;,
             &quot;etime&quot;:&quot;1512463769878&quot;,
-            indexdate:&quot;2017-12-7&quot;,//The date when the invocation chain is generated. Optional if querying logs generated within the current week
+            indexdate:&quot;2017-12-7&quot;,//The date when the invocation chain is generated. Optional if logs generated within the current week are to be queried
             &quot;eptype&quot;:&quot;E,S&quot;,
             &quot;from&quot;:&quot;0&quot;,
             &quot;size&quot;:&quot;100&quot;,
@@ -998,7 +964,7 @@
         traceid:&quot;127.0.0.1_8080_1512463713021_56_6&quot;
         url:&quot;http://localhost:8080/apphub/rs/gui/loadTemp&quot;
   }
-</code></pre><h4 id="2-query-instance-of-invocation-chain-details">2, Query instance of invocation chain details</h4>
+</code></pre><h4 id="2-instance-of-query-for-invocation-chain-details">2. Instance of Query for Invocation Chain Details</h4>
 <pre><code>  POST localhost:7799/ivc/q
   {
       &quot;intent&quot;:&quot;qTrace&quot;,
@@ -1030,7 +996,7 @@
 
   The format of the detailed content for each log is identical with the content structure of the invocation chain data
 </code></pre><h3 id="http://ip:port/slw/q"><a href="http://ip:port/slw/q" target="_blank">http://ip:port/slw/q</a> </h3>
-<p>Users could query the heavy-weighted invocation chain data via this interface, with the default query port being 7799</p>
+<p>Users are allowed query the heavyweight invocation chain data via this interface, with the default query port being 7799</p>
 <pre><code>  POST localhost:7799/slw/q
   {
       &quot;intent&quot;:&quot;qParams&quot;,
@@ -1042,7 +1008,7 @@
       }
   }
 </code></pre><p>Returned result</p>
-<pre><code>  Below is the format of the result returned, wherein rs is the heavy-weighted invocation chain data and count is the total number of data
+<pre><code>  Below is the format of the result returned, wherein rs is the heavyweight invocation chain data and count is the total number of data
   {
       rs: &quot;[{&quot;traceid&quot;:&quot;127.0.0.1_8080_1512528400374_94_1...values\\&quot;:{\\\\\\\\\\\\\\\&quot;urls\\&quot;}]&quot;,
       count: &quot;1&quot;
@@ -1064,8 +1030,8 @@
       }
   ]
 </code></pre><h3 id="http://ip:port/jta/q"><a href="http://ip:port/jta/q" target="_blank">http://ip:port/jta/q</a> </h3>
-<p>Users could query the thread analysis data via this interface, with the default query port being 5566</p>
-<h4 id="1-query-instance-of-the-thread-analysis-data">1, Query instance of the thread analysis data</h4>
+<p>Users are allowed to query the thread analysis data via this interface, with the default query port being 5566</p>
+<h4 id="1-instance-of-query-for-the-thread-analysis-data">1. Instance of Query for the Thread Analysis Data</h4>
 <pre><code>  POST localhost:5566/jta/q
   {
       &quot;intent&quot;:&quot;qDistinct&quot;,
@@ -1084,7 +1050,7 @@
         {threadcount: 120, time: &quot;1512536880350&quot;, user: &quot;admin&quot;}
         {threadcount: 120, time: &quot;1512531600647&quot;, user: &quot;admin&quot;}
     ]
-</code></pre><h4 id="2-query-instance-of-the-thread-analysis-details">2, Query instance of the thread analysis details</h4>
+</code></pre><h4 id="2-instance-of-query-for-thread-analysis-details">2. Instance of Query for Thread Analysis Details</h4>
 <pre><code>  POST localhost:5566/jta/q
   {
       &quot;intent&quot;:&quot;qField&quot;,
@@ -1138,12 +1104,12 @@
       user:&quot;admin&quot;
   }
 </code></pre><h3 id="http://ip:port/hm/query"><a href="http://ip:port/hm/query" target="_blank">http://ip:port/hm/query</a> </h3>
-<p>HM interface supports the query of history monitoring data and nodeInfo. The default exposed query port is 8765. Below are query instances of specific data type.</p>
+<p>HM interface allows users to query the history monitoring data and nodeInfo. The default exposed query port is 8765. Below is a instance to query a specifized type of data.</p>
 <ul>
 <li><h5 id="query-nodeinfo-data">Query nodeInfo data</h5>
 </li>
 </ul>
-<p>The example below is the query of process metrics.</p>
+<p>The example below is to query process metrics.</p>
 <pre><code>  POST localhost:8765/hm/query
   {
   &quot;request&quot;: {
@@ -1162,7 +1128,7 @@
     &quot;datastore.name&quot;: &quot;MT_Monitor&quot;
   }
   }
-  wherein &#x201C;start&#x201D; and &#x201C;end&#x201D; denote the start time and the end time , &#x201C;queries&#x201D; denote the query conditions, &#x201C;metric&#x201D; denotes the name of the performance metric and &#x201C;tags&#x201D; denote the query conditions of certain specific process
+  wherein &#x201C;start&#x201D; and &#x201C;end&#x201D; denote the starting time and the ending time , &#x201C;queries&#x201D; denote the query conditions, &#x201C;metric&#x201D; denotes the name of a performance metric and &#x201C;tags&#x201D; denote the query conditions of a specific process
 </code></pre><p>Returned result<br>Below is the format of the data returned:</p>
 <pre><code>  {
   &quot;rs&quot;: &quot;[{
@@ -1180,10 +1146,10 @@
       }
   }]&quot;
   }
-  wherein, &#x201C;metric&#x201D; denotes the name of the performance metric, &#x201C;tags&#x201D; denote the query conditions and &#x201C;dps&#x201D; denotes the history data returned
+  wherein, &#x201C;metric&#x201D; denotes the name of a performance metric, &#x201C;tags&#x201D; denote the query conditions and &#x201C;dps&#x201D; denotes the history data returned
 </code></pre><h3 id="http://ip:port/hb/query"><a href="http://ip:port/hb/query" target="_blank">http://ip:port/hb/query</a> </h3>
-<p>This interface supports the query of the cached nodeInfo. The default exposed query port is 8020. Below are query instances of specific data type.</p>
-<h4 id="1-query-the-heartbeat-data-of-all-containers">1, Query the heartbeat data of all containers</h4>
+<p>This interface allows users to query the cached nodeInfo. The default exposed query port is 8020. Below are instances to query specifized types of data.</p>
+<h4 id="1-query-the-heartbeat-data-of-all-containers">1. Query the Heartbeat Data of All Containers</h4>
 <pre><code>  POST localhost:8020/hb/query
   {
   &quot;intent&quot;:&quot;node&quot;,
@@ -1247,7 +1213,7 @@
               &quot;os.mac&quot;: &quot;F4:96:34:86:B9:EC&quot;,  
               &quot;os.cpu.number&quot;: &quot;8&quot;,  
               &quot;os.java.ver&quot;: &quot;1.8.0\_131&quot;,  
-              &quot;node.tags&quot;: &quot;Elasticsearch, UAV.AppHub, monitor agent, jar, BrokerStartup, NamesrvStartup, health manager,&quot;,  
+              &quot;node.tags&quot;: &quot;Elasticsearch, UAV.AppHub, Monitor Agent, jar, BrokerStartup, NamesrvStartup, Health Manager,&quot;,  
               &quot;os.cpu.load&quot;: &quot;9&quot;,  
               &quot;node.version&quot;: &quot;1.0&quot;,  
               &quot;node.procs&quot;: &quot;{......}&quot;,  
@@ -1258,7 +1224,7 @@
               &quot;os.cpu.avgload&quot;: &quot;-100&quot;  
         },  
       &quot;ip&quot;: &quot;localhost&quot;,  
-      &quot;name&quot;: &quot;monitor agent&quot;,  
+      &quot;name&quot;: &quot;Monitor Agent&quot;,  
       &quot;serverTimestamp&quot;: 1512546163630  
     }&quot;,  
     &quot;938300359816974336&quot;:&quot;{.....}&quot;  
@@ -1313,7 +1279,7 @@
   &quot;17272&quot;:{......},
   &quot;10508&quot;:{......}
   }&quot;
-</code></pre><h4 id="2-query-the-heartbeat-data-of-containers-with-specific-ip">2, Query the heartbeat data of containers with specific IP</h4>
+</code></pre><h4 id="2-query-the-heartbeat-data-of-containers-with-a-specifized-ip">2. Query the Heartbeat Data of Containers with a Specifized IP</h4>
 <pre><code>  POST localhost:8020/hb/query
   {
    &quot;intent&quot;:&quot;node&quot;,
@@ -1322,11 +1288,9 @@
       &quot;fvalue&quot;:&quot;127.0.0.1&quot;
    }
   }
-</code></pre><p>The structure of the data returned is identical with that when the heartbeat data of all containers is queried. But the result only includes the heatbeat data of the container with specific IP.</p>
-<h4 id="3-query-the-heartbeat-data-of-containers-in-the-specific-group">3, Query the heartbeat data of containers in the specific group</h4>
-<p>Take UAV as an example (separate the names of multiple groups with comma)<br>The structure of the data returned is identical with that when the heartbeat data of all containers is queried. But the result only includes the heartbeat data of the container with specific IP.</p>
-<h4 id="3-query-the-heartbeat-data-of-containers-in-the-specific-group">3, Query the heartbeat data of containers in the specific group</h4>
-<p>Take UAV as an example (separate the names of multiple groups with comma)</p>
+</code></pre><p>The structure of the data returned is identical with that when the heartbeat data of all containers is queried. But the result only includes the heatbeat data of the container with the specifized IP.</p>
+<h4 id="3-query-the-heartbeat-data-of-containers-in-a-specifized-group">3. Query the Heartbeat Data of Containers in a Specifized Group</h4>
+<p>Take UAV as an example (separate the names of multiple groups with comma)  </p>
 <pre><code>  POST localhost:8020/hb/query
   {
   &quot;intent&quot;:&quot;node&quot;,
@@ -1335,8 +1299,8 @@
       &quot;fvalue&quot;:&quot;UAV&quot;
   }
   }
-</code></pre><p>The structure of the data returned is identical with that when the heartbeat data of all containers is queried. But the result only includes the heatbeat data of the container with specific IP.</p>
-<h4 id="4-query-the-heartbeat-data-of-the-registered-services-of-a-container">4, Query the heartbeat data of the registered services of a container</h4>
+</code></pre><p>The structure of the data returned is identical with that when the heartbeat data of all containers is queried. But the result only includes the heatbeat data of the container in the specifized group.</p>
+<h4 id="4-query-the-heartbeat-data-of-the-registered-server-in-a-container">4. Query the Heartbeat Data of the Registered Server in a Container</h4>
 <p>Take nodeoperagent-NodeOperHttpServer-/node/ctrl as an example</p>
 <pre><code>  POST localhost:8020/hb/query
   {
@@ -1392,7 +1356,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"HM Interface","level":"1.2.2.10","depth":3,"next":{"title":"Monitor Agent","level":"1.3","depth":1,"path":"monitoragent.md","ref":"monitoragent.md","articles":[{"title":"MA Architecture","level":"1.3.1","depth":2,"path":"monitoragent.md","ref":"monitoragent.md","articles":[]},{"title":"Heartbeat Mechanism","level":"1.3.2","depth":2,"path":"monitoragent/xin-tiao-ji-zhi.md","ref":"monitoragent/xin-tiao-ji-zhi.md","articles":[]},{"title":"Application Data Collection","level":"1.3.3","depth":2,"path":"monitoragent/ying-yong-shu-ju-cai-ji.md","ref":"monitoragent/ying-yong-shu-ju-cai-ji.md","articles":[{"title":"Application Monitoring Data","level":"1.3.3.1","depth":3,"path":"monitoragent/ying-yong-shu-ju-cai-ji/ying-yong-shi-shi-shu-ju.md","ref":"monitoragent/ying-yong-shu-ju-cai-ji/ying-yong-shi-shi-shu-ju.md","articles":[]},{"title":"Application Profile Data","level":"1.3.3.2","depth":3,"path":"monitoragent/ying-yong-shu-ju-cai-ji/ying-yong-hua-xiang-shu-ju.md","ref":"monitoragent/ying-yong-shu-ju-cai-ji/ying-yong-hua-xiang-shu-ju.md","articles":[]}]},{"title":"Node and Process Data Collection","level":"1.3.4","depth":2,"path":"monitoragent/rong-qi-ji-jin-cheng-shu-ju-cai-ji.md","ref":"monitoragent/rong-qi-ji-jin-cheng-shu-ju-cai-ji.md","articles":[]},{"title":"File Data Collection Mechanism","level":"1.3.5","depth":2,"path":"monitoragent/shu-ju-gui-ji-ji-zhi.md","ref":"monitoragent/shu-ju-gui-ji-ji-zhi.md","articles":[]},{"title":"Process Lifekeeper","level":"1.3.6","depth":2,"path":"monitoragent/jin-cheng-zhi-shou.md","ref":"monitoragent/jin-cheng-zhi-shou.md","articles":[]},{"title":"Node Control","level":"1.3.7","depth":2,"path":"monitoragent/jie-dian-kong-zhi.md","ref":"monitoragent/jie-dian-kong-zhi.md","articles":[]}]},"previous":{"title":"APM Server","level":"1.2.2.9","depth":3,"path":"healthmanager/diao-yong-lian.md","ref":"healthmanager/diao-yong-lian.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"healthmanager/jie-kou-shuo-ming.md","mtime":"2018-06-21T02:55:56.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T03:02:19.043Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"HM Interface","level":"1.2.2.10","depth":3,"next":{"title":"Monitor Agent","level":"1.3","depth":1,"path":"monitoragent.md","ref":"monitoragent.md","articles":[{"title":"MA Architecture","level":"1.3.1","depth":2,"path":"monitoragent.md","ref":"monitoragent.md","articles":[]},{"title":"Heartbeat Mechanism","level":"1.3.2","depth":2,"path":"monitoragent/xin-tiao-ji-zhi.md","ref":"monitoragent/xin-tiao-ji-zhi.md","articles":[]},{"title":"Application Data Collection","level":"1.3.3","depth":2,"path":"monitoragent/ying-yong-shu-ju-cai-ji.md","ref":"monitoragent/ying-yong-shu-ju-cai-ji.md","articles":[{"title":"Application Monitoring Data","level":"1.3.3.1","depth":3,"path":"monitoragent/ying-yong-shu-ju-cai-ji/ying-yong-shi-shi-shu-ju.md","ref":"monitoragent/ying-yong-shu-ju-cai-ji/ying-yong-shi-shi-shu-ju.md","articles":[]},{"title":"Application Profile Data","level":"1.3.3.2","depth":3,"path":"monitoragent/ying-yong-shu-ju-cai-ji/ying-yong-hua-xiang-shu-ju.md","ref":"monitoragent/ying-yong-shu-ju-cai-ji/ying-yong-hua-xiang-shu-ju.md","articles":[]}]},{"title":"Node and Process Data Collection","level":"1.3.4","depth":2,"path":"monitoragent/rong-qi-ji-jin-cheng-shu-ju-cai-ji.md","ref":"monitoragent/rong-qi-ji-jin-cheng-shu-ju-cai-ji.md","articles":[]},{"title":"File Data Collection Mechanism","level":"1.3.5","depth":2,"path":"monitoragent/shu-ju-gui-ji-ji-zhi.md","ref":"monitoragent/shu-ju-gui-ji-ji-zhi.md","articles":[]},{"title":"Process Keep-alive","level":"1.3.6","depth":2,"path":"monitoragent/jin-cheng-zhi-shou.md","ref":"monitoragent/jin-cheng-zhi-shou.md","articles":[]},{"title":"Node Control","level":"1.3.7","depth":2,"path":"monitoragent/jie-dian-kong-zhi.md","ref":"monitoragent/jie-dian-kong-zhi.md","articles":[]}]},"previous":{"title":"APM Server","level":"1.2.2.9","depth":3,"path":"healthmanager/diao-yong-lian.md","ref":"healthmanager/diao-yong-lian.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"healthmanager/jie-kou-shuo-ming.md","mtime":"2018-06-28T09:51:28.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-02T03:08:45.482Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

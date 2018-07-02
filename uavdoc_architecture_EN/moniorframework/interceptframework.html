@@ -284,7 +284,7 @@
                 <a href="../healthmanager/apphubfu-wu.html">
             
                     
-                    AppHub Server
+                    AppHub Manager
             
                 </a>
             
@@ -457,7 +457,7 @@
                 <a href="../monitoragent/jin-cheng-zhi-shou.html">
             
                     
-                    Process Lifekeeper
+                    Process Keep-alive
             
                 </a>
             
@@ -700,33 +700,23 @@
 <p><img src="../assets/interceptfromework.png" alt=""></p>
 <h3 id="illustration">Illustration</h3>
 <ul>
-<li><strong>InterceptSupport:  </strong> a singleton as the uniform access point for Profile/Client hook capturing</li>
+<li><strong>InterceptSupport:</strong> a singleton as the uniform access point for Profile/Client hook capturing</li>
+<li><strong>InterceptContext:</strong> an interface that captures the context. All captured parameters are packaged by Context</li>
+<li><strong>InterceptEventListener:</strong> a event hooking listener. All listeners should be inherited and registered for listening</li>
+<li><strong>AppProfilingListener:</strong> a server profile listener that listens to all server profile events</li>
+<li><strong>AppFrkHookFactoryListener:</strong> a client profile listening agent</li>
+<li><strong>DataObserver:</strong> exposes JMX interface data</li>
 </ul>
-<ul>
-<li><strong>InterceptContext:</strong> the interface that captures the context. All captured parameters are packaged by Context</li>
-</ul>
-<ul>
-<li><strong>InterceptEventListener:</strong> the event intercept listener. All listeners should be inherited and register for listening</li>
-</ul>
-<ul>
-<li><strong>AppProfilingListener:</strong> the server profile listener that listens all server profile event</li>
-</ul>
-<ul>
-<li><strong>AppFrkHookFactoryListener:</strong> the client-side profile listening agent</li>
-</ul>
-<ul>
-<li><strong>DataObserver:</strong> expose JMX interface data</li>
-</ul>
-<h3 id="key-technologies">Key technologies</h3>
+<h3 id="key-technologies">Key Technologies</h3>
 <ul>
 <li><strong>JavaAsssist</strong></li>
-<li><strong>HOOK(&#x62E6;&#x622A;&#x6846;&#x67B6;)</strong></li>
+<li><strong>HOOK(hooking framework)</strong></li>
 <li><strong>webAppClassLoader</strong></li>
 </ul>
-<h3 id="key-class-and-functionality">Key class and functionality</h3>
+<h3 id="key-class-and-functionality">Key Class and Functionality</h3>
 <ul>
-<li>The profile data and the client-side monitoring metrics are captured and monitored via the InterceptSupport and hookProxy mechanism.</li>
-<li>The monitoring data is stored in the object storage DataStore and provides JMX interface.</li>
+<li>The profile data and the client- monitoring metrics are captured and monitored via the InterceptSupport and hookProxy mechanism.</li>
+<li>The monitoring data is stored in DataStore and provides the JMX interface.</li>
 </ul>
 <h1 id="interceptframework-implementation">InterceptFramework Implementation</h1>
 <p><img src="../assets/interceptframework.md_0.PNG" alt=""></p>
@@ -773,7 +763,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"InterceptFramework","level":"1.4.5","depth":2,"next":{"title":"CaptureFramework","level":"1.4.6","depth":2,"path":"moniorframework/captureframework.md","ref":"moniorframework/captureframework.md","articles":[]},"previous":{"title":"GlobalFilter","level":"1.4.4","depth":2,"path":"moniorframework/globalfilter.md","ref":"moniorframework/globalfilter.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"moniorframework/interceptframework.md","mtime":"2018-06-21T02:55:56.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T03:02:19.043Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"InterceptFramework","level":"1.4.5","depth":2,"next":{"title":"CaptureFramework","level":"1.4.6","depth":2,"path":"moniorframework/captureframework.md","ref":"moniorframework/captureframework.md","articles":[]},"previous":{"title":"GlobalFilter","level":"1.4.4","depth":2,"path":"moniorframework/globalfilter.md","ref":"moniorframework/globalfilter.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"moniorframework/interceptframework.md","mtime":"2018-06-28T09:51:28.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-02T03:08:45.482Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

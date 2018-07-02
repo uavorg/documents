@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>AppHub Server · GitBook</title>
+        <title>AppHub Manager · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -284,7 +284,7 @@
                 <a href="apphubfu-wu.html">
             
                     
-                    AppHub Server
+                    AppHub Manager
             
                 </a>
             
@@ -457,7 +457,7 @@
                 <a href="../monitoragent/jin-cheng-zhi-shou.html">
             
                     
-                    Process Lifekeeper
+                    Process Keep-alive
             
                 </a>
             
@@ -681,7 +681,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >AppHub Server</a>
+        <a href=".." >AppHub Manager</a>
     </h1>
 </div>
 
@@ -696,12 +696,11 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="apphub">AppHub</h2>
-<p>AppHub reads and writes information related to AppHub from databases.
-<img src="../assets/APPHUB2.png" alt=""></p>
-<p>As shown in the picture, 
-Web AppHub supports user login, UAV management and service governance management (i.e. monitoring authorization) by obtaining service governance data (monitoring authorization) information, App information cache, AppHub management cache and user information cache written into it by Redis. 
-AppHub reads / writes App information, AppHub management information and AppHubDataStore infomation into MongoDB.</p>
+                                <h2 id="apphub-manager">AppHub Manager</h2>
+<p>AppHub Manager reads and writes information related to AppHub from databases.</p>
+<p><img src="../assets/APPHUB2.png" alt=""></p>
+<p>As shown in the picture, Web AppHub supports user login, UAV management and service governance management (i.e. monitoring authorization). By obtaining the service authorization from Redis, AppHub writes the service governance data (monitoring authorization) information, application information cache, AppHub management cache and user information cache into Redis. 
+AppHub mostly reads/writes application information, AppHub management information and AppHubDataStore infomation into MongoDB.</p>
 
                                 
                                 </section>
@@ -745,7 +744,7 @@ AppHub reads / writes App information, AppHub management information and AppHubD
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"AppHub Server","level":"1.2.2.7","depth":3,"next":{"title":"Log Data Server","level":"1.2.2.8","depth":3,"path":"healthmanager/ri-zhi-fu-wu.md","ref":"healthmanager/ri-zhi-fu-wu.md","articles":[]},"previous":{"title":"Notification Server","level":"1.2.2.6","depth":3,"path":"healthmanager/yu-jing-zhong-xin-fu-wu.md","ref":"healthmanager/yu-jing-zhong-xin-fu-wu.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"healthmanager/apphubfu-wu.md","mtime":"2018-06-21T02:55:56.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T03:02:19.043Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"AppHub Manager","level":"1.2.2.7","depth":3,"next":{"title":"Log Data Server","level":"1.2.2.8","depth":3,"path":"healthmanager/ri-zhi-fu-wu.md","ref":"healthmanager/ri-zhi-fu-wu.md","articles":[]},"previous":{"title":"Notification Server","level":"1.2.2.6","depth":3,"path":"healthmanager/yu-jing-zhong-xin-fu-wu.md","ref":"healthmanager/yu-jing-zhong-xin-fu-wu.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"healthmanager/apphubfu-wu.md","mtime":"2018-07-02T03:02:16.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-02T03:08:45.482Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -284,7 +284,7 @@
                 <a href="healthmanager/apphubfu-wu.html">
             
                     
-                    AppHub Server
+                    AppHub Manager
             
                 </a>
             
@@ -457,7 +457,7 @@
                 <a href="monitoragent/jin-cheng-zhi-shou.html">
             
                     
-                    Process Lifekeeper
+                    Process Keep-alive
             
                 </a>
             
@@ -696,25 +696,25 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x76D1;&#x63A7;&#x4EE3;&#x7406;&#x7A0B;&#x5E8F;">&#x76D1;&#x63A7;&#x4EE3;&#x7406;&#x7A0B;&#x5E8F;</h1>
-<h1 id="ma&#x67B6;&#x6784;">MA&#x67B6;&#x6784;</h1>
-<h2 id="ma&#x7684;&#x5B9E;&#x73B0;&#x67B6;&#x6784;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;">MA&#x7684;&#x5B9E;&#x73B0;&#x67B6;&#x6784;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</h2>
+                                <h1 id="monitor-agent">Monitor Agent</h1>
+<h1 id="ma-architecture">MA Architecture</h1>
+<h2 id="implementation-architecture-of-ma">Implementation Architecture of MA:</h2>
 <p><img src="assets/ma_01.png" alt=""></p>
-<p>MA&#x662F;&#x4E00;&#x4E2A;agent&#xFF0C;&#x7528;&#x4E8E;&#x89E3;&#x8026;&#xFF0C;&#x5728;application&#x5916;&#x72EC;&#x7ACB;&#x8FD0;&#x884C;&#x3002;MA&#x7528;&#x4E8E;&#x5B9A;&#x65F6;&#x6293;&#x53D6;MOF&#x4E2D;&#x7684;&#x4FE1;&#x606F;&#x3001;&#x81EA;&#x52A8;&#x53D1;&#x73B0;Tomcat&#x3001;MSCP&#x3001;JavaEE&#x4E2D;&#x7684;&#x4FE1;&#x606F;&#x5E76;&#x83B7;&#x53D6;&#x66F4;&#x591A;&#x63A8;&#x5BFC;&#x7684;&#x76D1;&#x63A7;&#x4FE1;&#x606F;&#x3002;&#x4E4B;&#x540E;MA&#x4E2D;&#x7684;&#x6570;&#x636E;&#x901A;&#x8FC7;Rocketmq&#x5230;&#x8FBE;<a href="healthmanager">HealthManager</a>&#x3002;</p>
-<p>MA&#x83B7;&#x53D6;&#x7684;&#x503C;&#x6765;&#x81EA;&#x4E24;&#x90E8;&#x5206;&#xFF1A;</p>
+<p>MA is an agent for decoupling and runs independently outside applications. MA fetches MOF information periodically, detects Tomcat, MSCP and JavaEE information automatically, and obtains more derived monitoring information. Then data in MA is delivered to <a href="healthmanager">Health Manager</a> via RocketMQ.</p>
+<p>Below are two approaches in which MA obtains values: </p>
 <ol>
-<li><a href="moniorframework.html">MonitorFramework</a>&#x5728;J2EE&#x5DE5;&#x7A0B;&#x4E2D;&#x57CB;&#x70B9;&#xFF0C;MA&#x4ECE;&#x4E2D;&#x53D6;&#x503C;</li>
-<li>MA&#x4ECE;&#x7CFB;&#x7EDF;&#x4E2D;&#x83B7;&#x53D6;&#x53C2;&#x6570;&#x503C;</li>
+<li><a href="moniorframework.html">Monitor Framework</a> tracks J2EE projects and MA obtains data from such projects</li>
+<li>MA obtains parameter values from the system</li>
 </ol>
-<h2 id="ma&#x7684;&#x8FD0;&#x884C;&#x673A;&#x5236;&#x4E3A;&#xFF1A;">MA&#x7684;&#x8FD0;&#x884C;&#x673A;&#x5236;&#x4E3A;&#xFF1A;</h2>
+<h2 id="workflow-of-ma">Workflow of MA:</h2>
 <p><img src="assets/ma_02.png" alt=""></p>
 <ol>
-<li>MSCPBoot&#x4F5C;&#x4E3A;MSCP&#x7684;&#x7A0B;&#x5E8F;&#x5165;&#x53E3;&#xFF0C;&#x5728;&#x542F;&#x52A8;&#x65F6;&#x8C03;&#x7528;SystemStarter&#x7684;startup&#x65B9;&#x6CD5;&#x3002;</li>
-<li>&#x5728;SystemStarter&#x542F;&#x52A8;&#x65F6;&#x4F1A;&#x8C03;&#x7528;MonitorAgent&#x7684;start&#x65B9;&#x6CD5;&#xFF0C;&#x5728;&#x6B64;&#x65B9;&#x6CD5;&#x4E2D;&#x8C03;&#x7528;AppServerMonitorDetector&#x7684;run&#x65B9;&#x6CD5;&#x3002;</li>
-<li>&#x5728;run&#x65B9;&#x6CD5;&#x4E2D;&#x83B7;&#x53D6;&#x6240;&#x6709;&#x7684;JVM&#x8FDB;&#x7A0B;&#xFF0C;&#x5E76;&#x542F;&#x52A8;&#x5BF9;&#x5E94;&#x6570;&#x636E;&#x7684;&#x6293;&#x53D6;&#x4EFB;&#x52A1;&#x53CA;&#x5224;&#x65AD;&#x662F;&#x5426;&#x5360;&#x7528;&#x6027;&#x80FD;&#x592A;&#x591A;&#x800C;&#x9700;&#x8981;&#x81EA;&#x6740;&#x3002;</li>
-<li>&#x5728;AppServerMonitorDetector&#x7684;addWorker&#x65B9;&#x6CD5;&#x4E2D;&#xFF0C;&#x6839;&#x636E;jvmType&#x7684;&#x4E0D;&#x540C;&#x503C;&#x6765;&#x5B9A;&#x65F6;&#x6293;&#x53D6;Tomcat/MSCP/JavaSE&#x7684;Monitor Data&#x5E76;&#x751F;&#x6210;MonitorDataFrame&#x3002;</li>
-<li>&#x82E5;&#x65E0;&#x6CD5;&#x83B7;&#x53D6;Monitor Data&#xFF0C;&#x8FD0;&#x884C;&#x8FDB;&#x7A0B;&#x68C0;&#x6D4B;&#xFF0C;&#x82E5;&#x8FDB;&#x7A0B;&#x6B7B;&#x6389;&#xFF0C;&#x5219;&#x76F8;&#x5173;worker&#x81EA;&#x52A8;&#x9000;&#x51FA;&#x3002;</li>
-<li>&#x5C06;MonitorDataFrame&#x53D1;&#x9001;&#x5230;Rocketmq&#xFF0C;&#x6700;&#x7EC8;&#x5230;&#x8FBE;HealthManager&#x8FDB;&#x884C;&#x5904;&#x7406;&#x3002;&#x5176;&#x4E2D;&#x6536;&#x96C6;&#x7684;&#x6D88;&#x606F;&#x5206;&#x4E3A;<a href="ying-yong-hua-xiang-shu-ju.md">profile</a>&#x6570;&#x636E;&#x548C;<a href="ying-yong-hua-xiang-shu-ju.md">monitor</a>&#x6570;&#x636E;&#xFF0C;&#x524D;&#x8005;&#x4E3A;&#x7CFB;&#x7EDF;&#x9759;&#x6001;&#x6570;&#x636E;&#xFF0C;&#x540E;&#x8005;&#x4E3A;&#x5B9E;&#x65F6;&#x76D1;&#x63A7;&#x6570;&#x636E;&#x3002;</li>
+<li>As MSCP&apos;s program entry, MSCPBoot invokes the startup method of SystemStarter when getting started.</li>
+<li>SystemStarter invokes the run method of AppServerMonitorDetector in the start method of MonitorAgent when getting started.</li>
+<li>Obtain all JVM processes with the run method, start the corresponding data fetching task, and determine whether the processes should get killed if they use too much CPU or memory.</li>
+<li>Use the addWorker method in AppServerMonitorDetector to periodically fetch the Monitor Data of Tomcat/MSCP/JavaSE based on different values of jvmType and generate the MonitorDataFrame.</li>
+<li>Detect processes if the monitoring data cannot be obtained. If the process has been killed, the related worker shall stop automatically.</li>
+<li>Send MonitorDataFrame to RocketMQ. Health Manger shall process MonitorDataFrame. Messages collected are classified into <a href="ying-yong-hua-xiang-shu-ju.md">profile</a> data and <a href="ying-yong-hua-xiang-shu-ju.md">monitor</a> data, with the former being static data of the system and the latter being runtime monitoring data.</li>
 </ol>
 
                                 
@@ -759,7 +759,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Monitor Agent","level":"1.3","depth":1,"next":{"title":"MA Architecture","level":"1.3.1","depth":2,"path":"monitoragent.md","ref":"monitoragent.md","articles":[]},"previous":{"title":"HM Interface","level":"1.2.2.10","depth":3,"path":"healthmanager/jie-kou-shuo-ming.md","ref":"healthmanager/jie-kou-shuo-ming.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"monitoragent.md","mtime":"2018-06-21T02:55:56.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T03:02:19.043Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Monitor Agent","level":"1.3","depth":1,"next":{"title":"MA Architecture","level":"1.3.1","depth":2,"path":"monitoragent.md","ref":"monitoragent.md","articles":[]},"previous":{"title":"HM Interface","level":"1.2.2.10","depth":3,"path":"healthmanager/jie-kou-shuo-ming.md","ref":"healthmanager/jie-kou-shuo-ming.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"monitoragent.md","mtime":"2018-06-28T09:51:28.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-02T03:08:45.482Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

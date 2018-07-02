@@ -284,7 +284,7 @@
                 <a href="../apphubfu-wu.html">
             
                     
-                    AppHub Server
+                    AppHub Manager
             
                 </a>
             
@@ -457,7 +457,7 @@
                 <a href="../../monitoragent/jin-cheng-zhi-shou.html">
             
                     
-                    Process Lifekeeper
+                    Process Keep-alive
             
                 </a>
             
@@ -696,13 +696,13 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="structure-of-the-notification-data">Structure of the notification data</h3>
-<p>The structure of the notification data is saved and processed in a time slice.
-<img src="../../assets/&#x9884;&#x8B66;&#x6570;&#x636E;&#x7ED3;&#x6784;.png" alt=""></p>
-<p>Properties of the slice include key, timestamp, map that stores mdf, and mdf properties.</p>
-<p>Each slice stores a small section of MDF information and a slice is sampled for the given time span.
-<img src="../../assets/&#x9884;&#x8B66;&#x5207;&#x7247;.png" alt=""></p>
-<p>Obtain continuous slices with getSlice (Slice, start, end) function and have them processed by the notification strategy.</p>
+                                <h3 id="structure-of-the-notification-data">Structure of the Notification Data</h3>
+<p>The structure of the notification data is stored and processed in a time slice.</p>
+<p><img src="../../assets/&#x9884;&#x8B66;&#x6570;&#x636E;&#x7ED3;&#x6784;.png" alt=""></p>
+<p>Properties of a slice include key, timestamp, map that stores MDF, and MDF properties.</p>
+<p>Each slice stores a small section of MDF information and a slice is sampled for each given time span.</p>
+<p><img src="../../assets/&#x9884;&#x8B66;&#x5207;&#x7247;.png" alt=""></p>
+<p>Obtain continuous slices with the getSlice (Slice, start, end) function and have them processed by the notification strategy.</p>
 
                                 
                                 </section>
@@ -746,7 +746,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Notification Data Structure","level":"1.2.2.5.1","depth":4,"next":{"title":"Notification Strategy","level":"1.2.2.5.2","depth":4,"path":"healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-ce-lve.md","ref":"healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-ce-lve.md","articles":[]},"previous":{"title":"Runtime Notification Server","level":"1.2.2.5","depth":3,"path":"healthmanager/shi-shi-yu-jing-fu-wu.md","ref":"healthmanager/shi-shi-yu-jing-fu-wu.md","articles":[{"title":"Notification Data Structure","level":"1.2.2.5.1","depth":4,"path":"healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-xin-xi-shu-ju-jie-gou-slice.md","ref":"healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-xin-xi-shu-ju-jie-gou-slice.md","articles":[]},{"title":"Notification Strategy","level":"1.2.2.5.2","depth":4,"path":"healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-ce-lve.md","ref":"healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-ce-lve.md","articles":[]},{"title":"Notification Strategy Expressions","level":"1.2.2.5.3","depth":4,"path":"healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-ce-lve-biao-da-shi.md","ref":"healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-ce-lve-biao-da-shi.md","articles":[]},{"title":"Notification Format","level":"1.2.2.5.4","depth":4,"path":"healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-tong-zhi-ge-shi.md","ref":"healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-tong-zhi-ge-shi.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-xin-xi-shu-ju-jie-gou-slice.md","mtime":"2018-06-21T02:55:56.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T03:02:19.043Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Notification Data Structure","level":"1.2.2.5.1","depth":4,"next":{"title":"Notification Strategy","level":"1.2.2.5.2","depth":4,"path":"healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-ce-lve.md","ref":"healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-ce-lve.md","articles":[]},"previous":{"title":"Runtime Notification Server","level":"1.2.2.5","depth":3,"path":"healthmanager/shi-shi-yu-jing-fu-wu.md","ref":"healthmanager/shi-shi-yu-jing-fu-wu.md","articles":[{"title":"Notification Data Structure","level":"1.2.2.5.1","depth":4,"path":"healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-xin-xi-shu-ju-jie-gou-slice.md","ref":"healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-xin-xi-shu-ju-jie-gou-slice.md","articles":[]},{"title":"Notification Strategy","level":"1.2.2.5.2","depth":4,"path":"healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-ce-lve.md","ref":"healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-ce-lve.md","articles":[]},{"title":"Notification Strategy Expressions","level":"1.2.2.5.3","depth":4,"path":"healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-ce-lve-biao-da-shi.md","ref":"healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-ce-lve-biao-da-shi.md","articles":[]},{"title":"Notification Format","level":"1.2.2.5.4","depth":4,"path":"healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-tong-zhi-ge-shi.md","ref":"healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-tong-zhi-ge-shi.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"healthmanager/shi-shi-yu-jing-fu-wu/yu-jing-xin-xi-shu-ju-jie-gou-slice.md","mtime":"2018-06-28T09:51:28.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-02T03:08:45.482Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -284,7 +284,7 @@
                 <a href="apphubfu-wu.html">
             
                     
-                    AppHub Server
+                    AppHub Manager
             
                 </a>
             
@@ -457,7 +457,7 @@
                 <a href="../monitoragent/jin-cheng-zhi-shou.html">
             
                     
-                    Process Lifekeeper
+                    Process Keep-alive
             
                 </a>
             
@@ -696,10 +696,10 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="profile-server">Profile Server</h1>
-<p>Profile Server consumes the profile data in RocketMQ. Below are detailed workflow: </p>
+                                <h1 id="profile-data-server">Profile Data Server</h1>
+<p>Profile Data Server consumes the profile data in RocketMQ. Below is the detailed workflow: </p>
 <p><img src="../assets/HM_&#x753B;&#x50CF;.png" alt=""></p>
-<p>Profile Server consumes the profile data in RocketMQ delivered by MA, stores the data in MongoDB, and caches the data within 5 minutes in Redis. Profile Server also redelivers the profile data to RocketMQ and the redelivered data is finally further consumed by Runtime Server for the notification information calculation. In addition, Profile Server exposes the query interfaces for profile data query by external applications via <a href="jie-kou-shuo-ming.html#http://ip:port/hm/cache/q">http://ip:port/hm/cache/q</a>.</p>
+<p>Profile Data Server consumes the profile data in RocketMQ delivered by MA, stores the data in MongoDB, and caches the data within 5 minutes in Redis. Profile Data Server also redelivers the profile data to RocketMQ and the redelivered data is finally further consumed by Runtime Notification Server for the notification information calculation. In addition, the Profile Data Server exposes the query interfaces for profile data query by external applications via <a href="jie-kou-shuo-ming.html#http://ip:port/hm/cache/q">http://ip:port/hm/cache/q</a>.</p>
 
                                 
                                 </section>
@@ -743,7 +743,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Profile Data Server","level":"1.2.2.2","depth":3,"next":{"title":"Monitoring Data Server","level":"1.2.2.3","depth":3,"path":"healthmanager/shi-shi-shu-ju-fu-wu.md","ref":"healthmanager/shi-shi-shu-ju-fu-wu.md","articles":[]},"previous":{"title":"Heartbeat Data Server","level":"1.2.2.1","depth":3,"path":"healthmanager/xin-tiao-shu-ju-fu-wu.md","ref":"healthmanager/xin-tiao-shu-ju-fu-wu.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"healthmanager/hua-xiang-shu-ju-fu-wu.md","mtime":"2018-06-21T02:55:56.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T03:02:19.043Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Profile Data Server","level":"1.2.2.2","depth":3,"next":{"title":"Monitoring Data Server","level":"1.2.2.3","depth":3,"path":"healthmanager/shi-shi-shu-ju-fu-wu.md","ref":"healthmanager/shi-shi-shu-ju-fu-wu.md","articles":[]},"previous":{"title":"Heartbeat Data Server","level":"1.2.2.1","depth":3,"path":"healthmanager/xin-tiao-shu-ju-fu-wu.md","ref":"healthmanager/xin-tiao-shu-ju-fu-wu.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"healthmanager/hua-xiang-shu-ju-fu-wu.md","mtime":"2018-07-02T03:02:16.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-02T03:08:45.482Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

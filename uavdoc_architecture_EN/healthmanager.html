@@ -284,7 +284,7 @@
                 <a href="healthmanager/apphubfu-wu.html">
             
                     
-                    AppHub Server
+                    AppHub Manager
             
                 </a>
             
@@ -457,7 +457,7 @@
                 <a href="monitoragent/jin-cheng-zhi-shou.html">
             
                     
-                    Process Lifekeeper
+                    Process Keep-alive
             
                 </a>
             
@@ -698,20 +698,20 @@
                                 
                                 <h1 id="health-manager">Health Manager</h1>
 <h1 id="hm-architecture">HM Architecture</h1>
-<h2 id="1-overall-architecture-and-characteristics">1. Overall architecture and characteristics</h2>
-<p>HM(HealthManager) is a comprehensive service center that supports the processing of the monitoring data, the profile data, the runtime notification data and log data. It calculates and processes all data in the UAVStack and provides related service support. Below is the overall architecture of HM: </p>
+<h2 id="1-overall-architecture-and-characteristics">1. Overall Architecture and Characteristics</h2>
+<p>HM(Health Manager) is a comprehensive service center that supports the processing of monitoring data, profile data, runtime notification data and log data. It calculates and processes all data in UAVStack and provides related service support. Below is the overall architecture of HM: </p>
 <p><img src="assets/HM&#x67B6;&#x6784;.png" alt=""></p>
-<p>Below are characteristics of HM: </p>
+<p>Characteristics of HM include: </p>
 <ol>
 <li>HM is a deployable JAVA MAIN process program</li>
-<li>Each HM could integrate multiple features, each of which is with the single responsibility. Users shall customize the HM process by integrating features needed by the business </li>
+<li>Each HM integrates multiple features. Each feature is with a single responsibility. Users shall customize a HM by integrating features needed by the business </li>
 <li>HM can be deployed on different hosts based on the needs of users, forming an HM cluster</li>
-<li>The service interface of HM is visible to the higher level (business and other systems).</li>
+<li>HM&apos;s service interface is visible to the higher architecture level (business and other systems).</li>
 </ol>
-<h2 id="2-hm-workflow">2. HM workflow</h2>
+<h2 id="2-hm-workflow">2. HM Workflow</h2>
 <p>Below are the overall workflow of HM: </p>
 <p><img src="assets/HM_&#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;.png" alt=""></p>
-<p>In UAVStack, MA collects the monitor data and profile data (except the heartbeat data) and delivers the data to the information middleware RocketMQ. Each feature in HM consumes its corresponding data and persists the data into different databases based on the message type. For instance, the monitoring server shall consume the monitor data in RocketMQ and persist the data into OpenTSDB while the profile data shall consume the profile data and persist the data into MongoDB. Refer to details in HM service. HM shall expose Http service interfaces, with which AppHub shall query and display data. Some external systems could access the monitoring data with such interfaces.</p>
+<p>In UAVStack, MA collects the monitor data and profile data (except the heartbeat data) and delivers the data to the information middleware RocketMQ. Each feature in HM consumes its corresponding data and persists the data into different databases based on the message type. For instance, the monitoring server shall consume the monitor data in RocketMQ and persist the data into OpenTSDB while the profile data shall consume the profile data and persist the data into MongoDB. Detailed HM workflow shall be illustrated in the following chapters. HM shall expose Http server interfaces, with which AppHub shall query and display data. External systems could access the monitoring data with such interfaces.</p>
 
                                 
                                 </section>
@@ -755,7 +755,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Health Manager","level":"1.2","depth":1,"next":{"title":"HM Architecture","level":"1.2.1","depth":2,"path":"healthmanager.md","ref":"healthmanager.md","articles":[]},"previous":{"title":"UAV.Monitor+APM  Architecture","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"healthmanager.md","mtime":"2018-06-21T02:55:56.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T03:02:19.043Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Health Manager","level":"1.2","depth":1,"next":{"title":"HM Architecture","level":"1.2.1","depth":2,"path":"healthmanager.md","ref":"healthmanager.md","articles":[]},"previous":{"title":"UAV.Monitor+APM  Architecture","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"healthmanager.md","mtime":"2018-07-02T03:02:16.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-02T03:08:45.482Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

@@ -284,7 +284,7 @@
                 <a href="../healthmanager/apphubfu-wu.html">
             
                     
-                    AppHub Server
+                    AppHub Manager
             
                 </a>
             
@@ -457,7 +457,7 @@
                 <a href="jin-cheng-zhi-shou.html">
             
                     
-                    Process Lifekeeper
+                    Process Keep-alive
             
                 </a>
             
@@ -696,27 +696,27 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="heartbeat-mechanism">Heartbeat mechanism</h1>
+                                <h1 id="heartbeat-mechanism">Heartbeat Mechanism</h1>
 <p>The heartbeat mechanism is the basis for service registration in service governance. Below is the class diagram of the heartbeat mechanism: </p>
 <p><img src="../assets/ma_03.png" alt=""></p>
-<p>As shown above, there are both the client-side heartbeat mechanism and the server-side heartbeat mechnism.</p>
+<p>As shown above, there are both client heartbeat mechanism and server heartbeat mechnism.</p>
 <ul>
-<li><p>The client side generates the contents of heartbeat messages and send them to the server side via Http every 15 minutes by default.</p>
-<p>Contents of messages:</p>
+<li><p>The client heartbeat mechanism generates the contents of heartbeat messages and send the messages to the server every 15 minutes by default via Http.</p>
+<p>Message contents:</p>
 <ol>
-<li>Module and Http services started by the MSCP node; </li>
+<li>Modules and Http servers started by the MSCP node; </li>
 <li>Context data: OS information, JDK information and disk use;</li>
 <li>Context performance data: CPU, memory, conncetion count, port traffic and disk IO.
-Life cycle of the client side: Alive (1*TTL, green) &#x2014;&gt; Dying (2*TTL, red) &#x2014;&gt; Dead (5*TTL, grey)&#x2014;&gt; Disappear (10*TTL)</li>
+Client life cycle: Alive (1*TTL, green) &#x2014;&gt; Dying (2*TTL, red) &#x2014;&gt; Dead (5*TTL, grey)&#x2014;&gt; Disappear (10*TTL)</li>
 </ol>
 </li>
-<li><p>The server side stores the contents of the heartbeat messages and the cascading with the multi-level service registration center.
+<li><p>The server heartbeat mechanism stores the contents of the heartbeat messages and handles the cascading with the multi-level service registration center.
 Storage: CacheManager hash structure:</p>
 <pre><code>node.info:
 key: NodeInfo.id,
 value: NodeInfo JSON
-</code></pre><p>Cascading: Multi-level service registration center.
-The low tolerance towards the update latency of the service registration information in particular business scenarios makes the computational node of the heartbeat cascading a service registration center.</p>
+</code></pre><p>Cascading: multi-level service registration center.
+Some business scenarios have low tolerance with the update latency of the service registration information, which requires the computational node of the heartbeat cascading to be a service registration center.</p>
 </li>
 </ul>
 
@@ -762,7 +762,7 @@ The low tolerance towards the update latency of the service registration informa
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Heartbeat Mechanism","level":"1.3.2","depth":2,"next":{"title":"Application Data Collection","level":"1.3.3","depth":2,"path":"monitoragent/ying-yong-shu-ju-cai-ji.md","ref":"monitoragent/ying-yong-shu-ju-cai-ji.md","articles":[{"title":"Application Monitoring Data","level":"1.3.3.1","depth":3,"path":"monitoragent/ying-yong-shu-ju-cai-ji/ying-yong-shi-shi-shu-ju.md","ref":"monitoragent/ying-yong-shu-ju-cai-ji/ying-yong-shi-shi-shu-ju.md","articles":[]},{"title":"Application Profile Data","level":"1.3.3.2","depth":3,"path":"monitoragent/ying-yong-shu-ju-cai-ji/ying-yong-hua-xiang-shu-ju.md","ref":"monitoragent/ying-yong-shu-ju-cai-ji/ying-yong-hua-xiang-shu-ju.md","articles":[]}]},"previous":{"title":"MA Architecture","level":"1.3.1","depth":2,"path":"monitoragent.md","ref":"monitoragent.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"monitoragent/xin-tiao-ji-zhi.md","mtime":"2018-06-21T02:55:56.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T03:02:19.043Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Heartbeat Mechanism","level":"1.3.2","depth":2,"next":{"title":"Application Data Collection","level":"1.3.3","depth":2,"path":"monitoragent/ying-yong-shu-ju-cai-ji.md","ref":"monitoragent/ying-yong-shu-ju-cai-ji.md","articles":[{"title":"Application Monitoring Data","level":"1.3.3.1","depth":3,"path":"monitoragent/ying-yong-shu-ju-cai-ji/ying-yong-shi-shi-shu-ju.md","ref":"monitoragent/ying-yong-shu-ju-cai-ji/ying-yong-shi-shi-shu-ju.md","articles":[]},{"title":"Application Profile Data","level":"1.3.3.2","depth":3,"path":"monitoragent/ying-yong-shu-ju-cai-ji/ying-yong-hua-xiang-shu-ju.md","ref":"monitoragent/ying-yong-shu-ju-cai-ji/ying-yong-hua-xiang-shu-ju.md","articles":[]}]},"previous":{"title":"MA Architecture","level":"1.3.1","depth":2,"path":"monitoragent.md","ref":"monitoragent.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"monitoragent/xin-tiao-ji-zhi.md","mtime":"2018-06-28T09:51:28.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-02T03:08:45.482Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

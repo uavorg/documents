@@ -289,7 +289,7 @@
                 <a href="../healmanagerInstall/healmanagerInstall.html">
             
                     
-                    2. Health Manager Installation
+                        2. Health Manager Installation
             
                 </a>
             
@@ -460,7 +460,7 @@
                 <a href="../healmanagerInstall/healmanagerInstall/microservice/profile-and-notification-and-heartbeat-server.html">
             
                     
-                    Profile & Notification & Heartbeat Server
+                    Profile, Notification and Heartbeat Server
             
                 </a>
             
@@ -567,20 +567,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="../upgrade.html">
-            
-                <a href="../upgrade.html">
-            
-                    
-                    Upgrade
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5" data-path="../Agent.html">
+        <li class="chapter " data-level="1.4" data-path="../Agent.html">
             
                 <a href="../Agent.html">
             
@@ -594,7 +581,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="../uavagentInstall/ma_install.html">
+        <li class="chapter " data-level="1.4.1" data-path="../uavagentInstall/ma_install.html">
             
                 <a href="../uavagentInstall/ma_install.html">
             
@@ -608,7 +595,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1.1" data-path="../uavagentInstall/ma_install.html">
+        <li class="chapter " data-level="1.4.1.1" data-path="../uavagentInstall/ma_install.html">
             
                 <a href="../uavagentInstall/ma_install.html">
             
@@ -621,7 +608,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.2" data-path="../uavagentInstall/ma_start_stop.html">
+        <li class="chapter " data-level="1.4.1.2" data-path="../uavagentInstall/ma_start_stop.html">
             
                 <a href="../uavagentInstall/ma_start_stop.html">
             
@@ -634,7 +621,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.3" data-path="../uavagentInstall/issues.html">
+        <li class="chapter " data-level="1.4.1.3" data-path="../uavagentInstall/issues.html">
             
                 <a href="../uavagentInstall/issues.html">
             
@@ -652,7 +639,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="mof_install.html">
+        <li class="chapter " data-level="1.4.2" data-path="mof_install.html">
             
                 <a href="mof_install.html">
             
@@ -666,7 +653,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.2.1" data-path="mof_install.html">
+        <li class="chapter " data-level="1.4.2.1" data-path="mof_install.html">
             
                 <a href="mof_install.html">
             
@@ -679,7 +666,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2.2" data-path="example.html">
+        <li class="chapter " data-level="1.4.2.2" data-path="example.html">
             
                 <a href="example.html">
             
@@ -692,7 +679,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2.3" data-path="issues.html">
+        <li class="chapter " data-level="1.4.2.3" data-path="issues.html">
             
                 <a href="issues.html">
             
@@ -710,7 +697,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="../docker/uavagent.html">
+        <li class="chapter " data-level="1.4.3" data-path="../docker/uavagent.html">
             
                 <a href="../docker/uavagent.html">
             
@@ -724,7 +711,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.3.1" data-path="../docker/uavagent.html">
+        <li class="chapter " data-level="1.4.3.1" data-path="../docker/uavagent.html">
             
                 <a href="../docker/uavagent.html">
             
@@ -737,7 +724,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3.2" data-path="../docker/mof.html">
+        <li class="chapter " data-level="1.4.3.2" data-path="../docker/mof.html">
             
                 <a href="../docker/mof.html">
             
@@ -750,7 +737,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3.3" data-path="../docker/33-chang-jian-wen-ti.html">
+        <li class="chapter " data-level="1.4.3.3" data-path="../docker/33-chang-jian-wen-ti.html">
             
                 <a href="../docker/33-chang-jian-wen-ti.html">
             
@@ -770,6 +757,19 @@
     
 
             </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../upgrade.html">
+            
+                <a href="../upgrade.html">
+            
+                    
+                    Upgrade
+            
+                </a>
+            
+
             
         </li>
     
@@ -902,65 +902,65 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="mof-probe-configuration">MOF probe configuration</h1>
-<p>uav.properties under the directory of uavmof/com.creditease.uav is the configuration file of MOF. Below are detailed illustration of each property: </p>
+                                <h1 id="mof-configuration">MOF Configuration</h1>
+<p>The configuration file of MOF is uav.properties under the directory of uavmof/com.creditease.uav. Below are detailed illustrations of each property: </p>
 <h5 id="comcrediteaseuavclassfilter">com.creditease.uav.class.filter</h5>
-<p>class invisible to WebApp among classed loaded in MOF.</p>
+<p>Classes invisible to WebApp among classes loaded in MOF.</p>
 <h5 id="comcrediteaseuavsupporters">com.creditease.uav.supporters</h5>
-<p>Supporters are enabled when loading MOF. Such supporters shall expand the functionality of MOF. Separate supporters with comma.</p>
+<p>Supporters enabled when MOF is loaded. Such supporters shall expand the functionality of MOF. Separate multiple supporters with comma.</p>
 <h5 id="comcrediteaseuavinterceptlisteners">com.creditease.uav.interceptlisteners</h5>
-<p>Interceptlisteners are enabled when loading MOF. Such interceptlisteners shall implement different actions during varied life cycles of webapp or servlet. Separate interceptlisteners with comma.</p>
+<p>Interceptlisteners enabled when MOF is loaded. Such interceptlisteners shall implement different actions during varied life cycles of WebApp or servlet. Separate multiple interceptlisteners with comma.</p>
 <h5 id="comcrediteaseuavhookfactoryconfig">com.creditease.uav.hookfactory.config</h5>
-<p>Configuration of application framework hooking. This property is the json array, each json element representing a hooking class in the format of </p>
+<p>Configuration of application framework hooking. This property is presented as the json array, each json element representing a hooking class in the format of </p>
 <pre><code>{
-detect:&quot; &lt;detect class&gt;&#x201C;,//Class to be hooked. Hijack such class if it is detected
-jar:&quot; &lt;jar file contains hook&gt;&#x201C;,//Hooked jar package
-proxy:&quot; &lt;hook proxy class extends HookProxy&gt;,//Hijack class
-supports: [&lt;jar file&gt;,&lt;jar file&gt;...]&#x201D;//supporter needed by the hooking classes
+   detect:&quot; &lt;detect class&gt;&#x201C;,//Class to be hooked. Hook such class if it is detected
+   jar:&quot; &lt;jar file contains hook&gt;&#x201C;,//Hooked jar package
+   proxy:&quot; &lt;hook proxy class extends HookProxy&gt;,//Hooked class
+   supports: [&lt;jar file&gt;,&lt;jar file&gt;...]&#x201D;//supporter needed by the hooking classes
 }
-</code></pre><h5 id="netcardindex">NetCardIndex</h5>
-<p>NetCard used as the server IP. The No. of the selected NetCard shall be displayed as the IP address in the application monitor.</p>
-<h5 id="netcardname">NetCardName</h5>
-<p>NetCard used as the server IP. View the NetCard No. via ifconfig. The No. of the selected NetCard shall be displayed as the IP address in the application monitor.</p>
+</code></pre><h4 id="netcardindex">NetCardIndex</h4>
+<p>NetCard used as the server IP. The No. of the selected netcard shall be the IP address displayed in the interface of [Application Monitoring].</p>
+<h4 id="netcardname">NetCardName</h4>
+<p>NetCard used as the server IP. Check the netcard No. via ifconfig. The No. of the selected netcard shall be the IP address displayed in the interface of [Application Monitoring].</p>
 <h5 id="comcrediteasemonitordebug">com.creditease.monitor.debug</h5>
-<p>output the debug information of the monitor or not.</p>
+<p>Output the debug information of the monitor or not.</p>
 <h5 id="comcrediteaseuaviplinkapptimeout-application">com.creditease.uav.iplink.app.timeout //application</h5>
 <h5 id="comcrediteaseuaviplinkusertimeout-user">com.creditease.uav.iplink.user.timeout //user</h5>
 <h5 id="comcrediteaseuaviplinkproxytimeoutproxy">com.creditease.uav.iplink.proxy.timeout//proxy</h5>
 <h5 id="comcrediteaseuaviplinkapptimeout-application-proxy">com.creditease.uav.iplink.app.timeout //application proxy</h5>
 <h5 id="comcrediteaseuaviplinkproxyusertimeout-user-proxy">com.creditease.uav.iplink.proxy.user.timeout //user proxy</h5>
-<p>expiration time of the provenance-awareness data in the service flow, in ms.</p>
+<p>Expiration time of the provenance-awareness data in the service flow, in ms.</p>
 <h5 id="comcrediteaseuaviplinkurlslimit">com.creditease.uav.iplink.urls.limit</h5>
 <h5 id="comcrediteaseuaviplinkclientslimit">com.creditease.uav.iplink.clients.limit</h5>
-<p>count limit of URL and client in the service flow.</p>
+<p>Count limit of URLs and clients in the service flow.</p>
 <h5 id="comcrediteaseuavmonitoreleminstlimit">com.creditease.uav.monitor.eleminst.limit</h5>
 <h5 id="comcrediteaseuavprofileeleminstlimit">com.creditease.uav.profile.eleminst.limit</h5>
-<p>count limit of monitored instances in monitor and profile.</p>
+<p>Count limit of monitors and profiles under monitoring.</p>
 <h5 id="comcrediteaseuavdataobserverworkmodel">com.creditease.uav.dataobserver.workmodel</h5>
-<p>data transmission modes (JMX and Http) between MOF and &#x201C;MA&#x201D;. JMX mode by default. Select Http mode in the multi-user system and modify <a href="../uavagentInstall/ma_configuration.html">Configuration</a> of MA accordingly.</p>
-<h5 id="comcrediteaseuavlogroot-log-directory">com.creditease.uav.*.logroot //Log directory</h5>
-<h5 id="comcrediteaseuavlogbuffer-buffered-lines-during-log-printing">com.creditease.uav.*.logbuffer //Buffered lines during log printing</h5>
-<h5 id="comcrediteaseuavlogsize-log-size-byte">com.creditease.uav.*.logsize //log size (byte)</h5>
+<p>Data transmission modes (JMX and Http) between MOF and MA. JMX mode by default. Select Http mode in the multi-user system and modify <a href="../uavagentInstall/ma_configuration.html">Configuration</a> of MA accordingly.</p>
+<h5 id="comcrediteaseuavlogroot-log-directory">com.creditease.uav.*.logroot //log directory</h5>
+<h5 id="comcrediteaseuavlogbuffer-buffered-lines-during-log-printing">com.creditease.uav.*.logbuffer //buffered lines during log printing</h5>
+<h5 id="comcrediteaseuavlogsize-log-size-in-byte">com.creditease.uav.*.logsize //log size, in byte</h5>
 <h5 id="comcrediteaseuavlogcount-count-limit-of-logs">com.creditease.uav.*.logcount //count limit of logs</h5>
 <p>Configuration related to logs.</p>
 <h5 id="comcrediteaseuavinvokechaincodekey">com.creditease.uav.invokechain.code.*.key</h5>
 <h5 id="comcrediteaseuavinvokechaincodeclass">com.creditease.uav.invokechain.code.*.class</h5>
-<p>Relative position between key classes and their business invocation classes in the stack information, wherein class represnets the name of the key class and key represents the layer difference between the business invocation class and the key class in the stack information.</p>
+<p>Relative position relationship between key classes and their business invocation classes in the stack information, wherein class represnets the name of the key class and key represents the layer difference between the business invocation class and the key class in the stack information.</p>
 <h5 id="comcrediteaseuavmonitorfilterserverurlblacklist">com.creditease.uav.monitorfilter.serverurl.blacklist</h5>
 <h5 id="comcrediteaseuavmonitorfilterserverurlwhitelist">com.creditease.uav.monitorfilter.serverurl.whitelist</h5>
 <h5 id="comcrediteaseuavmonitorfilterclienturlblacklist">com.creditease.uav.monitorfilter.clienturl.blacklist</h5>
 <h5 id="comcrediteaseuavmonitorfilterclienturlwhitelist">com.creditease.uav.monitorfilter.clienturl.whitelist</h5>
-<p>black list and white list setting of the monitored URL.</p>
+<p>Black list and white list configuration of the monitored URL.</p>
 <h5 id="comcrediteaseuavmonitorfilterneedcache">com.creditease.uav.monitorfilter.needcache</h5>
 <h5 id="comcrediteaseuavmonitorfilterserverurlblacklistcachesize">com.creditease.uav.monitorfilter.serverurl.blacklist.cachesize</h5>
 <h5 id="comcrediteaseuavmonitorfilterserverurlwhitelistcachesize">com.creditease.uav.monitorfilter.serverurl.whitelist.cachesize</h5>
 <h5 id="comcrediteaseuavmonitorfilterclienturlblacklistcachesize">com.creditease.uav.monitorfilter.clienturl.blacklist.cachesize</h5>
 <h5 id="comcrediteaseuavmonitorfilterclienturlwhitelistcachesize">com.creditease.uav.monitorfilter.clienturl.whitelist.cachesize</h5>
-<p>cache the URL in the black list and white list or not and the cache size.</p>
+<p>Cache the URL in the black list and white list or not; and the size of the cache if yes.</p>
 <h5 id="comcrediteaseuavmonitorfilterservicevalidate">com.creditease.uav.monitorfilter.servicevalidate</h5>
-<p>Strictly validate URL or not. If yes, then do not monitor if the requested URL is not in the profile data.</p>
+<p>Strictly validate URL or not. If yes, do not monitor if the requested URL is not in the profile data.</p>
 <h5 id="comcrediteaseuavuavmofmetapath">com.creditease.uav.uavmof.metapath</h5>
-<p>Address of metadata of MOF. Use the default address if left empty, i.e. the metadata folder at the same level of uavmof.</p>
+<p>Address of MOF metadata. Use the default address if left empty, i.e. the metadata director at the same level of uavmof.</p>
 <h5 id="comcrediteaseuavuavmofprofilepackageheader">com.creditease.uav.uavmof.profile.package.header</h5>
 <p>Scan packages prefixed with this header only in the profiling process. Separate multiple headers with comma.</p>
 
@@ -1006,7 +1006,7 @@ supports: [&lt;jar file&gt;,&lt;jar file&gt;...]&#x201D;//supporter needed by th
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"4. MOF","level":"1.6.4","depth":2,"next":{"title":"FAQ","level":"1.7","depth":1,"path":"chang-jian-wen-ti.md","ref":"chang-jian-wen-ti.md","articles":[]},"previous":{"title":"3. MA","level":"1.6.3","depth":2,"path":"uavagentInstall/ma_configuration.md","ref":"uavagentInstall/ma_configuration.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"mof_install/mof_configuration.md","mtime":"2018-06-19T07:40:38.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T03:02:27.670Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"4. MOF","level":"1.6.4","depth":2,"next":{"title":"FAQ","level":"1.7","depth":1,"path":"chang-jian-wen-ti.md","ref":"chang-jian-wen-ti.md","articles":[]},"previous":{"title":"3. MA","level":"1.6.3","depth":2,"path":"uavagentInstall/ma_configuration.md","ref":"uavagentInstall/ma_configuration.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"mof_install/mof_configuration.md","mtime":"2018-06-27T09:05:48.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-02T03:08:07.805Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

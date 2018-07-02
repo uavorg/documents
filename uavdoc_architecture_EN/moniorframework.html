@@ -284,7 +284,7 @@
                 <a href="healthmanager/apphubfu-wu.html">
             
                     
-                    AppHub Server
+                    AppHub Manager
             
                 </a>
             
@@ -457,7 +457,7 @@
                 <a href="monitoragent/jin-cheng-zhi-shou.html">
             
                     
-                    Process Lifekeeper
+                    Process Keep-alive
             
                 </a>
             
@@ -696,20 +696,20 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x4E2D;&#x95F4;&#x4EF6;&#x589E;&#x5F3A;&#x6846;&#x67B6;">&#x4E2D;&#x95F4;&#x4EF6;&#x589E;&#x5F3A;&#x6846;&#x67B6;</h1>
-<h2 id="mof&#x67B6;&#x6784;">MOF&#x67B6;&#x6784;</h2>
-<h3 id="mof&#x67B6;&#x6784;&#x7EC4;&#x4EF6;&#x56FE;">MOF&#x67B6;&#x6784;&#x7EC4;&#x4EF6;&#x56FE;</h3>
+                                <h1 id="monitor-framework">Monitor Framework</h1>
+<h2 id="mof-architecture">MOF Architecture</h2>
+<h3 id="mof-architecutre-components">MOF Architecutre Components</h3>
 <p><img src="assets/mofjia-gou-zu-jian_1.jpg" alt=""></p>
-<h5 id="&#x6838;&#x5FC3;&#x7EC4;&#x4EF6;&#xFF1A;">&#x6838;&#x5FC3;&#x7EC4;&#x4EF6;&#xFF1A;</h5>
-<p>Supporter&#xFF0C;CaptureFramework&#xFF0C;InteceptFramework&#xFF0C;HookFactory&#xFF0C;ProfileFramework&#xFF0C;DataObserver</p>
-<h5 id="&#x5404;&#x7EC4;&#x4EF6;&#x8BF4;&#x660E;&#xFF1A;">&#x5404;&#x7EC4;&#x4EF6;&#x8BF4;&#x660E;&#xFF1A;</h5>
+<h5 id="core-components">Core Components:</h5>
+<p>Supporter, CaptureFramework, InteceptFramework, HookFactory, ProfileFramework and DataObserver</p>
+<h5 id="component-illustration">Component Illustration:</h5>
 <ul>
-<li>Supporter:&#x62BD;&#x8C61;&#x7684;&#x4E00;&#x4E2A;&#x529F;&#x80FD;&#x652F;&#x6301;&#x7C7B;&#xFF0C;&#x4EE3;&#x8868;&#x4E00;&#x79CD;&#x529F;&#x80FD;&#xFF0C;&#x53EF;&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#xFF1B;</li>
-<li>CaptureFramework&#xFF1A;&#x5B9E;&#x65F6;&#x6570;&#x636E;&#x6293;&#x53D6;&#x6846;&#x67B6;&#xFF0C;&#x63D0;&#x4F9B;&#x6293;&#x53D6;&#x5B9E;&#x65F6;&#x6570;&#x636E;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#xFF1B;</li>
-<li>InterceptFramework:AOP&#x5B9E;&#x73B0;&#x6846;&#x67B6;&#xFF0C;&#x63D0;&#x4F9B;&#x5207;&#x9762;&#x6269;&#x5C55;&#x529F;&#x80FD;&#xFF1B;</li>
-<li>ProfileFramework:&#x753B;&#x50CF;&#x6570;&#x636E;&#x7684;&#x6355;&#x83B7;&#xFF0C;&#x5B9E;&#x73B0;&#x4E86;&#x4E8B;&#x4EF6;&#x52AB;&#x6301;&#x76D1;&#x542C;&#xFF08;&#x753B;&#x50CF;&#x76D1;&#x542C;&#x5668;&#xFF09;&#xFF1B;</li>
-<li>HookProxy&#xFF1A;&#x5E94;&#x7528;&#x4EE3;&#x7801;&#x52AB;&#x6301;&#x6846;&#x67B6;&#xFF1B;</li>
-<li>DataObserver:&#x66B4;&#x9732;&#x6570;&#x636E;&#x6293;&#x53D6;&#x63A5;&#x53E3;(JMX/HTTP)&#x4F9B;MonitorAgent&#x6293;&#x53D6;&#x4F7F;&#x7528;&#xFF1B;</li>
+<li>Supporter: an abstract feature support class which represents a feature and can be dynamically loaded;</li>
+<li>CaptureFramework: a monitoring data capture framework tha supports the fetching of monitoring data;</li>
+<li>InterceptFramework: AOP&apos;s implementation framework which supports aspect expansion;</li>
+<li>ProfileFramework: captures the profile data and listens to event hooking (profile listener);</li>
+<li>HookProxy: a hook framework of application codes; </li>
+<li>DataObserver: exposes the data capturing interface (JMX/HTTP) to Monitor Agent;</li>
 </ul>
 
                                 
@@ -754,7 +754,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Monitor Framework","level":"1.4","depth":1,"next":{"title":"MOF Architecture","level":"1.4.1","depth":2,"path":"moniorframework.md","ref":"moniorframework.md","articles":[]},"previous":{"title":"Node Control","level":"1.3.7","depth":2,"path":"monitoragent/jie-dian-kong-zhi.md","ref":"monitoragent/jie-dian-kong-zhi.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"moniorframework.md","mtime":"2018-06-21T02:55:56.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T03:02:19.043Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Monitor Framework","level":"1.4","depth":1,"next":{"title":"MOF Architecture","level":"1.4.1","depth":2,"path":"moniorframework.md","ref":"moniorframework.md","articles":[]},"previous":{"title":"Node Control","level":"1.3.7","depth":2,"path":"monitoragent/jie-dian-kong-zhi.md","ref":"monitoragent/jie-dian-kong-zhi.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"moniorframework.md","mtime":"2018-06-28T09:51:28.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-02T03:08:45.482Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
